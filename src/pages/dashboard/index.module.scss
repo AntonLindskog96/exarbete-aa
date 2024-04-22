@@ -5,9 +5,64 @@
   
   .headerContainer h1 {
     font-size: 70px;
+    border-bottom: 1px solid;
   }
   
   .headerContainer h2 {
-    font-size: 35px;
+    font-size: 25px;
     margin-top: -40px;
   }
+
+  .button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #b63333;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 5px;
+    width: 350px; 
+  }
+
+  
+  
+  .button:hover {
+    background-color: transparent;
+    border: 1px solid #b63333 ;
+    color: #b63333;
+  }
+
+  .scrollTextContainer {
+    position: flex;
+    bottom: 50px;
+    left: 20px;
+    width: calc(100% - 40px);
+    overflow: hidden;
+  }
+  
+  
+  .scrollTextList {
+    list-style-type: none;
+    margin: 5;
+    padding: 5;
+    white-space: nowrap;
+    animation: scrollText 20s linear infinite;
+  }
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .scrollTextList li {
+    display: inline-block;
+    padding-right: 25px;
+  }
+
+
