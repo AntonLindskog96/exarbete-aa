@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './index.module.scss';
+import homeIcon from '../../assets/images/home-icon.png';
 
 const StartPage = () => {
+  
+
+  
   return (
     <motion.div>
       <div className={styles.headerContainer}>
@@ -12,6 +16,9 @@ const StartPage = () => {
           transition={{ delay: 0.5 }}
           className={styles.header1}
         >
+    
+          
+          <img src= {homeIcon.src} alt="icon" className={styles.icon} />
           <h1>Pints & Pattys</h1>
         </motion.div>
         <motion.div
