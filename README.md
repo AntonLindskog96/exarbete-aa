@@ -1,6 +1,6 @@
 ## Case
-Vårt uppdrag är att utveckla ett system till restaurangen Pints & Pattys.
-Systemet är en webbapplikation som skall tillgodose några olika behov ( se user stories ) och se ut enligt följande mockup.
+
+Vi ska skapa en webbapplikation för restaurangen Pints & Pattys som ska lösa olika behov, enligt de user-stories vi har fått. Applikationen ska designas enligt den angivna mockupen för att möta restaurangens krav och önskemål.
 
 ## Frontend & Backend
 Vi kommer använda oss av nextJs för att bygga frontend & backend. Vi tillämpar bl.a React, Typescript, SCSS och Framer motion. 
