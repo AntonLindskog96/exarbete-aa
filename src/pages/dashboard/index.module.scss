@@ -20,6 +20,8 @@
     margin-bottom: 100px;
     margin-top: -150px;
     margin-left: auto;
+
+
   }
 
   .button {
@@ -35,13 +37,24 @@
     width: 350px; 
   }
 
-  
-  
-  .button:hover {
-    background-color: transparent;
-    border: 1px solid #b63333 ;
-    color: #b63333;
-  }
+
+.button:hover {
+  background-color: transparent;
+  border: 1px solid #b63333;
+  color: #b63333;
+}
+
+.headerButton:hover {
+  background-color: transparent;
+  border: 1px solid #b63333;
+  color: #b63333;
+}
+
+.loginButton:hover {
+  background-color: transparent;
+  border: 1px solid #b63333;
+  color: #b63333;
+}
 
   .scrollTextContainer {
     position: flex;
