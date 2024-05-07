@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './index.module.scss';
 import homeIcon from '../../assets/images/home-icon.png';
+import Link from 'next/link';
 
 const StartPage = () => {
   
@@ -28,7 +29,9 @@ const StartPage = () => {
           className={styles.header1}
         >
           <h2>The perfect pair, burger and beer</h2>
+        <Link href="/orderPage">
           <button className={styles.button}>Beställ</button>
+        </Link>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }} 
