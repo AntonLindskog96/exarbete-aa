@@ -3,7 +3,7 @@ import styles from './index.module.scss';
 import { useEffect, useState } from "react";
 
 async function getMenu(){
-    const res = await fetch('http://localhost:3000/api/burgers');
+    const res = await fetch('http://localhost:3000/api/products');
     const data = await res.json();
     return data;
 }
@@ -15,7 +15,8 @@ const Orders: NextPage = () => {
         const fetchData = async () => {
             try {
                 const data = await getMenu();
-                setMenu(data);
+                const menu = [...data.burgers, ...data.beers];
+                setMenu(menu);
             } catch (error) {
                 console.error('Error fetching menu:', error);
             }
