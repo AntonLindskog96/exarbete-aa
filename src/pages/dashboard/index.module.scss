@@ -1,6 +1,6 @@
 .headerContainer, .getStarted {
   color: #F4DFC8;
-  font-family: 'Apple Garamond', sans-serif
+  font-family: 'Apple Garamond', sans-serif;
 }
 
 .headerContainer h1 {
@@ -60,6 +60,23 @@
   width: 100px;
 
 
+}
+
+.mainInfoPage {}
+
+.contentPicture {
+
+    height: auto;
+    z-index: 10;
+    bottom: 20%;
+    left: 40%;
+    position: absolute;
+
+}
+
+.burgerPicture {
+  max-width: fit-content;
+  height: 450px;
 }
 
 .orderButton:hover {
