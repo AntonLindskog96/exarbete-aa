@@ -9,7 +9,7 @@ const Header = () => {
                 <img src={homeIcon.src} alt="icon" className={styles.icon}/>
             </div>
             <div className={styles.buttonContent}>
-                <button className={styles.headerButton}>Beställ</button>
+                <button className={styles.orderButton}>Beställ</button>
                 <button className={styles.loginButton}>Logga in</button>
             </div>
         </div>
