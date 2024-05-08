@@ -1,77 +1,140 @@
 .headerContainer, .getStarted {
-    color: #F4DFC8;
-    font-family: 'Apple Garamond', sans-serif
-  }
-  
-  .headerContainer h1 {
-    font-size: 70px;
-    border-bottom: 1px solid;
-  }
-  
-  .headerContainer h2 {
-    font-size: 25px;
-    margin-top: -40px;
-  }
+  color: #F4DFC8;
+  font-family: 'Apple Garamond', sans-serif
+}
 
-  .icon {
+.headerContainer h1 {
+  font-size: 70px;
+  border-bottom: 1px solid;
+}
 
-    width: 150px;
-    height: 150px;
-    margin-bottom: 100px;
-    margin-top: -150px;
-    margin-left: auto;
-  }
+.headerContainer h2 {
+  font-size: 25px;
+  margin-top: -40px;
+}
 
-  .button {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #b63333;
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 5px;
-    width: 350px; 
-  }
+.headerContent {
+  display: flex;
+  margin-left: auto;
+  padding: 20px;
+  margin-top: -200px;
+}
 
-  
-  
-  .button:hover {
-    background-color: transparent;
-    border: 1px solid #b63333 ;
-    color: #b63333;
-  }
+.iconContent {
 
-  .scrollTextContainer {
-    position: flex;
-    bottom: 50px;
-    left: 20px;
-    width: calc(100% - 40px);
-    overflow: hidden;
+}
+
+.buttonContent {
+  margin: auto;
+}
+
+.icon {
+  width: 150px;
+  height: 150px;
+}
+
+.orderButton {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #b63333;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 5px;
+  width: 100px;
+}
+
+.loginButton {
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #b63333;
+  color: white;
+  padding: 15px 5px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 5px;
+  width: 100px;
+
+
+}
+
+.orderButton:hover {
+  background-color: transparent;
+  border: 1px solid #b63333;
+  color: #b63333;
+}
+
+.loginButton:hover {
+  background-color: transparent;
+  border: 1px solid #b63333;
+  color: #b63333;
+}
+
+.button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #b63333;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 5px;
+  width: 350px;
+}
+
+
+.button:hover {
+  background-color: transparent;
+  border: 1px solid #b63333;
+  color: #b63333;
+}
+
+.headerButton:hover {
+  background-color: transparent;
+  border: 1px solid #b63333;
+  color: #b63333;
+}
+
+.loginButton:hover {
+  background-color: transparent;
+  border: 1px solid #b63333;
+  color: #b63333;
+}
+
+.scrollTextContainer {
+  position: flex;
+  bottom: 50px;
+  left: 20px;
+  width: calc(100% - 40px);
+  overflow: hidden;
+}
+
+
+.scrollTextList {
+  list-style-type: none;
+  margin: 5;
+  padding: 5;
+  white-space: nowrap;
+  animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
   }
-  
-  
-  .scrollTextList {
-    list-style-type: none;
-    margin: 5;
-    padding: 5;
-    white-space: nowrap;
-    animation: scrollText 20s linear infinite;
+  100% {
+    transform: translateX(-100%);
   }
-  
-  @keyframes scrollText {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  .scrollTextList li {
-    display: inline-block;
-    padding-right: 25px;
-  }
+}
+
+.scrollTextList li {
+  display: inline-block;
+  padding-right: 25px;
+}
 
 
