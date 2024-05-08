@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import styles from "./index.module.scss";
 import { useEffect, useState } from "react";
+import Header from "@/pages/header/header";
 
 async function getMenu() {
   const res = await fetch("http://localhost:3000/api/products");
@@ -26,58 +27,78 @@ const Orders: NextPage = () => {
     fetchData();
   }, [selectedCategory]);
 
-  const addToCart = (item: any) => {
-    setCart((prevCart) => [...prevCart, item]);
-  };
+  useEffect(() => {
+
+    const storedCartItems = localStorage.getItem('cartItems');
+    if (storedCartItems) {
+        setCart(JSON.parse(storedCartItems));
+    }
+}, []);
+
+const addToCart = (item: any) => {
+
+    const updatedCart = [...cart, item];
+    setCart(updatedCart);
+
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+};
 
   return (
-    <section className={styles.menuContainer}>
-      <h1 className={styles.menuTitle}>Meny</h1>
-      <div className={styles.buttonContainer}>
-        <button
-          className={styles.productButton}
-          onClick={() => setSelectedCategory("burgers")}
-        >
-          Burgare
-        </button>
-        <button
-          className={styles.productButton}
-          onClick={() => setSelectedCategory("beers")}
-        >
-          Öl
-        </button>
-      </div>
-      <ul className={styles.ul}>
-        {menu.map((item, index) => (
-           <button
-           key={index}
-           onClick={() => addToCart(item)}
-           className={styles.menuButton}
-         >
-           <div className={styles.menuItemContainer}>
-             <div className={styles.menuItemContent}>
-               <h2 className={styles.menuItemTitle}>{item.title}</h2>
-             </div>
-             <img
-               src={item.image}
-               className={styles.menuItemImage} // Apply a class for styling
-               alt={item.title}
-             />
-           </div>
-         </button>
-       ))}
-      </ul>
-      <div>
-        <h2 className={styles.menuTitle}>Shopping Cart</h2>
+    <div className={styles.outerContainer}>
+      <section className={styles.menuContainer}>
+        <h1 className={styles.menuTitle}>Meny</h1>
+        <div className={styles.buttonContainer}>
+          <button
+            className={styles.productButton}
+            onClick={() => setSelectedCategory("burgers")}
+          >
+            Burgare
+          </button>
+          <button
+            className={styles.productButton}
+            onClick={() => setSelectedCategory("beers")}
+          >
+            Öl
+          </button>
+        </div>
         <ul className={styles.ul}>
-          {cart.map((item, index) => (
-            <li key={index}>
-              <h3>{item.title}</h3>
+          {menu.map((item, index) => (
+            <button
+              key={index}
+              onClick={() => addToCart(item)}
+              className={styles.menuButton}
+            >
+              <div className={styles.menuItemContainer}>
+                <div className={styles.menuItemContent}>
+                  <h2 className={styles.menuItemTitle}>{item.title}</h2>
+                </div>
+                <img
+                  src={item.image}
+                  className={styles.menuItemImage}
+                  alt={item.title}
+                />
+              </div>
+            </button>
+          ))}
+        </ul>
+      </section>
+      <section className={styles.shoppingCartContainer}>
+        <h2 className={styles.shopping}>Min Beställning</h2>
+        <ul className={styles.ulcart}>
+          {cart.map((item) => (
+            <li key={item.id} className={styles.listItem}>
+              <img
+                src={item.image}
+                className={styles.cartItemImage}
+                alt={item.title}
+              />
+              <p>{item.title}</p>
+              <p>{item.price}</p>
             </li>
           ))}
         </ul>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

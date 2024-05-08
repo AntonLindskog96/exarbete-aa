@@ -2,38 +2,81 @@
 @import "../../styles/_variables";
 @import "../../styles/_typography";
 
+
+
+.outerContainer {
+  flex-direction: row; 
+  display: flex;
+  justify-content: space-between; 
+  width: 100%; 
+  
+}
+
 .menuContainer {
   font-family: "Apple Garamond", sans-serif;
   color: $bacon;
+  flex-direction: column;
+  padding-left: 40px;
+  width: 100%;
+}
+
+.shoppingCartContainer {
+  background-color: rgb(24, 22, 22);
+  border-radius: 5%;
+  width: 30%; 
+  margin-top: 100px;
+  border: none;
   display: flex;
   flex-direction: column;
+  margin-right: 100px;
+}
+
+.shopping {
+  font-family: "Apple Garamond", sans-serif;
+  color: white;
+  align-self: center;
+}
+
+.listItem {
+  display: flex;
   align-items: center;
 }
+
+.cartItemImage {
+  width: 70px;
+  height: auto; 
+  margin-right: 10px; 
+}
+
+.ulcart {
+  font-family: "Apple Garamond", sans-serif;
+  color: white;
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+
 .menuTitle {
   @include fontsizeHuge;
 }
 
 .menuButton {
-  flex-wrap: wrap;
-  background-color: black;
-  height: 110px;
+  background-color: rgb(24, 22, 22);
+  height: 200px;
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   border: none;
-  width: 400px;
-  border: 1px solid grey;
-}
-.menuButton:hover {
-  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
-    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
-  transform: scale(1.05);
+  width: 300px;
+  padding: auto;
 }
 
+
 .menuItemTitle {
+  font-family: "JetBrains Mono", monospace;
   @include fontsizeRegular;
   color: white;
-  margin-top: 1px;
+
 }
 
 .menuItemContainer {
@@ -44,9 +87,10 @@
 }
 
 .menuItemImage {
-  width: 100px;
-  height: 100%;
+  width: 200px;
+  height: 100%; 
   border-radius: 5px;
+  object-fit: cover;
 }
 
 .productButton {
@@ -64,7 +108,7 @@
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono", monospace;
-  height: 48px;
+  height: 35px;
   justify-content: center;
   line-height: 1;
   list-style: none;
@@ -90,8 +134,8 @@
 
 .productButton:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-  transform: translateY(-2px);
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -1px 0 inset;
+  transform: translateY(-1px);
 }
 
 .productButton:active {
