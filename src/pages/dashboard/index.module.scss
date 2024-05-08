@@ -15,6 +15,7 @@
 
 .headerContent {
   display: flex;
+  //flex-direction: row;
   margin-left: auto;
   padding: 20px;
   margin-top: -200px;
@@ -26,6 +27,8 @@
 
 .buttonContent {
   margin: auto;
+  justify-content: space-between;
+
 }
 
 .icon {
@@ -42,7 +45,7 @@
   border-radius: 25px;
   cursor: pointer;
   font-size: 18px;
-  margin-top: 5px;
+  margin: 10px;
   width: 100px;
 }
 
@@ -62,7 +65,10 @@
 
 }
 
-.mainInfoPage {}
+.mainInfoPage {
+
+  box-sizing: border-box;
+}
 
 .contentPicture {
 
@@ -73,6 +79,8 @@
     position: absolute;
 
 }
+
+
 
 .burgerPicture {
   max-width: fit-content;
