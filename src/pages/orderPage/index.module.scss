@@ -1,16 +1,100 @@
-@import url('https://fonts.cdnfonts.com/css/apple-garamond');
-@import '../../styles/_variables';
-@import '../../styles/_typography';
+@import url("https://fonts.cdnfonts.com/css/apple-garamond");
+@import "../../styles/_variables";
+@import "../../styles/_typography";
 
 .menuContainer {
-    font-family: 'Apple Garamond', sans-serif;
-    color: white;
+  font-family: "Apple Garamond", sans-serif;
+  color: $bacon;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .menuTitle {
-    @include fontsizeHuge;
+  @include fontsizeHuge;
 }
 
-.menuItem {
-    @include fontsizeMedium;
+.menuButton {
+  flex-wrap: wrap;
+  background-color: black;
+  height: 110px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 400px;
+  border: 1px solid grey;
+}
+.menuButton:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
+    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
+  transform: scale(1.05);
 }
 
+.menuItemTitle {
+  @include fontsizeRegular;
+  color: white;
+  margin-top: 1px;
+}
+
+.menuItemContainer {
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuItemImage {
+  width: 100px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.productButton {
+  margin-left: 10px;
+  width: 100px;
+  align-items: center;
+  appearance: none;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.productButton:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.productButton:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.productButton:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}

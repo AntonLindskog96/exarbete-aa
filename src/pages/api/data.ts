@@ -2,46 +2,57 @@ export const burgers = [
     {
       "id": 1,
       "title": "Classic Cheeseburger",
+      "price": 65,
+      "image": "https://images.deliveryhero.io/image/fd-op/Products/11102707.jpg??width=400"
+      
 
     },
     {
       "id": 2,
-      "title": "BBQ Bacon Burger",
+      "title": "BBQ Bacon Burger Baby",
+      "price": 65,
+      "image": "https://images.deliveryhero.io/image/fd-op/Products/4970114.jpg??width=400"
+  
     },
     {
       "id": 3,
-      "title": "Mushroom Swiss Burger",
+      "title": "Truffleburger",
+      "price": 65,
+      "image": "https://images.deliveryhero.io/image/fd-op/Products/4970113.jpg??width=400"
     },
     {
       "id": 4,
-      "title": "Spicy Jalapeño Burger",
+      "title": "Chicken",
+      "price": 65,
+      "image": "https://images.deliveryhero.io/image/fd-op/Products/4970113.jpg??width=400"
     },
-    {
-      "id": 5,
-      "title": "Veggie Burger",
-    }
   ]
 
   export const beers = [
     {
       "id": 1,
-      "title": "IPA",
+      "title": "Birabärsing 0.5L",
+      "price": 65,
     },
     {
       "id": 2,
-      "title": "Stout",
+      "title": "Bärsika 0.3L",
+      "price": 65,
     },
     {
       "id": 3,
-      "title": "Pale Ale",
+      "title": "Bärtil 0.6L",
+      "price": 65,
     },
     {
       "id": 4,
-      "title": "Wheat Beer",
+      "title": "Ölle 0.4L",
+      "price": 65,
     },
     {
       "id": 5,
-      "title": "Pilsner",
+      "title": "Ölker 0.5L",
+      "price": 55,
     }
   ];
   
