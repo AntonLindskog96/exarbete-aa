@@ -2,8 +2,8 @@ import { NextPage } from "next";
 import styles from "./index.module.scss";
 import { useEffect, useState } from "react";
 import Header from "@/pages/header/header";
-import DeleteSharpIcon from '@mui/icons-material/DeleteSharp';
 import DeleteOutlineSharpIcon from '@mui/icons-material/DeleteOutlineSharp';
+import RemoveSharpIcon from '@mui/icons-material/RemoveSharp';
 import AddIcon from '@mui/icons-material/Add';
 async function getMenu() {
   const res = await fetch("http://localhost:3000/api/products");
@@ -55,12 +55,21 @@ const addToCart = (item: any) => {
     }
 };
 
-const removeFromCart = (index: number) => {
-  const updatedCart = [...cart];
-  updatedCart.splice(index,1);
-  setCart(updatedCart)
-  localStorage.setItem("cartItems", JSON.stringify(updatedCart))
+const removeFromCart = (item: any) => {
 
+  const existingItemIndex = cart.findIndex((cartItem => cartItem.id === item.id));
+
+  if(cart[existingItemIndex].quantity > 1) {
+    const updatedCart = [...cart];
+    updatedCart[existingItemIndex].quantity -= 1;
+    setCart(updatedCart);
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart))
+  } else {
+    const updatedCart = [...cart];
+    updatedCart.splice(existingItemIndex,1);
+    setCart(updatedCart)
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart))
+  }
 }
 
   return (
@@ -116,7 +125,7 @@ const removeFromCart = (index: number) => {
               <p>{item.price}</p>
               <div className={styles.shoppingCartButtons}>
               <button className={styles.removeButton} onClick={() => removeFromCart(item)}>
-               <DeleteOutlineSharpIcon/>
+                {item.quantity === 1 ? <DeleteOutlineSharpIcon/> : <RemoveSharpIcon/>}
               </button>
               <p>({item.quantity})</p>
               <button className={styles.addButton} onClick={() => addToCart(item)}>
