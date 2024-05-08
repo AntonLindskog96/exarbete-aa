@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 async function getMenu() {
   const res = await fetch("http://localhost:3000/api/products");
   const data = await res.json();
+  data.burgers.forEach((item: { isBeer: boolean }) => (item.isBeer = false));
+  data.beers.forEach((item: { isBeer: boolean }) => (item.isBeer = true));
   return data;
 }
 
@@ -27,20 +29,18 @@ const Orders: NextPage = () => {
   }, [selectedCategory]);
 
   useEffect(() => {
-
-    const storedCartItems = localStorage.getItem('cartItems');
+    const storedCartItems = localStorage.getItem("cartItems");
     if (storedCartItems) {
-        setCart(JSON.parse(storedCartItems));
+      setCart(JSON.parse(storedCartItems));
     }
-}, []);
+  }, []);
 
-const addToCart = (item: any) => {
-
+  const addToCart = (item: any) => {
     const updatedCart = [...cart, item];
     setCart(updatedCart);
 
     localStorage.setItem("cartItems", JSON.stringify(updatedCart));
-};
+  };
 
   return (
     <div className={styles.outerContainer}>
@@ -61,7 +61,7 @@ const addToCart = (item: any) => {
           </button>
         </div>
         <ul className={styles.ul}>
-          {menu.map((item, index) => 
+          {menu.map((item, index) => (
             <button
               key={index}
               onClick={() => addToCart(item)}
@@ -73,13 +73,17 @@ const addToCart = (item: any) => {
                   <h2 className={styles.menuItemTitle}>{item.price}Kr</h2>
                 </div>
                 <img
-                  src={item.image}
-                  className={styles.menuItemImage}
+                  src={
+                    selectedCategory === "beers" ? item.imagebeer : item.image
+                  }
+                  className={`${styles.menuItemImage} ${
+                    selectedCategory === "beers" ? styles.imageBeer : ""
+                  }`}
                   alt={item.title}
                 />
               </div>
             </button>
-          )}
+          ))}
         </ul>
       </section>
       <section className={styles.shoppingCartContainer}>
@@ -88,13 +92,16 @@ const addToCart = (item: any) => {
           {cart.map((item) => (
             <li key={item.id} className={styles.cartListItem}>
               <img
-                src={item.image}
-                className={styles.cartItemImage}
+                src={item.isBeer ? item.imagebeer : item.image}
+                className={`${styles.cartItemImage} ${
+                  item.isBeer ? styles.cartItemImageBeer : ""
+                }`}
                 alt={item.title}
               />
+
               <div className={styles.cartContent}>
-              <p className={styles.cartItemPrice}>{item.title}</p>
-              <p className={styles.cartItemPrice}>{item.price}Kr</p>
+                <p className={styles.cartItemPrice}>{item.title}</p>
+                <p className={styles.cartItemPrice}>{item.price}Kr</p>
               </div>
             </li>
           ))}

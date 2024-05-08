@@ -45,28 +45,31 @@ export const burgers = [
       "id": 1,
       "title": "Birabärsing 0.5L",
       "price": 65,
-      "image": "https://product-cdn.systembolaget.se/productimages/40994907/40994907_400.png?q=75&w=2000"
+      "imagebeer": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
     },
     {
       "id": 2,
       "title": "Bärsika 0.3L",
       "price": 65,
-      "image": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
+      "imagebeer": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
     },
     {
       "id": 3,
       "title": "Bärtil 0.6L",
       "price": 65,
+      "imagebeer": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
     },
     {
       "id": 4,
       "title": "Ölle 0.4L",
       "price": 65,
+      "imagebeer": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
     },
     {
       "id": 5,
       "title": "Ölker 0.5L",
       "price": 55,
+      "imagebeer": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
     }
   ];
   

@@ -35,6 +35,7 @@
   border-radius: 5px;
   border: none;
   width: 270px;
+  
 }
 
 .menuButton:hover {
@@ -67,6 +68,7 @@
 
 
 .menuItemContainer {
+  bottom: 0;
   display: flex;
   align-items: center;
   position: relative;
@@ -79,9 +81,17 @@
   width: 200px;
   height: 100%; 
   object-fit: cover;
-
 }
 
+.imageBeer {
+  width: 70px;
+  height: 100%;
+  display: flex;
+  margin-bottom: 50px;
+  margin-top: 15px;
+  
+  object-fit: cover;
+}
 .productButton {
   margin-right: 5px;
   width: 100px;
@@ -154,6 +164,13 @@
     width: 70px;
     height: auto; 
     margin-right: 10px; 
+  }
+
+  .cartItemImageBeer {
+    width: 35px;
+    height: auto; 
+    margin: 10px 35px 0 15px;
+
   }
 
   .cartContent {
