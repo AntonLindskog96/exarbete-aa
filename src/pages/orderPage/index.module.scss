@@ -9,7 +9,6 @@
   display: flex;
   justify-content: space-between; 
   width: 100%; 
-  
 }
 
 .menuContainer {
@@ -20,55 +19,37 @@
   width: 100%;
 }
 
-.shoppingCartContainer {
-  background-color: rgb(24, 22, 22);
-  border-radius: 5%;
-  width: 30%; 
-  margin-top: 100px;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  margin-right: 100px;
-}
-
-.shopping {
-  font-family: "Apple Garamond", sans-serif;
-  color: white;
-  align-self: center;
-}
-
-.listItem {
-  display: flex;
-  align-items: center;
-}
-
-.cartItemImage {
-  width: 70px;
-  height: auto; 
-  margin-right: 10px; 
-}
-
-.ulcart {
-  font-family: "Apple Garamond", sans-serif;
-  color: white;
-  list-style-type: none;
-  padding-left: 10px;
-}
 
 
 .menuTitle {
   @include fontsizeHuge;
+  
 }
+
 
 .menuButton {
   background-color: rgb(24, 22, 22);
-  height: 200px;
+  height: 180px;
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   border: none;
-  width: 300px;
-  padding: auto;
+  width: 270px;
+}
+
+.menuButton:hover {
+  box-shadow: 0 0 8px 4px rgba(70,150,240,0.25) inset, 0 0 8px 4px rgba(70,150,240,0.25);
+  border: 0px solid rgb(33, 38, 44);
+  color: rgba(255,255,255,1);
+}
+
+.menuItemContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
 }
 
 
@@ -76,25 +57,33 @@
   font-family: "JetBrains Mono", monospace;
   @include fontsizeRegular;
   color: white;
-
 }
 
+.menuItemPrice {
+  font-family: "JetBrains Mono", monospace;
+  @include fontsizeRegular;
+  color: white;
+}
+
+
 .menuItemContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
   border-radius: 5px;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .menuItemImage {
   width: 200px;
   height: 100%; 
-  border-radius: 5px;
   object-fit: cover;
+
 }
 
 .productButton {
-  margin-left: 10px;
+  margin-right: 5px;
   width: 100px;
   align-items: center;
   appearance: none;
@@ -103,9 +92,9 @@
   border-width: 0;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #36395a;
-  cursor: pointer;
+    box-sizing: border-box;
+    color: #36395a;
+    cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono", monospace;
   height: 35px;
@@ -129,16 +118,57 @@
 
 .productButton:focus {
   box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
 }
 
 .productButton:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+  box-shadow: rgba(68, 12, 189, 0.4) 0 4px 8px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -1px 0 inset;
-  transform: translateY(-1px);
-}
+    transform: translateY(-1px);
+  }
 
-.productButton:active {
-  box-shadow: #d6d6e7 0 3px 7px inset;
-  transform: translateY(2px);
+  
+  .shoppingCartContainer {
+    background-color: rgb(24, 22, 22);
+    border-radius: 5%;
+    width: 30%; 
+    margin-top: 100px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+  }
+  
+  .shopping {
+    font-family: "Apple Garamond", sans-serif;
+    color: white;
+    align-self: center;
+  }
+  
+  .cartListItem {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cartItemImage {
+    width: 70px;
+    height: auto; 
+    margin-right: 10px; 
+  }
+
+  .cartContent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    margin-right: 20px;
+  }
+.cartItemPrice {
+  @include fontsizeSmall;
 }
+  
+  .ulcart {
+    font-family: "Apple Garamond", sans-serif;
+    color: white;
+    list-style-type: none;
+    padding-left: 10px;
+  }

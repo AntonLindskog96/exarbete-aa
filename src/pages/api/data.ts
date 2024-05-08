@@ -1,7 +1,7 @@
 export const burgers = [
     {
       "id": 1,
-      "title": "Classic Cheeseburger",
+      "title": "Cheesy Cheeser",
       "price": 65,
       "image": "https://misteryork-images.futureordering.com/images/product/86/FFAD02870D497CD8FBD8315A4409CD34D/326x303.png"
       
@@ -9,22 +9,34 @@ export const burgers = [
     },
     {
       "id": 2,
-      "title": "BBQ Bacon Burger Baby",
-      "price": 65,
+      "title": "Håll käften burgaren",
+      "price": 85,
       "image": "https://misteryork-images.futureordering.com/images/product/456/F95715B2B2D3A0118488701E892023ACD/326x303.png"
   
     },
     {
       "id": 3,
-      "title": "Truffleburger",
-      "price": 65,
+      "title": "Kristianstad-krutet",
+      "price": 85,
       "image": "https://misteryork-images.futureordering.com/images/product/181/835C33864BF262A0FC36E182E5A6FE58D/326x303.png"
     },
     {
       "id": 4,
-      "title": "Chicken",
-      "price": 65,
+      "title": "Den där",
+      "price": 79,
       "image": "https://misteryork-images.futureordering.com/images/product/2/47C79081CCF7929E82384020B95CD554D/326x303.png"
+    },
+    {
+      "id": 5,
+      "title": "Den goda",
+      "price": 79,
+      "image": "https://misteryork-images.futureordering.com/images/product/24/B218500BE0BF23D9AE27F3706CED7BF9D/326x303.png"
+    },
+    {
+      "id": 6,
+      "title": "Honey Honey",
+      "price": 82,
+      "image": "https://misteryork-images.futureordering.com/images/product/18/A5D480CAD1FAAC78913A7FB583261145D/326x303.png"
     },
   ]
 
@@ -33,11 +45,13 @@ export const burgers = [
       "id": 1,
       "title": "Birabärsing 0.5L",
       "price": 65,
+      "image": "https://product-cdn.systembolaget.se/productimages/40994907/40994907_400.png?q=75&w=2000"
     },
     {
       "id": 2,
       "title": "Bärsika 0.3L",
       "price": 65,
+      "image": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
     },
     {
       "id": 3,

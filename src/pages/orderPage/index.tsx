@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import styles from "./index.module.scss";
 import { useEffect, useState } from "react";
-import Header from "@/pages/header/header";
 
 async function getMenu() {
   const res = await fetch("http://localhost:3000/api/products");
@@ -62,7 +61,7 @@ const addToCart = (item: any) => {
           </button>
         </div>
         <ul className={styles.ul}>
-          {menu.map((item, index) => (
+          {menu.map((item, index) => 
             <button
               key={index}
               onClick={() => addToCart(item)}
@@ -71,6 +70,7 @@ const addToCart = (item: any) => {
               <div className={styles.menuItemContainer}>
                 <div className={styles.menuItemContent}>
                   <h2 className={styles.menuItemTitle}>{item.title}</h2>
+                  <h2 className={styles.menuItemTitle}>{item.price}Kr</h2>
                 </div>
                 <img
                   src={item.image}
@@ -79,21 +79,23 @@ const addToCart = (item: any) => {
                 />
               </div>
             </button>
-          ))}
+          )}
         </ul>
       </section>
       <section className={styles.shoppingCartContainer}>
         <h2 className={styles.shopping}>Min Beställning</h2>
         <ul className={styles.ulcart}>
           {cart.map((item) => (
-            <li key={item.id} className={styles.listItem}>
+            <li key={item.id} className={styles.cartListItem}>
               <img
                 src={item.image}
                 className={styles.cartItemImage}
                 alt={item.title}
               />
-              <p>{item.title}</p>
-              <p>{item.price}</p>
+              <div className={styles.cartContent}>
+              <p className={styles.cartItemPrice}>{item.title}</p>
+              <p className={styles.cartItemPrice}>{item.price}Kr</p>
+              </div>
             </li>
           ))}
         </ul>
