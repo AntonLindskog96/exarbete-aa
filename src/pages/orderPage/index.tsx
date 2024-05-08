@@ -2,7 +2,9 @@ import { NextPage } from "next";
 import styles from "./index.module.scss";
 import { useEffect, useState } from "react";
 import Header from "@/pages/header/header";
-
+import DeleteSharpIcon from '@mui/icons-material/DeleteSharp';
+import DeleteOutlineSharpIcon from '@mui/icons-material/DeleteOutlineSharp';
+import AddIcon from '@mui/icons-material/Add';
 async function getMenu() {
   const res = await fetch("http://localhost:3000/api/products");
   const data = await res.json();
@@ -42,6 +44,14 @@ const addToCart = (item: any) => {
 
     localStorage.setItem("cartItems", JSON.stringify(updatedCart));
 };
+
+const removeFromCart = (index: number) => {
+  const updatedCart = [...cart];
+  updatedCart.splice(index,1);
+  setCart(updatedCart)
+  localStorage.setItem("cartItems", JSON.stringify(updatedCart))
+
+}
 
   return (
     <div className={styles.outerContainer}>
@@ -94,6 +104,12 @@ const addToCart = (item: any) => {
               />
               <p>{item.title}</p>
               <p>{item.price}</p>
+              <button className={styles.removeButton} onClick={() => removeFromCart(item)}>
+               <DeleteOutlineSharpIcon/>
+              </button>
+              <button className={styles.addButton} onClick={() => addToCart(item)}>
+                <AddIcon/>
+              </button>
             </li>
           ))}
         </ul>
