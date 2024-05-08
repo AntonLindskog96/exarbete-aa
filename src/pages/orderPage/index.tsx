@@ -39,10 +39,20 @@ const Orders: NextPage = () => {
 
 const addToCart = (item: any) => {
 
-    const updatedCart = [...cart, item];
-    setCart(updatedCart);
+    const existingItemIndex = cart.findIndex(cartItem => cartItem.id === item.id);
 
-    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+    if(existingItemIndex !== -1) {
+
+      const updatedCart = [...cart];
+      updatedCart[existingItemIndex].quantity += 1;
+      setCart(updatedCart);
+      localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+    }
+    else {
+      const updatedCart = [...cart, {...item,quantity:1}];
+      setCart(updatedCart);
+      localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+    }
 };
 
 const removeFromCart = (index: number) => {
@@ -104,12 +114,15 @@ const removeFromCart = (index: number) => {
               />
               <p>{item.title}</p>
               <p>{item.price}</p>
+              <div className={styles.shoppingCartButtons}>
               <button className={styles.removeButton} onClick={() => removeFromCart(item)}>
                <DeleteOutlineSharpIcon/>
               </button>
+              <p>({item.quantity})</p>
               <button className={styles.addButton} onClick={() => addToCart(item)}>
                 <AddIcon/>
               </button>
+              </div>
             </li>
           ))}
         </ul>

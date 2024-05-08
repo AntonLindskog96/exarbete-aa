@@ -71,6 +71,12 @@
   padding: auto;
 }
 
+.shoppingCartButtons {
+
+  display: flex;
+  align-items: center;
+}
+
 .removeButton {
 
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
