@@ -253,6 +253,8 @@
   }
 .cartItemPrice {
   @include fontsizeSmall;
+  line-height: 100%;
+
 }
   
   .ulcart {

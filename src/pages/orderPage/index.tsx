@@ -53,6 +53,13 @@ const Orders: NextPage = () => {
             setCart(updatedCart);
             localStorage.setItem("cartItems", JSON.stringify(updatedCart));
         }
+
+        if (item.isBeer) {
+            console.log(`${item.title} is added to the cart`);
+        }
+        if (item.isBurger) {
+            console.log(`${item.title} is added to the cart`);
+        }
     };
 
     const removeFromCart = (item: any) => {
