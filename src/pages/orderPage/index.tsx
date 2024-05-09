@@ -9,8 +9,8 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 async function getMenu() {
     const res = await fetch("http://localhost:3000/api/products");
     const data = await res.json();
-    data.burgers.forEach((item: { isBeer: boolean }) => (item.isBeer = false));
-    data.beers.forEach((item: { isBeer: boolean }) => (item.isBeer = true));
+    data.burgers.forEach((item: { id: string | number}) => (item.id = ("burger_" + item.id)));
+    data.beers.forEach((item: { id: string | number}) => (item.id = ("beer_" + item.id)));
     return data;
 }
 
@@ -87,14 +87,12 @@ const Orders: NextPage = () => {
                     <button
                         className={styles.productButton}
                         onClick={() => setSelectedCategory("burgers")}
-                    >
-                        Burgare
+                    >Burgare
                     </button>
                     <button
                         className={styles.productButton}
                         onClick={() => setSelectedCategory("beers")}
-                    >
-                        Öl
+                    >Öl
                     </button>
                 </div>
                 <ul className={styles.ul}>
@@ -111,7 +109,7 @@ const Orders: NextPage = () => {
                                 </div>
                                 <img
                                     src={
-                                        selectedCategory === "beers" ? item.imagebeer : item.image
+                                        selectedCategory === "beers" ? item.imagebeer : item.imageburger
                                     }
                                     className={`${styles.menuItemImage} ${
                                         selectedCategory === "beers" ? styles.imageBeer : ""
@@ -132,9 +130,9 @@ const Orders: NextPage = () => {
                 {cart.map((item) => (
                     <li key={item.id} className={styles.cartListItem}>
                         <img
-                            src={item.isBeer ? item.imagebeer : item.image}
+                            src={item.imagebeer ? item.imagebeer : item.imageburger}
                             className={`${styles.cartItemImage} ${
-                                item.isBeer ? styles.cartItemImageBeer : ""
+                                item.imagebeer ? styles.cartItemImageBeer : ""
                             }`}
                             alt={item.title}
                         />
