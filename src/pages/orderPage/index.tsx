@@ -5,6 +5,7 @@ import Header from "@/pages/header/header";
 import DeleteOutlineSharpIcon from '@mui/icons-material/DeleteOutlineSharp';
 import RemoveSharpIcon from '@mui/icons-material/RemoveSharp';
 import AddIcon from '@mui/icons-material/Add';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 async function getMenu() {
   const res = await fetch("http://localhost:3000/api/products");
   const data = await res.json();
@@ -113,27 +114,31 @@ const removeFromCart = (item: any) => {
       </section>
       <section className={styles.shoppingCartContainer}>
         <h2 className={styles.shopping}>Min Beställning</h2>
-        <ul className={styles.ulcart}>
-          {cart.map((item) => (
+        <div className={styles.shoppingCartSection}>
+        <ShoppingCartOutlinedIcon className={styles.shoppingCart}/>
+        <p className={styles.quantityCounter}>{cart.reduce((total, item) => total + item.quantity, 0)}</p>
+        </div>
+        {cart.map((item) => (
             <li key={item.id} className={styles.listItem}>
               <img
-                src={item.image}
-                className={styles.cartItemImage}
-                alt={item.title}
+                  src={item.image}
+                  className={styles.cartItemImage}
+                  alt={item.title}
               />
               <p>{item.title}</p>
               <p>{item.price}</p>
               <div className={styles.shoppingCartButtons}>
-              <button className={styles.removeButton} onClick={() => removeFromCart(item)}>
-                {item.quantity === 1 ? <DeleteOutlineSharpIcon/> : <RemoveSharpIcon/>}
-              </button>
-              <p>({item.quantity})</p>
-              <button className={styles.addButton} onClick={() => addToCart(item)}>
-                <AddIcon/>
-              </button>
+                <button className={styles.removeButton} onClick={() => removeFromCart(item)}>
+                  {item.quantity === 1 ? <DeleteOutlineSharpIcon/> : <RemoveSharpIcon/>}
+                </button>
+                <p>({item.quantity})</p>
+                <button className={styles.addButton} onClick={() => addToCart(item)}>
+                  <AddIcon/>
+                </button>
               </div>
             </li>
-          ))}
+        ))}
+        <ul className={styles.ulcart}>
         </ul>
       </section>
     </div>

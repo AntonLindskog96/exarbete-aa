@@ -23,7 +23,7 @@
 .shoppingCartContainer {
   background-color: rgb(24, 22, 22);
   border-radius: 5%;
-  width: 30%; 
+  width: 20%;
   margin-top: 100px;
   border: none;
   display: flex;
@@ -78,6 +78,26 @@
   background-color: #b63333;
   border-radius: 10px;
   height: 35px;
+}
+
+.shoppingCartSection {
+  position: absolute;
+  display: flex;
+  margin-left: 250px;
+  margin-top: -4px;
+  align-items: flex-end;
+}
+
+.quantityCounter {
+
+  color:white;
+  font-weight: bold;
+
+}
+
+.shoppingCart {
+
+  color:white;
 }
 
 .removeButton {
