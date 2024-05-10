@@ -54,6 +54,11 @@
 
 }
 
+.totalPriceSection {
+  color: white;
+  margin-left: 10px;
+}
+
 
 .checkoutButtonSection {
 
@@ -103,6 +108,7 @@
 .cartListItem {
   display: flex;
   align-items: center;
+  margin-left: 10px;
 }
 
 .cartItemImage {
@@ -123,10 +129,18 @@
   justify-content: space-between;
   width: 100%;
   margin-right: 20px;
+
+}
+
+.borderline {
+
+  border-bottom: 1px solid;
+  color: #605858;
 }
 
 .cartItemPrice {
   @include fontsizeSmall;
   line-height: 100%;
+  color: white;
 
 }

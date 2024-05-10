@@ -66,36 +66,38 @@ const CheckoutPage = () => {
                     Meny<ArrowBackIosIcon sx={{ fontSize: 30 }}/>
                 </button>
                 <h1 className={styles.menuTitle}>Min beställning</h1>
-                <ul className={styles.ul}>
-                </ul>
             </section>
             <div className={styles.checkoutButtonSection}>
                     <button className={styles.checkoutButton}>Beställ & betala {totalPrice} SEK</button>
             </div>
             <section className={styles.shoppingCartContainer}>
                 <h2 className={styles.shopping}>Min Beställning</h2>
+                <div className={styles.borderline}>
+                </div>
                 <div className={styles.shoppingCartSection}>
                     <ShoppingCartOutlinedIcon className={styles.shoppingCart}/>
                     <p className={styles.quantityCounter}>{cart.reduce((total, item) => total + item.quantity, 0)}</p>
                 </div>
                 {cart.map((item) => (
                     <li key={item.id} className={styles.cartListItem}>
-                        <img
-                            src={item.imagebeer ? item.imagebeer : item.imageburger}
-                            className={`${styles.cartItemImage} ${
-                                item.imagebeer ? styles.cartItemImageBeer : ""
-                            }`}
-                            alt={item.title}
-                        />
+                        {/*<img*/}
+                        {/*    src={item.imagebeer ? item.imagebeer : item.imageburger}*/}
+                        {/*    className={`${styles.cartItemImage} ${*/}
+                        {/*        item.imagebeer ? styles.cartItemImageBeer : ""*/}
+                        {/*    }`}*/}
+                        {/*    alt={item.title}*/}
+                        {/*/>*/}
                         <div className={styles.cartContent}>
-                            <p className={styles.cartItemPrice}>{item.title}</p>
+                            <p className={styles.cartItemPrice}>+ {item.title}</p>
                             <p className={styles.cartItemPrice}>{item.price}Kr</p>
                         </div>
-                        <p>Summa totalt: ${totalPrice}</p>
                     </li>
                 ))}
-                <ul className={styles.ulcart}>
-                </ul>
+                <div className={styles.borderline}>
+                </div>
+                <div className={styles.totalPriceSection} >
+                    <p>Summa totalt: {totalPrice} SEK</p>
+                </div>
             </section>
         </div>
     );
