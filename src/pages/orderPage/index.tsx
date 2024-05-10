@@ -18,6 +18,7 @@ const Orders: NextPage = () => {
     const [menu, setMenu] = useState<any[]>([]);
     const [selectedCategory, setSelectedCategory] = useState<string>("burgers");
     const [cart, setCart] = useState<any[]>([]);
+    const [totalPrice,setTotalPrice] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -48,10 +49,12 @@ const Orders: NextPage = () => {
             updatedCart[existingItemIndex].quantity += 1;
             setCart(updatedCart);
             localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+            setTotalPrice(totalPrice + item.price)
         } else {
             const updatedCart = [...cart, {...item, quantity: 1}];
             setCart(updatedCart);
             localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+            setTotalPrice(totalPrice + item.price);
         }
 
         if (item.isBeer) {
@@ -71,11 +74,13 @@ const Orders: NextPage = () => {
             updatedCart[existingItemIndex].quantity -= 1;
             setCart(updatedCart);
             localStorage.setItem("cartItems", JSON.stringify(updatedCart))
+            setTotalPrice(totalPrice - item.price);
         } else {
             const updatedCart = [...cart];
             updatedCart.splice(existingItemIndex, 1);
             setCart(updatedCart)
             localStorage.setItem("cartItems", JSON.stringify(updatedCart))
+            setTotalPrice(totalPrice - item.price);
         }
     }
 
@@ -121,6 +126,10 @@ const Orders: NextPage = () => {
                     ))}
                 </ul>
             </section>
+            <div className={styles.checkoutButtonSection}>
+                <button className={styles.checkoutButton}>Till Betalning {totalPrice} SEK</button>
+                <p>Total Price: ${totalPrice}</p>
+            </div>
             <section className={styles.shoppingCartContainer}>
                 <h2 className={styles.shopping}>Min Beställning</h2>
                 <div className={styles.shoppingCartSection}>
