@@ -143,12 +143,14 @@ const Orders: NextPage = () => {
                     ))}
                 </ul>
             </section>
+            {cart.length > 0 && (
             <div className={styles.checkoutButtonSection}>
                 <Link href="/checkoutPage">
                 <button className={styles.checkoutButton}>Till Betalning {totalPrice} SEK</button>
                 </Link>
                 <p>Total Price: ${totalPrice}</p>
             </div>
+            )}
             <section className={styles.shoppingCartContainer}>
                 <h2 className={styles.shopping}>Min Beställning</h2>
                 <div className={styles.shoppingCartSection}>
