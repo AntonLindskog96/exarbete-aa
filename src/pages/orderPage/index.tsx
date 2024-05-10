@@ -1,14 +1,13 @@
 import {NextPage} from "next";
 import styles from "./index.module.scss";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import DeleteOutlineSharpIcon from '@mui/icons-material/DeleteOutlineSharp';
 import RemoveSharpIcon from '@mui/icons-material/RemoveSharp';
 import AddIcon from '@mui/icons-material/Add';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import Header from "@/pages/header/header";
-import {useIntersection} from "next/dist/client/use-intersection";
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
+import Link from "next/link";
 
 async function getMenu() {
     const res = await fetch("http://localhost:3000/api/products");
@@ -145,7 +144,9 @@ const Orders: NextPage = () => {
                 </ul>
             </section>
             <div className={styles.checkoutButtonSection}>
+                <Link href="/checkoutPage">
                 <button className={styles.checkoutButton}>Till Betalning {totalPrice} SEK</button>
+                </Link>
                 <p>Total Price: ${totalPrice}</p>
             </div>
             <section className={styles.shoppingCartContainer}>
