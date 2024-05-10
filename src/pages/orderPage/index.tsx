@@ -5,6 +5,10 @@ import DeleteOutlineSharpIcon from '@mui/icons-material/DeleteOutlineSharp';
 import RemoveSharpIcon from '@mui/icons-material/RemoveSharp';
 import AddIcon from '@mui/icons-material/Add';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import Header from "@/pages/header/header";
+import {useIntersection} from "next/dist/client/use-intersection";
+import { useRouter } from 'next/router'
 
 async function getMenu() {
     const res = await fetch("http://localhost:3000/api/products");
@@ -19,6 +23,7 @@ const Orders: NextPage = () => {
     const [selectedCategory, setSelectedCategory] = useState<string>("burgers");
     const [cart, setCart] = useState<any[]>([]);
     const [totalPrice,setTotalPrice] = useState(0);
+    const router = useRouter();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -84,9 +89,13 @@ const Orders: NextPage = () => {
         }
     }
 
+
     return (
         <div className={styles.outerContainer}>
             <section className={styles.menuContainer}>
+                <button className={styles.navigateButton} onClick={() => router.back()}>
+                    Gå tillbaka<ArrowBackIosIcon sx={{ fontSize: 30 }}/>
+                </button>
                 <h1 className={styles.menuTitle}>Meny</h1>
                 <div className={styles.buttonContainer}>
                     <button

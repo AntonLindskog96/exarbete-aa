@@ -124,10 +124,26 @@
 
   position: absolute;
   left: 79%;
-
-
-
 }
+
+.navigateButton {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: transparent;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+.navigateButton:hover {
+  background-color: transparent;
+}
+
+
 
 .shoppingCart {
 
