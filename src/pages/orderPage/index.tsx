@@ -43,7 +43,20 @@ const Orders: NextPage = () => {
         if (storedCartItems) {
             setCart(JSON.parse(storedCartItems));
         }
+
+        const storedTotalPrice = localStorage.getItem("totalPrice");
+        if (storedTotalPrice) {
+            setTotalPrice(parseFloat(storedTotalPrice));
+        }
+
     }, []);
+
+    useEffect(() => {
+
+        const newTotalPrice = cart.reduce((total,item) => total + (item.quantity * item.price), 0);
+        setTotalPrice(newTotalPrice);
+        localStorage.setItem("totalPrice", newTotalPrice.toString());
+    }, [cart]);
 
     const addToCart = (item: any) => {
         const existingItemIndex = cart.findIndex(cartItem => cartItem.id === item.id);
@@ -54,12 +67,10 @@ const Orders: NextPage = () => {
             updatedCart[existingItemIndex].quantity += 1;
             setCart(updatedCart);
             localStorage.setItem("cartItems", JSON.stringify(updatedCart));
-            setTotalPrice(totalPrice + item.price)
         } else {
             const updatedCart = [...cart, {...item, quantity: 1}];
             setCart(updatedCart);
             localStorage.setItem("cartItems", JSON.stringify(updatedCart));
-            setTotalPrice(totalPrice + item.price);
         }
 
         if (item.isBeer) {
@@ -79,13 +90,11 @@ const Orders: NextPage = () => {
             updatedCart[existingItemIndex].quantity -= 1;
             setCart(updatedCart);
             localStorage.setItem("cartItems", JSON.stringify(updatedCart))
-            setTotalPrice(totalPrice - item.price);
         } else {
             const updatedCart = [...cart];
             updatedCart.splice(existingItemIndex, 1);
             setCart(updatedCart)
             localStorage.setItem("cartItems", JSON.stringify(updatedCart))
-            setTotalPrice(totalPrice - item.price);
         }
     }
 
