@@ -1,6 +1,6 @@
 import React from 'react'
 import homeIcon from "@/assets/images/home-icon.png";
-import styles from "@/pages/dashboard/index.module.scss";
+import styles from "@/pages/header/header.module.scss";
 
 const Header = () => {
     return (

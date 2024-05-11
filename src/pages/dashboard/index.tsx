@@ -7,12 +7,13 @@ import burgerPicture from "@/assets/images/burger-picture.webp";
 
 const StartPage = () => {
 
-
     return (
         <motion.div>
-            <Header/>
             <div className={styles.headerContainer}>
+                <Header/>
                 <div className={styles.mainInfoPage}>
+
+                    {/*<img src={burgerPicture.src} alt="icon" className={styles.burgerPicture}/>*/}
                     <motion.div
                         initial={{opacity: 0}}
                         animate={{opacity: 1}}
@@ -43,18 +44,15 @@ const StartPage = () => {
                             <li>Göteborg</li>
                             <li>Åstorp</li>
                             <li>Ystad</li>
-                            <li>Kristiandstad</li>
+                            <li>Kristianstad</li>
                             <li>Skåne</li>
                             <li>Göteborg</li>
                             <li>Åstorp</li>
                             <li>Ystad</li>
-                            <li>Kristiandstad</li>
+                            <li>Kristianstad</li>
                             <li>Skåne</li>
                         </ul>
                     </motion.div>
-                    <div className={styles.contentPicture}>
-                        <img src={burgerPicture.src} alt="icon" className={styles.burgerPicture}/>
-                    </div>
                 </div>
             </div>
         </motion.div>
