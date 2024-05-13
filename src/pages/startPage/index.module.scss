@@ -1,6 +1,9 @@
+@import "../../styles/_variables";
+@import "../../styles/_typography";
+
 .headerContainer, .getStarted {
-  color: #F4DFC8;
-  font-family: 'Apple Garamond', sans-serif
+  color: $primaryTextColor;
+  font-family: $example1font
 }
 
 .headerContainer h1 {
@@ -9,7 +12,7 @@
 }
 
 .headerContainer h2 {
-  font-size: 25px;
+  @include fontsizeMedium;
   margin-top: -40px;
 }
 
@@ -20,9 +23,6 @@
   margin-top: -200px;
 }
 
-.iconContent {
-
-}
 
 .buttonContent {
   margin: auto;
@@ -34,28 +34,28 @@
 }
 
 .orderButton {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
-  color: white;
+  font-family: $example1font;
+  background-color: $buttonColor;
+  color: $primaryTextColor;
   padding: 15px 20px;
   border: none;
-  border-radius: 25px;
+  border-radius: $radius-tier-1;
   cursor: pointer;
-  font-size: 18px;
+  font-size: $base;
   margin-top: 5px;
   width: 100px;
 }
 
 .loginButton {
 
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
-  color: white;
+  font-family: $example1font;
+  background-color: $buttonColor;
+  color: $primaryTextColor;
   padding: 15px 5px;
   border: none;
-  border-radius: 25px;
+  border-radius: $radius-tier-1;
   cursor: pointer;
-  font-size: 18px;
+  font-size: $base;
   margin-top: 5px;
   width: 100px;
 
@@ -65,25 +65,25 @@
 
 .orderButton:hover {
   background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+  border: 1px solid $buttonColor;
+  color: $buttonColor;
 }
 
 .loginButton:hover {
   background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+  border: 1px solid $buttonColor;
+  color: $buttonColor;
 }
 
 .button {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
-  color: white;
+  font-family: $example1font;
+  background-color: $buttonColor;
+  color: $primaryTextColor;
   padding: 15px 25px;
   border: none;
-  border-radius: 25px;
+  border-radius: $radius-tier-1;
   cursor: pointer;
-  font-size: 18px;
+  font-size: $base;
   margin-top: 5px;
   width: 350px;
 }
@@ -91,20 +91,20 @@
 
 .button:hover {
   background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+  border: 1px solid $buttonColor;
+  color:$buttonColor;
 }
 
 .headerButton:hover {
   background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+  border: 1px solid $buttonColor;
+  color: $buttonColor;
 }
 
 .loginButton:hover {
   background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+  border: 1px solid $buttonColor;
+  color: $buttonColor;
 }
 
 .scrollTextContainer {

@@ -1,8 +1,16 @@
 /* Boilerplate variables */
 
 /* COLORS */
-$primaryTextColor: #222;
-$primaryBg: #ccc;
+$primaryTextColor: #FFFFFF;
+$secondaryTextColor: black;
+$primaryBg: #d9d9d9;
+$secondaryBg: #242323;
+$buttonColor: #bc5050;
+
+/* FONT FAMILYS */
+$example1font: "JetBrains Mono", monospace;
+$example2font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+
 
 $Red: #b63333;
 $bacon: #FBE9E9;
@@ -42,9 +50,9 @@ $gap-nano: calc($baseline / 4);
 
 /* EFFECTS */
 
-$radius-tier-1: 8px;
-$radius-tier-2: 4px;
-$radius-tier-3: 2px;
+$radius-tier-1: 20px;
+$radius-tier-2: 14px;
+$radius-tier-3: 10px;
 
 $shadow-sml:
   0px 0px 1.2px rgba(0, 0, 0, 0.025),

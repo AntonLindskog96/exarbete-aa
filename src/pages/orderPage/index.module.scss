@@ -12,16 +12,15 @@
 }
 
 .menuContainer {
-  font-family: "Apple Garamond", sans-serif;
-  color: $bacon;
+  font-family: $example1font;
+  color: $secondaryTextColor;
   flex-direction: column;
   padding-left: 40px;
   width: 100%;
 }
 
 
-.shoppingCartContainer {
-  background-color: rgb(24, 22, 22);
+.shoppingCartContainer {  
   border-radius: 5%;
   width: 25%;
   margin-top: 100px;
@@ -44,8 +43,8 @@
 }
 
 .ulcart {
-  font-family: "Apple Garamond", sans-serif;
-  color: white;
+  font-family: $example1font;
+  color: $secondaryTextColor;
   list-style-type: none;
   padding-left: 10px;
 }
@@ -54,12 +53,14 @@
 
 .menuTitle {
   @include fontsizeHuge;
+  color: $secondaryTextColor;
+
   
 }
 
 
 .menuButton {
-  background-color: rgb(24, 22, 22);
+  background: linear-gradient(-0deg, $primaryBg 20%, rgb(134, 134, 134) 90%);
   height: 180px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -70,7 +71,7 @@
 }
 
 .menuButton:hover {
-  box-shadow: 0 0 8px 4px rgba(70,150,240,0.25) inset, 0 0 8px 4px rgba(70,150,240,0.25);
+  box-shadow: 0 0 8px 4px rgba(90, 90, 90, 0.25) inset, 0 0 8px 4px rgba(70,150,240,0.25);
   border: 0px solid rgb(33, 38, 44);
   color: rgba(255,255,255,1);
 }
@@ -84,14 +85,7 @@
   width: 100%; 
 }
 
-.shoppingCartButtons {
-  display: flex;
-  align-items: center;
-  background-color: #b63333;
-  border-radius: 10px;
-  height: 35px;
-  margin-right: 10px;
-}
+
 
 .shoppingCartSection {
   justify-content: flex-end; 
@@ -105,28 +99,29 @@
 }
 
 .quantityCounter {
-  color:white;
+  font-family: $example1font;
+  color:$secondaryTextColor;
   font-weight: bold;
 }
 
 .checkoutButton {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background-color: #b63333;
-  color: white;
+  font-family: $example1font;
+  background-color: $buttonColor;
+  color: $primaryTextColor;
   padding: 15px 25px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: $base;
   width: 100%;
   margin-bottom: 10px;
 }
 
 
 .navigateButton {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: $example1font;
   background-color: transparent;
-  color: white;
+  color: $secondaryTextColor;
   border: none;
   margin-top: 10px;
   cursor: pointer;
@@ -143,42 +138,53 @@
 
 
 .shoppingCart {
-  color:white;
+  color:$secondaryTextColor;
+  
+}
+
+.shoppingCartButtons {
+  display: flex;
+  align-items: center;
+  background-color: $buttonColor;
+  border-radius: 10px;
+  height: 35px;
+  margin-right: 10px;
+  color: $primaryTextColor;
+  font-size: 10px;
 }
 
 .removeButton {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
+  font-family: $example1font;
+  background-color: $buttonColor;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: white;
+  color: $primaryTextColor;
   margin: auto;
-
-
 }
 
+
 .addButton {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
+  font-family: $example1font;
+  background-color: $buttonColor;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: white;
+  color: $primaryTextColor;
   margin: auto;
 }
 
 
 .menuItemTitle {
-  font-family: "JetBrains Mono", monospace;
+  font-family: $example1font;
   @include fontsizeRegular;
-  color: white;
+  color: $secondaryTextColor;
 }
 
 .menuItemPrice {
-  font-family: "JetBrains Mono", monospace;
+  font-family: $example1font;
   @include fontsizeRegular;
-  color: white;
+  color: $secondaryTextColor;
 }
 
 
@@ -218,10 +224,10 @@
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
     box-sizing: border-box;
-    color: #36395a;
+    color: $secondaryTextColor;
     cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono", monospace;
+  font-family: $example1font;
   height: 35px;
   justify-content: center;
   line-height: 1;
@@ -238,7 +244,7 @@
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow, transform;
-  font-size: 18px;
+  font-size: $base;
 }
 
 .productButton:focus {
@@ -256,14 +262,16 @@
 
   
   .shopping {
-    font-family: "Apple Garamond", sans-serif;
-    color: white;
+    font-family: $example1font;
+    color: $secondaryTextColor;
     align-self: center;
+    width: 100%;
   }
   
   .cartListItem {
     display: flex;
     align-items: center;
+    font-family: $example1font;
   }
   
   .cartItemImage {
@@ -280,20 +288,18 @@
   }
 
   .cartContent {
-    display: flex;
-    justify-content: space-between;
     width: 100%; 
-    margin-right: 20px;
+    margin-right: 25px;
   }
+  
 .cartItemPrice {
-  @include fontsizeSmall;
-  line-height: 100%;
-
+  display: flex;
+  font-size: 10px;
 }
   
   .ulcart {
-    font-family: "Apple Garamond", sans-serif;
-    color: white;
+    font-family: $example1font;
+    color: $secondaryTextColor;
     list-style-type: none;
     padding-left: 10px;
   }
