@@ -19,24 +19,25 @@
 
 .mainInfoPage {
 
+  margin-left: 100px;
 }
 
 
 
 .contentPicture {
 
-    height: auto;
+
     z-index: 10;
-    bottom: 20%;
-    left: 40%;
+    bottom: 5%;
+    left:-1%;
     position: absolute;
 
 
 }
 
 .burgerPicture {
-  max-width: fit-content;
-  height: 450px;
+  width: 1800px;
+  height: 1000px;
 }
 
 

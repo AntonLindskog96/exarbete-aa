@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import styles from './index.module.scss';
 import Link from 'next/link';
 import Header from "@/pages/header/header";
-import burgerPicture from "@/assets/images/burger-picture.webp";
+import burgerPicture from "@/assets/images/burger-picture.png";
 
 const StartPage = () => {
 
@@ -12,8 +12,6 @@ const StartPage = () => {
             <div className={styles.headerContainer}>
                 <Header/>
                 <div className={styles.mainInfoPage}>
-
-                    {/*<img src={burgerPicture.src} alt="icon" className={styles.burgerPicture}/>*/}
                     <motion.div
                         initial={{opacity: 0}}
                         animate={{opacity: 1}}
@@ -32,7 +30,6 @@ const StartPage = () => {
                         <Link href="/orderPage">
                             <button className={styles.button}>Beställ</button>
                         </Link>
-
                     </motion.div>
                     <motion.div
                         initial={{opacity: 0}}
@@ -53,6 +50,9 @@ const StartPage = () => {
                             <li>Skåne</li>
                         </ul>
                     </motion.div>
+                    <div className={styles.contentPicture}>
+                        <img src={burgerPicture.src} alt="icon" className={styles.burgerPicture}/>
+                    </div>
                 </div>
             </div>
         </motion.div>
