@@ -1,14 +1,18 @@
+@import "../../styles/_variables";
+@import "../../styles/_typography";
+
 .headerContainer, .getStarted {
-  color: #F4DFC8;
-  font-family: 'Apple Garamond', sans-serif;
+  color: $primaryTextColor;
+  font-family: $example1font
 }
 
 .headerContainer h1 {
   font-size: 70px;
+  border-bottom: 1px solid;
 }
 
 .headerContainer h2 {
-  font-size: 25px;
+  @include fontsizeMedium;
   margin-top: -40px;
 }
 
@@ -37,8 +41,8 @@
 
 
 .button {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
+  font-family: $example1font;
+  background-color: $buttonColor;
   color: white;
   padding: 15px 25px;
   border: none;
@@ -52,20 +56,20 @@
 
 .button:hover {
   background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+  border: 1px solid $primaryTextColor;
+  color: $buttonColor;
 }
 
 .headerButton:hover {
   background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+  border: 1px solid $buttonColor;
+  color: $buttonColor;
 }
 
 .loginButton:hover {
   background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+  border: 1px solid $buttonColor;
+  color: $buttonColor;
 }
 
 .scrollTextContainer {

@@ -1,3 +1,6 @@
+@import "../../styles/_variables";
+@import "../../styles/_typography";
+
 .headerContent {
   display: flex;
   //flex-direction: row;
@@ -30,7 +33,7 @@
 
 .orderButton {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
+  background-color:  $buttonColor;
   color: white;
   padding: 15px 20px;
   border: none;
@@ -44,7 +47,7 @@
 .loginButton {
 
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
+  background-color:  $buttonColor;
   color: white;
   padding: 15px 5px;
   border: none;
@@ -89,7 +92,7 @@
 }
 
 .nav {
-  background: white;
+  background: $primaryBg;
   top: 0;
   right: 0;
   height: 100%;

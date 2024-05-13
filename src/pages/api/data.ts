@@ -49,25 +49,25 @@ export const beers = [
         "id": 2,
         "title": "Bärsika 0.3L",
         "price": 65,
-        "imagebeer": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/507758/507758_400.png?q=75&w=2000"
     },
     {
         "id": 3,
         "title": "Bärtil 0.6L",
         "price": 65,
-        "imagebeer": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/507840/507840_400.png?q=75&w=2000"
     },
     {
         "id": 4,
         "title": "Ölle 0.4L",
         "price": 65,
-        "imagebeer": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/625317/625317_400.png?q=75&w=2000"
     },
     {
         "id": 5,
         "title": "Ölker 0.5L",
         "price": 55,
-        "imagebeer": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/24578195/24578195_400.png?q=75&w=2000"
     }
 ];
   
