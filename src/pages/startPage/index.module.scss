@@ -1,9 +1,6 @@
-@import "../../styles/_variables";
-@import "../../styles/_typography";
-
 .headerContainer, .getStarted {
-  color: $primaryTextColor;
-  font-family: $example1font
+  color: #F4DFC8;
+  font-family: 'Apple Garamond', sans-serif;
 }
 
 .headerContainer h1 {
@@ -11,82 +8,43 @@
 }
 
 .headerContainer h2 {
-  @include fontsizeMedium;
+  font-size: 25px;
   margin-top: -40px;
 }
 
-.headerContent {
-  display: flex;
-  margin-left: auto;
-  padding: 20px;
-  margin-top: -200px;
-}
 
-.iconContent {
-
-}
-
-.buttonContent {
-  margin: auto;
-}
-
-.icon {
-  width: 150px;
-  height: 150px;
-}
-
-.orderButton {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
-  color: white;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 5px;
-  width: 100px;
-}
-
-.loginButton {
-
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
-  color: white;
-  padding: 15px 5px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 5px;
-  width: 100px;
-
+.mainInfoPage {
 
 }
 
 
-.orderButton:hover {
-  background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+
+.contentPicture {
+
+    height: auto;
+    z-index: 10;
+    bottom: 20%;
+    left: 40%;
+    position: absolute;
+
+
 }
 
-.loginButton:hover {
-  background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+.burgerPicture {
+  max-width: fit-content;
+  height: 450px;
 }
 
 
 .button {
-  font-family: $example1font;
-  background-color: $buttonColor;
-  color: $primaryTextColor;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #b63333;
+  color: white;
   padding: 15px 25px;
   border: none;
-  border-radius: $radius-tier-1;
+  border-radius: 25px;
   cursor: pointer;
-  font-size: $base;
+  font-size: 18px;
   margin-top: 5px;
   width: 350px;
 }
@@ -94,20 +52,20 @@
 
 .button:hover {
   background-color: transparent;
-  border: 1px solid $buttonColor;
-  color:$buttonColor;
+  border: 1px solid #b63333;
+  color: #b63333;
 }
 
 .headerButton:hover {
   background-color: transparent;
-  border: 1px solid $buttonColor;
-  color: $buttonColor;
+  border: 1px solid #b63333;
+  color: #b63333;
 }
 
 .loginButton:hover {
   background-color: transparent;
-  border: 1px solid $buttonColor;
-  color: $buttonColor;
+  border: 1px solid #b63333;
+  color: #b63333;
 }
 
 .scrollTextContainer {
