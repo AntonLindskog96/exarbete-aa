@@ -143,14 +143,6 @@ const Orders: NextPage = () => {
                     ))}
                 </ul>
             </section>
-            {cart.length > 0 && (
-            <div className={styles.checkoutButtonSection}>
-                <Link href="/checkoutPage">
-                <button className={styles.checkoutButton}>Till Betalning {totalPrice} SEK</button>
-                </Link>
-                <p>Total Price: ${totalPrice}</p>
-            </div>
-            )}
             <section className={styles.shoppingCartContainer}>
                 <h2 className={styles.shopping}>Min Beställning</h2>
                 <div className={styles.shoppingCartSection}>
@@ -165,7 +157,7 @@ const Orders: NextPage = () => {
                                 item.imagebeer ? styles.cartItemImageBeer : ""
                             }`}
                             alt={item.title}
-                        />
+                            />
                         <div className={styles.cartContent}>
                             <p className={styles.cartItemPrice}>{item.title}</p>
                             <p className={styles.cartItemPrice}>{item.price}Kr</p>
@@ -183,6 +175,13 @@ const Orders: NextPage = () => {
                 ))}
                 <ul className={styles.ulcart}>
                 </ul>
+            {cart.length > 0 && (
+        <div className={styles.checkoutButtonSection}>
+            <Link href="/checkoutPage">
+            <button className={styles.checkoutButton}>Till Betalning {totalPrice} SEK</button>
+            </Link>
+        </div>
+        )}
             </section>
         </div>
     );
