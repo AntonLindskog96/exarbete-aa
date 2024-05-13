@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import homeIcon from "@/assets/images/home-icon.png";
-import styles from "@/pages/startPage/index.module.scss";
+import hamburgerMenuIcon from "@/assets/images/hamburger-menu.png";
+import styles from "@/pages/header/header.module.scss";
+
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen)
+    };
+
+
     return (
         <div className={styles.headerContent}>
             <div className={styles.iconContent}>
@@ -12,8 +21,24 @@ const Header = () => {
                 <button className={styles.orderButton}>Beställ</button>
                 <button className={styles.loginButton}>Logga in</button>
             </div>
-        </div>
-    )
-}
+            <div className={styles.hamburgericon} onClick={toggleMenu}>
+                <img src={hamburgerMenuIcon.src} height={50}></img>
+            </div>
+            <nav id="nav">
 
-export default Header
+                {/*<ul>*/}
+                {/*    <li>HOme</li>*/}
+                {/*    <li>About</li>*/}
+                {/*    <li>Contact</li>*/}
+                {/*    <li>Help</li>*/}
+                {/*</ul>*/}
+
+            </nav>
+            <div className={ ` ${styles["dark-blue"]} ${isMenuOpen ? styles.slide : ""}`}></div>
+            {isMenuOpen && <div className={styles.overlay} onClick={toggleMenu}></div> }
+        </div>
+
+    );
+};
+
+export default Header;

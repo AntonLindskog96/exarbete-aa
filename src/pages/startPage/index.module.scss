@@ -1,11 +1,10 @@
 .headerContainer, .getStarted {
   color: #F4DFC8;
-  font-family: 'Apple Garamond', sans-serif
+  font-family: 'Apple Garamond', sans-serif;
 }
 
 .headerContainer h1 {
   font-size: 70px;
-  border-bottom: 1px solid;
 }
 
 .headerContainer h2 {
@@ -13,67 +12,29 @@
   margin-top: -40px;
 }
 
-.headerContent {
-  display: flex;
-  margin-left: auto;
-  padding: 20px;
-  margin-top: -200px;
-}
 
-.iconContent {
-
-}
-
-.buttonContent {
-  margin: auto;
-}
-
-.icon {
-  width: 150px;
-  height: 150px;
-}
-
-.orderButton {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
-  color: white;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 5px;
-  width: 100px;
-}
-
-.loginButton {
-
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #b63333;
-  color: white;
-  padding: 15px 5px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 5px;
-  width: 100px;
-
+.mainInfoPage {
 
 }
 
 
-.orderButton:hover {
-  background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+
+.contentPicture {
+
+    height: auto;
+    z-index: 10;
+    bottom: 20%;
+    left: 40%;
+    position: absolute;
+
+
 }
 
-.loginButton:hover {
-  background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+.burgerPicture {
+  max-width: fit-content;
+  height: 450px;
 }
+
 
 .button {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -108,10 +69,10 @@
 }
 
 .scrollTextContainer {
-  position: flex;
+
   bottom: 50px;
   left: 20px;
-  width: calc(100% - 40px);
+  width: 300px;
   overflow: hidden;
 }
 
@@ -121,7 +82,7 @@
   margin: 5;
   padding: 5;
   white-space: nowrap;
-  animation: scrollText 20s linear infinite;
+  animation: scrollText 8s linear infinite;
 }
 
 @keyframes scrollText {
