@@ -6,9 +6,9 @@ import RemoveSharpIcon from "@mui/icons-material/RemoveSharp";
 import AddIcon from "@mui/icons-material/Add";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import Navback from "../componets/navback/navback";
+import CheckoutButton from "../componets/buttons/paymentButton";
 
 async function getMenu() {
   const res = await fetch("http://localhost:3000/api/products");
@@ -204,22 +204,7 @@ const Orders: NextPage = () => {
             </motion.div>
           </li>
         ))}
-        {cart.length > 0 && (
-          <div className={styles.checkoutButtonSection}>
-            <Link href="/checkoutPage">
-              <motion.div>
-                <motion.button
-                  className={styles.checkoutButton}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  Till Betalning <motion.span>{rounded}</motion.span> SEK
-                </motion.button>
-              </motion.div>
-            </Link>
-          </div>
-        )}
+        {cart.length > 0 && <CheckoutButton rounded={rounded} />}
       </section>
     </div>
   );

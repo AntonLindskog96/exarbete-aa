@@ -21,13 +21,14 @@
 
 
 .shoppingCartContainer {  
-  width: 25%;
-  margin-top: 150px;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  margin-right: 200px;
-  position: relative;
+width: 25%;
+margin-top: 150px;
+border: none;
+display: flex;
+flex-direction: column;
+margin-right: 200px;
+position: relative;
+
 }
 
 .listItem {
@@ -101,18 +102,6 @@ margin-left: -40px;
   font-weight: bold;
 }
 
-.checkoutButton {
-  font-family: $example1font;
-  background-color: $buttonColor;
-  color: $primaryTextColor;
-  padding: 15px 25px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: $base;
-  width: 100%;
-  margin-bottom: 10px;
-}
 
 .navigateButton:hover {
   background-color: transparent;
@@ -255,6 +244,7 @@ margin-left: -40px;
     display: flex;
     align-items: center;
     font-family: $example1font;
+    padding-bottom: 5px;
   }
   
   .cartItemImage {
