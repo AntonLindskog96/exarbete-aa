@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {motion} from 'framer-motion';
 import styles from './index.module.scss';
 import Link from 'next/link';
 import Header from "@/pages/header/header";
 import burgerPicture from "@/assets/images/burger-picture.avif";
+import Login from "@/modules/login";
 
 const StartPage = () => {
+
 
     return (
         <motion.div>
