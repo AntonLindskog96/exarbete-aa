@@ -21,19 +21,22 @@
 
 
 .shoppingCartContainer {  
-  border-radius: 5%;
   width: 25%;
-  margin-top: 100px;
+  margin-top: 150px;
   border: none;
   display: flex;
   flex-direction: column;
-  margin-right: 100px;
+  margin-right: 200px;
   position: relative;
 }
 
 .listItem {
   display: flex;
   align-items: center;
+}
+
+.ulmenu {
+margin-left: -40px;
 }
 
 .cartItemImage {
@@ -109,20 +112,6 @@
   font-size: $base;
   width: 100%;
   margin-bottom: 10px;
-}
-
-
-.navigateButton {
-  font-family: $example1font;
-  background-color: transparent;
-  color: $secondaryTextColor;
-  border: none;
-  margin-top: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  flex-direction: column-reverse;
-  gap: 10px;
 }
 
 .navigateButton:hover {
@@ -291,9 +280,3 @@
   font-size: 10px;
 }
   
-  .ulcart {
-    font-family: $example1font;
-    color: $secondaryTextColor;
-    list-style-type: none;
-    padding-left: 10px;
-  }

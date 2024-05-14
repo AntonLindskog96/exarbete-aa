@@ -5,10 +5,10 @@ import DeleteOutlineSharpIcon from "@mui/icons-material/DeleteOutlineSharp";
 import RemoveSharpIcon from "@mui/icons-material/RemoveSharp";
 import AddIcon from "@mui/icons-material/Add";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
+import Navback from "../componets/navback/navback";
 
 async function getMenu() {
   const res = await fetch("http://localhost:3000/api/products");
@@ -115,10 +115,7 @@ const Orders: NextPage = () => {
   return (
     <div className={styles.outerContainer}>
       <section className={styles.menuContainer}>
-        <button className={styles.navigateButton} onClick={() => router.back()}>
-          Gå tillbaka
-          <ArrowBackIosIcon sx={{ fontSize: 30 }} />
-        </button>
+        <Navback />
         <h1 className={styles.menuTitle}>Meny</h1>
         <div className={styles.buttonContainer}>
           <button
@@ -134,7 +131,7 @@ const Orders: NextPage = () => {
             Öl
           </button>
         </div>
-        <motion.ul className={styles.ul}>
+        <motion.ul className={styles.ulmenu}>
           {menu.map((item, index) => (
             <motion.button
               key={index}
@@ -207,7 +204,6 @@ const Orders: NextPage = () => {
             </motion.div>
           </li>
         ))}
-        <ul className={styles.ulcart}></ul>
         {cart.length > 0 && (
           <div className={styles.checkoutButtonSection}>
             <Link href="/checkoutPage">
