@@ -21,19 +21,23 @@
 
 
 .shoppingCartContainer {  
-  border-radius: 5%;
-  width: 25%;
-  margin-top: 100px;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  margin-right: 100px;
-  position: relative;
+width: 25%;
+margin-top: 150px;
+border: none;
+display: flex;
+flex-direction: column;
+margin-right: 200px;
+position: relative;
+
 }
 
 .listItem {
   display: flex;
   align-items: center;
+}
+
+.ulmenu {
+margin-left: -40px;
 }
 
 .cartItemImage {
@@ -70,12 +74,6 @@
   
 }
 
-.menuButton:hover {
-  box-shadow: 0 0 8px 4px rgba(90, 90, 90, 0.25) inset, 0 0 8px 4px rgba(70,150,240,0.25);
-  border: 0px solid rgb(33, 38, 44);
-  color: rgba(255,255,255,1);
-}
-
 .menuItemContent {
   position: absolute;
   bottom: 0;
@@ -104,32 +102,6 @@
   font-weight: bold;
 }
 
-.checkoutButton {
-  font-family: $example1font;
-  background-color: $buttonColor;
-  color: $primaryTextColor;
-  padding: 15px 25px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: $base;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-
-.navigateButton {
-  font-family: $example1font;
-  background-color: transparent;
-  color: $secondaryTextColor;
-  border: none;
-  margin-top: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  flex-direction: column-reverse;
-  gap: 10px;
-}
 
 .navigateButton:hover {
   background-color: transparent;
@@ -272,6 +244,7 @@
     display: flex;
     align-items: center;
     font-family: $example1font;
+    padding-bottom: 5px;
   }
   
   .cartItemImage {
@@ -297,9 +270,3 @@
   font-size: 10px;
 }
   
-  .ulcart {
-    font-family: $example1font;
-    color: $secondaryTextColor;
-    list-style-type: none;
-    padding-left: 10px;
-  }
