@@ -8,7 +8,7 @@ import Login from "@/modules/login";
 
 const StartPage = () => {
 
-
+    
     return (
         <motion.div>
             <div className={styles.headerContainer}>

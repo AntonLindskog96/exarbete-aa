@@ -1,4 +1,3 @@
-
 import StartPage from "@/pages/startPage";
 import {useState} from "react";
 import React from 'react';
@@ -16,22 +15,45 @@ interface LoginProps {
 
 const Login: React.FC<LoginProps> = ({open, onClose}) => {
 
+    const [isLogin, setIsLogin] = useState(true);
+
+    const toggleForm = () => {
+        setIsLogin(!isLogin)
+    };
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const formData = new FormData(event.currentTarget);
+        const formJson = Object.fromEntries(formData.entries());
+
+        if (isLogin) {
+
+            const {email, password} = formJson;
+            localStorage.setItem("user", JSON.stringify({email, password}));
+        } else {
+            const {email, password, confirmPassword} = formJson;
+            if (password !== confirmPassword) {
+                alert("Lösenorden matchar inte");
+                return;
+            }
+            localStorage.setItem("user", JSON.stringify({email, password}));
+        }
+
+        onClose();
+
+
+    };
+
+
     return (
         <div>
             <Dialog open={open} onClose={onClose} PaperProps={{
                 className: styles.loginPopup,
                 component: 'form',
-                onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
-                    event.preventDefault();
-                    const formData = new FormData(event.currentTarget);
-                    const formJson = Object.fromEntries((formData as any).entries());
-                    const email = formJson.email;
-                    console.log(email);
-                    onClose();
-                },
+                onSubmit: handleSubmit,
             }}>
                 <CloseIcon className={styles.closeIcon} onClick={onClose}>Cancel</CloseIcon>
-                <DialogTitle>Login</DialogTitle>
+                <DialogTitle>{isLogin ? "Logga in" : "Registrera"}</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
                     </DialogContentText>
@@ -52,14 +74,30 @@ const Login: React.FC<LoginProps> = ({open, onClose}) => {
                         margin="dense"
                         id="name"
                         name="password"
-                        label="Password"
+                        label="Lösenord"
                         type="password"
                         fullWidth
                         variant="standard"
                     />
+                    {!isLogin && (
+                        <TextField
+                            autoFocus
+                            required
+                            margin="dense"
+                            id="name"
+                            name="confirmPassword"
+                            label="Bekräfta lösenord"
+                            type="password"
+                            fullWidth
+                            variant="standard"
+                        />
+                    )}
                 </DialogContent>
+                <button type="submit">{isLogin ? "Logga in" : "Registrera dig"}</button>
                 <DialogActions>
-                    <button type="submit">Logga in</button>
+                    <p className={styles.registrationText} onClick={toggleForm}>
+                        {isLogin ? "Har du inget konto? Registrera dig här" : "Har du redan ett konto? Logga in här"}
+                    </p>
                 </DialogActions>
             </Dialog>
 
