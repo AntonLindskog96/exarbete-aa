@@ -3,7 +3,9 @@
 
 .headerContainer, .getStarted {
   color: $primaryTextColor;
-  font-family: $example1font
+  font-family: $example1font;
+  height: 100vh;
+  
 }
 
 .headerContainer h1 {
@@ -17,6 +19,7 @@
 }
 
 
+
 .mainInfoPage {
 
   margin-left: 100px;
@@ -25,14 +28,10 @@
 
 
 .contentPicture {
-
-
-    z-index: 10;
-    bottom: 20%;
+    z-index: 0;
+    bottom: 8%;
     left:35%;
     position: absolute;
-
-
 }
 
 .burgerPicture {
@@ -103,5 +102,7 @@
   display: inline-block;
   padding-right: 25px;
 }
+
+
 
 

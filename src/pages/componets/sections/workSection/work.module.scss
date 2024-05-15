@@ -1,0 +1,27 @@
+@import "../../../../styles/_variables";
+@import "../../../../styles/_typography";
+
+.workSection {
+    font-family: $example1font;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%; 
+    background-color: white;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .homepageText {
+    @include fontsizeRegular
+  }
+  
+  .aboutname {
+  @include fontsizeLarge;
+  }
+  
+  
+  .aboutPicture {
+    width: 400px;
+  }
+  
