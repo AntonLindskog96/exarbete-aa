@@ -1,7 +1,7 @@
 @import "../../../../styles/_variables";
 @import "../../../../styles/_typography";
 
-.workSection {
+.burgerSection {
     font-family: $example1font;
     display: flex;
     align-items: center;
@@ -10,18 +10,22 @@
     background-color: white;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 45px;
   }
   
   .homepageText {
-    @include fontsizeRegular
+    @include fontsizeRegular;
+    padding: 20px;
   }
   
-  .aboutname {
+  .burgerTitle {
   @include fontsizeLarge;
+  text-transform: uppercase;
   }
   
   
-  .aboutPicture {
-    width: 400px;
+  .burgerPicture {
+    width: 500px;
+    height: 100%;
   }
   

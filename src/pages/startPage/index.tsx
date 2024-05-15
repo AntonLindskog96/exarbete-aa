@@ -5,7 +5,7 @@ import Link from "next/link";
 import Header from "@/pages/header/header";
 import burgerPicture from "@/assets/images/burger-picture.avif";
 import AboutSection from "../componets/sections/aboutSection/about";
-import WorkSection from "../componets/sections/workSection/work";
+import BurgerSection from "../componets/sections/burgerSection/burger";
 
 const StartPage = () => {
   return (
@@ -61,7 +61,7 @@ const StartPage = () => {
         </section>
       </section>
       <AboutSection />
-      <WorkSection />
+      <BurgerSection />
     </motion.div>
   );
 };

@@ -10,19 +10,22 @@
     background-color: white;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 45px;
+    margin-bottom: 10vh;
   }
   
   .homepageText {
-    @include fontsizeRegular
+    @include fontsizeRegular;
+    padding: 20px;
   }
   
   .aboutname {
   @include fontsizeLarge;
+  text-transform: uppercase;
   }
   
   
   .aboutPicture {
-    width: 400px;
+    width: 450px;
+    height: 100%;
   }
   
