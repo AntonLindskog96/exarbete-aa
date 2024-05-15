@@ -6,6 +6,7 @@ import styles from "@/modules/login.module.scss";
 import Dialog from '@mui/material/Dialog';
 import {DialogActions, DialogContent, DialogContentText, DialogTitle, TextField} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
+import {set} from "immutable";
 
 interface LoginProps {
 
@@ -16,9 +17,12 @@ interface LoginProps {
 const Login: React.FC<LoginProps> = ({open, onClose}) => {
 
     const [isLogin, setIsLogin] = useState(true);
+    const [formError,setFormError] = useState<string | null>(null);
+
 
     const toggleForm = () => {
-        setIsLogin(!isLogin)
+        setIsLogin(!isLogin);
+        setFormError(null);
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -26,22 +30,31 @@ const Login: React.FC<LoginProps> = ({open, onClose}) => {
         const formData = new FormData(event.currentTarget);
         const formJson = Object.fromEntries(formData.entries());
 
+        const { email, password } = formJson;
+
         if (isLogin) {
 
-            const {email, password} = formJson;
-            localStorage.setItem("user", JSON.stringify({email, password}));
-        } else {
-            const {email, password, confirmPassword} = formJson;
-            if (password !== confirmPassword) {
-                alert("Lösenorden matchar inte");
+            const storedUser = JSON.parse(localStorage.getItem(email as string) as string)
+
+            if(!storedUser || storedUser.password !== password) {
+                setFormError("Fel email eller password");
                 return;
             }
-            localStorage.setItem("user", JSON.stringify({email, password}));
+
+            localStorage.setItem("currentUser", JSON.stringify({email}));
+            onClose();
+
+        } else {
+            const { confirmPassword} = formJson;
+
+            if (password !== confirmPassword) {
+                setFormError("Lösenorden matchar inte");
+                return;
+            }
+            localStorage.setItem("currentUser", JSON.stringify({email, password}));
+            onClose();
+
         }
-
-        onClose();
-
-
     };
 
 
@@ -56,6 +69,7 @@ const Login: React.FC<LoginProps> = ({open, onClose}) => {
                 <DialogTitle>{isLogin ? "Logga in" : "Registrera"}</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
+                        {formError && <p className={styles.errorText}>{formError}</p>}
                     </DialogContentText>
                     <TextField
                         autoFocus

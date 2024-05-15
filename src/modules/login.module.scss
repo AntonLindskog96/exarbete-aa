@@ -14,4 +14,11 @@
 .registrationText {
 
   margin: auto;
+  cursor: pointer;
+}
+
+.registrationText:hover {
+
+  margin: auto;
+  text-decoration-line: underline;
 }
