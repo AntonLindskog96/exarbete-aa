@@ -1,0 +1,17 @@
+@import url("https://fonts.cdnfonts.com/css/apple-garamond");
+@import "../../../styles/_variables";
+@import "../../../styles/_typography";
+
+
+.checkoutButton {
+    font-family: $example1font;
+    background-color: $buttonColor;
+    color: $primaryTextColor;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: $base;
+  
+    
+  }

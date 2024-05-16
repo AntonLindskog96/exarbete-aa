@@ -1,0 +1,108 @@
+@import "../../styles/_variables";
+@import "../../styles/_typography";
+
+.headerContainer, .getStarted {
+  color: $primaryTextColor;
+  font-family: $example1font;
+  height: 100vh;
+  
+}
+
+.headerContainer h1 {
+  font-size: 70px;
+  border-bottom: 1px solid;
+}
+
+.headerContainer h2 {
+  @include fontsizeMedium;
+  margin-top: -40px;
+}
+
+
+
+.mainInfoPage {
+
+  margin-left: 100px;
+}
+
+
+
+.contentPicture {
+    z-index: 0;
+    bottom: 8%;
+    left:35%;
+    position: absolute;
+}
+
+.burgerPicture {
+  width: 800px;
+  height: 600px;
+}
+
+
+.button {
+  font-family: $example1font;
+  background-color: $buttonColor;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 5px;
+  width: 350px;
+}
+
+
+.button:hover {
+  background-color: transparent;
+  border: 1px solid $primaryTextColor;
+  color: $buttonColor;
+}
+
+.headerButton:hover {
+  background-color: transparent;
+  border: 1px solid $buttonColor;
+  color: $buttonColor;
+}
+
+.loginButton:hover {
+  background-color: transparent;
+  border: 1px solid $buttonColor;
+  color: $buttonColor;
+}
+
+.scrollTextContainer {
+
+  bottom: 50px;
+  left: 20px;
+  width: 300px;
+  overflow: hidden;
+}
+
+
+.scrollTextList {
+  list-style-type: none;
+  margin: 5;
+  padding: 5;
+  white-space: nowrap;
+  animation: scrollText 8s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scrollTextList li {
+  display: inline-block;
+  padding-right: 25px;
+}
+
+
+
+

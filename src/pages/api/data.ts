@@ -1,56 +1,73 @@
 export const burgers = [
     {
-      "id": 1,
-      "title": "Classic Cheeseburger",
-      "description": "Juicy beef patty, melted cheese, lettuce, tomato, onions, pickles, special sauce, toasted bun."
+        "id": 1,
+        "title": "Cheesy Cheeser",
+        "price": 65,
+        "imageburger": "https://misteryork-images.futureordering.com/images/product/86/FFAD02870D497CD8FBD8315A4409CD34D/326x303.png"
     },
     {
-      "id": 2,
-      "title": "BBQ Bacon Burger",
-      "description": "Grilled beef patty, barbecue sauce, bacon, cheddar cheese, caramelized onions, lettuce, toasted bun."
-    },
-    {
-      "id": 3,
-      "title": "Mushroom Swiss Burger",
-      "description": "Beef patty, sautéed mushrooms, Swiss cheese, lettuce, tomato, mayo, toasted bun."
-    },
-    {
-      "id": 4,
-      "title": "Spicy Jalapeño Burger",
-      "description": "Grilled beef patty, jalapeños, pepper jack cheese, lettuce, tomato, chipotle mayo, toasted bun."
-    },
-    {
-      "id": 5,
-      "title": "Veggie Burger",
-      "description": "Plant-based patty, lettuce, tomato, onions, pickles, vegan mayo, whole wheat bun."
-    }
-  ]
+        "id": 2,
+        "title": "Håll käften burgaren",
+        "price": 85,
+        "imageburger": "https://misteryork-images.futureordering.com/images/product/456/F95715B2B2D3A0118488701E892023ACD/326x303.png"
 
-  export const beers = [
-    {
-      "id": 1,
-      "title": "IPA",
-      "description": "A hoppy and aromatic beer with a bitter flavor profile, often with citrusy or floral notes."
     },
     {
-      "id": 2,
-      "title": "Stout",
-      "description": "A dark, rich beer with flavors of roasted malt, chocolate, and coffee, often with a creamy texture."
+        "id": 3,
+        "title": "Kristianstad-krutet",
+        "price": 85,
+        "imageburger": "https://misteryork-images.futureordering.com/images/product/181/835C33864BF262A0FC36E182E5A6FE58D/326x303.png"
     },
     {
-      "id": 3,
-      "title": "Pale Ale",
-      "description": "A refreshing beer with a balance of hoppy bitterness and malty sweetness, often with fruity or floral aromas."
+        "id": 4,
+        "title": "Den där",
+        "price": 79,
+        "imageburger": "https://misteryork-images.futureordering.com/images/product/2/47C79081CCF7929E82384020B95CD554D/326x303.png"
     },
     {
-      "id": 4,
-      "title": "Wheat Beer",
-      "description": "A light and refreshing beer made with a significant proportion of wheat, known for its cloudy appearance and subtle fruity flavors."
+        "id": 5,
+        "title": "Den goda",
+        "price": 79,
+        "imageburger": "https://misteryork-images.futureordering.com/images/product/24/B218500BE0BF23D9AE27F3706CED7BF9D/326x303.png"
     },
     {
-      "id": 5,
-      "title": "Pilsner",
-      "description": "A crisp and refreshing lager with a slightly bitter taste, often with a golden color and a noticeable hop aroma."
+        "id": 6,
+        "title": "Honey Honey",
+        "price": 82,
+        "imageburger": "https://misteryork-images.futureordering.com/images/product/18/A5D480CAD1FAAC78913A7FB583261145D/326x303.png"
+    },
+]
+
+export const beers = [
+    {
+        "id": 1,
+        "title": "Birabärsing 0.5L",
+        "price": 65,
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/507985/507985_400.png?q=75&w=2000"
+    },
+    {
+        "id": 2,
+        "title": "Bärsika 0.3L",
+        "price": 65,
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/507758/507758_400.png?q=75&w=2000"
+    },
+    {
+        "id": 3,
+        "title": "Bärtil 0.6L",
+        "price": 65,
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/507840/507840_400.png?q=75&w=2000"
+    },
+    {
+        "id": 4,
+        "title": "Ölle 0.4L",
+        "price": 65,
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/625317/625317_400.png?q=75&w=2000"
+    },
+    {
+        "id": 5,
+        "title": "Ölker 0.5L",
+        "price": 55,
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/24578195/24578195_400.png?q=75&w=2000"
     }
-  ];
+];
   

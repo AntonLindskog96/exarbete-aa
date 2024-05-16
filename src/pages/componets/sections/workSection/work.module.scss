@@ -1,0 +1,61 @@
+@import "../../../../styles/_variables";
+@import "../../../../styles/_typography";
+
+
+.formStyling{
+flex-direction: column;
+display: flex;
+padding-left: 20px;
+
+}
+
+.workSection {
+    font-family: $example1font;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%; 
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 25vh;
+    
+  }
+
+  .workText {
+    width: 70vh;
+    padding: 25px
+  }
+
+  
+  .workTitle {
+  @include fontsizeHuge;
+  text-transform: uppercase;
+  text-align: center;
+  }
+
+  .workDescription {
+    @include fontsizeRegular;
+    text-transform: uppercase;  
+    text-align: center;
+
+    }
+  
+  
+  .workPicture {
+    width: 680px;
+    height: 500px;
+    
+  }
+
+  .input {
+    margin-bottom: 15px;
+    display: flex;
+    width: 200px;
+    height: 20px;
+
+  }
+
+  .workButton {
+    width: 100px;
+  }
+  

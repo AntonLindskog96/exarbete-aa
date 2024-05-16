@@ -1,0 +1,146 @@
+@import url("https://fonts.cdnfonts.com/css/apple-garamond");
+@import "../../styles/_variables";
+@import "../../styles/_typography";
+
+
+
+.outerContainer {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menuContainer {
+  font-family: "Apple Garamond", sans-serif;
+  color: $bacon;
+  flex-direction: column;
+  padding-left: 40px;
+  width: 100%;
+}
+
+
+.shoppingCartContainer {
+  background-color: rgb(24, 22, 22);
+  border-radius: 5%;
+  width: 20%;
+  margin-top: 100px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.navigateButton {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: transparent;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+.navigateButton:hover {
+  background-color: transparent;
+}
+
+
+.menuTitle {
+  @include fontsizeHuge;
+
+}
+
+.totalPriceSection {
+  color: white;
+  margin-left: 10px;
+}
+
+
+.checkoutButtonSection {
+
+  position: absolute;
+  left: 79%;
+}
+
+.checkoutButton {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: #b63333;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 15px;
+  width: 300px;
+}
+
+.shopping {
+  font-family: "Apple Garamond", sans-serif;
+  color: white;
+  align-self: center;
+}
+
+.shoppingCartSection {
+  position: absolute;
+  display: flex;
+  margin-left: 250px;
+  margin-top: -4px;
+  align-items: flex-end;
+}
+
+.shoppingCart {
+
+  color:white;
+}
+
+.quantityCounter {
+
+  color:white;
+  font-weight: bold;
+
+}
+
+.cartListItem {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.cartItemImage {
+  width: 70px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.cartItemImageBeer {
+  width: 35px;
+  height: auto;
+  margin: 10px 35px 0 15px;
+
+}
+
+.cartContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 20px;
+
+}
+
+.borderline {
+
+  border-bottom: 1px solid;
+  color: #605858;
+}
+
+.cartItemPrice {
+  @include fontsizeSmall;
+  line-height: 100%;
+  color: white;
+
+}

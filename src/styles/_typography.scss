@@ -1,0 +1,38 @@
+
+
+$base: 18px;
+
+@mixin fontsizeHuge {
+    font-size: calc($base * 2.6);
+    line-height: 120%;
+}
+
+@mixin fontsizeLarge {
+    font-size: calc($base * 1.8);
+    line-height: 100%;
+}
+
+
+@mixin fontsizeMedium {
+    font-size: calc($base * 1.4);
+    line-height: 100%;
+}
+
+@mixin fontsizePriceTotal {
+    font-size: calc($base * 1.2);
+    line-height: 120%;
+}
+
+@mixin fontsizeRegular {
+    font-size: $base;
+    line-height: 120%;
+}
+
+@mixin fontsizeSmall {
+    font-size: calc($base * .8);
+    line-height: 120%;
+}
+
+@mixin fontsizeMini {
+    font-size: calc($base * .6);
+}
