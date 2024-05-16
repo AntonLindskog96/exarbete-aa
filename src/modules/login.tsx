@@ -4,9 +4,19 @@ import React from 'react';
 import {Modal} from "@mui/base";
 import styles from "@/modules/login.module.scss";
 import Dialog from '@mui/material/Dialog';
-import {DialogActions, DialogContent, DialogContentText, DialogTitle, TextField} from "@mui/material";
+import {
+    DialogActions,
+    DialogContent,
+    DialogContentText,
+    DialogTitle,
+    IconButton,
+    InputAdornment,
+    TextField
+} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import {set} from "immutable";
+import {fontSize} from "@mui/system";
+import {Visibility, VisibilityOff} from "@mui/icons-material";
 
 interface LoginProps {
 
@@ -17,26 +27,34 @@ interface LoginProps {
 const Login: React.FC<LoginProps> = ({open, onClose}) => {
 
     const [isLogin, setIsLogin] = useState(true);
-    const [formError,setFormError] = useState<string | null>(null);
-
+    const [formError, setFormError] = useState<string | null>(null);
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
     const toggleForm = () => {
         setIsLogin(!isLogin);
         setFormError(null);
     };
 
+    const togglePasswordVisibility = () => {
+
+        setIsPasswordVisible(prev => !prev);
+    }
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
         const formJson = Object.fromEntries(formData.entries());
 
-        const { email, password } = formJson;
+        const {email, password} = formJson;
 
         if (isLogin) {
 
             const storedUser = JSON.parse(localStorage.getItem(email as string) as string)
+            console.log("Stored user:", storedUser);
+            console.log("Entered Password:", password);
 
-            if(!storedUser || storedUser.password !== password) {
+
+            if (!storedUser || storedUser.password !== password) {
                 setFormError("Fel email eller password");
                 return;
             }
@@ -45,13 +63,14 @@ const Login: React.FC<LoginProps> = ({open, onClose}) => {
             onClose();
 
         } else {
-            const { confirmPassword} = formJson;
+            const {confirmPassword} = formJson;
 
             if (password !== confirmPassword) {
                 setFormError("Lösenorden matchar inte");
                 return;
             }
-            localStorage.setItem("currentUser", JSON.stringify({email, password}));
+            localStorage.setItem(email as string, JSON.stringify({email, password}));
+            localStorage.setItem("currentUser", JSON.stringify({email}));
             onClose();
 
         }
@@ -66,7 +85,8 @@ const Login: React.FC<LoginProps> = ({open, onClose}) => {
                 onSubmit: handleSubmit,
             }}>
                 <CloseIcon className={styles.closeIcon} onClick={onClose}>Cancel</CloseIcon>
-                <DialogTitle>{isLogin ? "Logga in" : "Registrera"}</DialogTitle>
+                <DialogTitle fontWeight={"bold"}
+                             textAlign={"center"}>{isLogin ? "Logga in" : "Registrera"}</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
                         {formError && <p className={styles.errorText}>{formError}</p>}
@@ -89,9 +109,21 @@ const Login: React.FC<LoginProps> = ({open, onClose}) => {
                         id="name"
                         name="password"
                         label="Lösenord"
-                        type="password"
+                        type={isPasswordVisible ? "text" : "password"}
                         fullWidth
                         variant="standard"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <IconButton
+                                        onClick={togglePasswordVisibility}
+                                        edge="end"
+                                    >
+                                        {isPasswordVisible ? <VisibilityOff/> : <Visibility/>}
+                                    </IconButton>
+                                </InputAdornment>
+                            ),
+                        }}
                     />
                     {!isLogin && (
                         <TextField
@@ -101,13 +133,25 @@ const Login: React.FC<LoginProps> = ({open, onClose}) => {
                             id="name"
                             name="confirmPassword"
                             label="Bekräfta lösenord"
-                            type="password"
+                            type={isPasswordVisible ? "text" : "password"}
                             fullWidth
                             variant="standard"
+                            InputProps={{
+                                endAdornment: (
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                            onClick={togglePasswordVisibility}
+                                            edge="end"
+                                        >
+                                            {isPasswordVisible ? <VisibilityOff/> : <Visibility/>}
+                                        </IconButton>
+                                    </InputAdornment>
+                                ),
+                            }}
                         />
                     )}
                 </DialogContent>
-                <button type="submit">{isLogin ? "Logga in" : "Registrera dig"}</button>
+                <button className={styles.submitButton} type="submit">{isLogin ? "Logga in" : "Registrera dig"}</button>
                 <DialogActions>
                     <p className={styles.registrationText} onClick={toggleForm}>
                         {isLogin ? "Har du inget konto? Registrera dig här" : "Har du redan ett konto? Logga in här"}

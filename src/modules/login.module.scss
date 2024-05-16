@@ -1,3 +1,6 @@
+@import "../../src/styles/_variables";
+@import "../../src/styles/_typography";
+
 
 .closeIcon {
 
@@ -21,4 +24,31 @@
 
   margin: auto;
   text-decoration-line: underline;
+}
+
+.DialogTitle {
+
+
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.errorText {
+
+  color: #b63333;
+}
+
+.submitButton {
+
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color:  $buttonColor;
+  color: white;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 10px;
+
 }

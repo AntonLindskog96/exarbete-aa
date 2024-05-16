@@ -17,12 +17,22 @@
   margin-top: 10px;
 }
 
+.loggedInText {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  font-weight: bold;
+  font-size: large;
+}
+
 .buttonContent {
   //margin: auto;
   justify-content: space-between;
   margin-left: auto;
   flex-direction: row;
   margin-right: 50px;
+  display: flex;
 
 
 }
@@ -55,9 +65,22 @@
   border-radius: 25px;
   cursor: pointer;
   font-size: 18px;
-  margin-top: 5px;
   width: 100px;
+  margin: 10px;
+}
 
+.logoutButton {
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color:  $buttonColor;
+  color: white;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 10px;
+  width: 100px;
 
 }
 
