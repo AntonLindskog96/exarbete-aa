@@ -12,7 +12,7 @@ import Footer from "../componets/footer/footer";
 const StartPage = () => {
   return (
     <motion.div>
-      <section className={styles.headerContainer}>
+      <section id="home" className={styles.headerContainer}>
         <Header />
         <section className={styles.mainInfoPage}>
           <motion.div
