@@ -6,7 +6,7 @@ const BurgerSection = () => {
   return (
     <section id="about" className={styles.burgerSection}>
       <img src={burgerPicture.src} alt="icon" className={styles.burgerPicture} />
-      <article>
+      <article className={styles.burgerText}>
         <h2 className={styles.burgerTitle}>Våra Burgare</h2>
         <p className={styles.homepageText}>
           I vår strävan efter den perfekta burgaren har vi inte glömt våra

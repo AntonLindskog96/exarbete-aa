@@ -6,26 +6,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60%; 
+    width: 70%; 
     background-color: white;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 45px;
+    margin-bottom: 10vh;
   }
   
+  .burgerText {
+    width: 150vh;
+  }
   .homepageText {
-    @include fontsizeRegular;
+    @include fontsizeMedium;
     padding: 20px;
   }
   
   .burgerTitle {
-  @include fontsizeLarge;
+  @include fontsizeHuge;
   text-transform: uppercase;
   }
   
   
   .burgerPicture {
-    width: 500px;
+    width: 100%;
     height: 100%;
   }
   
