@@ -1,0 +1,26 @@
+@import "../../../styles/_variables";
+@import "../../../styles/_typography";
+
+.footer {
+    background-color: white;
+    color: $secondaryTextColor;
+    text-align: center;
+    padding: 3rem 0; /* Increase padding for height */
+    margin-top: 2rem; /* Add top margin to create space */
+  }
+  
+  .footer a {
+    color: #61dafb;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .scrollToSection{
+
+    width: 100px;
+  }
+  
