@@ -8,15 +8,23 @@
   flex-direction: row;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+
 }
 
 .menuContainer {
   font-family: "Apple Garamond", sans-serif;
   color: $bacon;
-  flex-direction: column;
+  flex-direction: row;
   padding-left: 40px;
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.contentSection {
+
+
 }
 
 
@@ -51,7 +59,9 @@
 
 .menuTitle {
   @include fontsizeHuge;
-
+  font-family: $example1font;
+  color: white;
+  margin-left: 100px;
 }
 
 .totalPriceSection {

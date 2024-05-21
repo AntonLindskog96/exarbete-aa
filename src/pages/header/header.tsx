@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import homeIcon from "@/assets/images/home-icon.png";
 import hamburgerMenuIcon from "@/assets/images/hamburger-menu.png";
 import styles from "@/pages/header/header.module.scss";
-import Login from "@/modules/login";
+import Login from "@/modules/login/login";
 
 
 const Header: React.FC = () => {

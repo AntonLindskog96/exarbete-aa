@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import styles from './index.module.scss';
 import Link from 'next/link';
 import Header from "@/pages/header/header";
@@ -14,16 +14,17 @@ import {useRouter} from 'next/router'
 async function getMenu() {
     const res = await fetch("http://localhost:3000/api/products");
     const data = await res.json();
-    data.burgers.forEach((item: { id: string | number}) => (item.id = ("burger_" + item.id)));
-    data.beers.forEach((item: { id: string | number}) => (item.id = ("beer_" + item.id)));
+    data.burgers.forEach((item: { id: string | number }) => (item.id = ("burger_" + item.id)));
+    data.beers.forEach((item: { id: string | number }) => (item.id = ("beer_" + item.id)));
     return data;
 }
+
 const CheckoutPage = () => {
     const router = useRouter();
     const [menu, setMenu] = useState<any[]>([]);
     const [selectedCategory, setSelectedCategory] = useState<string>("burgers");
     const [cart, setCart] = useState<any[]>([]);
-    const [totalPrice,setTotalPrice] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -53,7 +54,7 @@ const CheckoutPage = () => {
 
     useEffect(() => {
 
-        const newTotalPrice = cart.reduce((total,item) => total + (item.quantity * item.price), 0);
+        const newTotalPrice = cart.reduce((total, item) => total + (item.quantity * item.price), 0);
         setTotalPrice(newTotalPrice);
         localStorage.setItem("totalPrice", newTotalPrice.toString());
     }, [cart]);
@@ -63,13 +64,16 @@ const CheckoutPage = () => {
         <div className={styles.outerContainer}>
             <section className={styles.menuContainer}>
                 <button className={styles.navigateButton} onClick={() => router.back()}>
-                    Meny<ArrowBackIosIcon sx={{ fontSize: 30 }}/>
+                    Meny<ArrowBackIosIcon sx={{fontSize: 30}}/>
                 </button>
                 <h1 className={styles.menuTitle}>Min beställning</h1>
+                <section>
+
+                </section>
+
             </section>
-            <div className={styles.checkoutButtonSection}>
-                    <button className={styles.checkoutButton}>Beställ & betala {totalPrice} SEK</button>
-            </div>
+            <section>
+            </section>
             <section className={styles.shoppingCartContainer}>
                 <h2 className={styles.shopping}>Min Beställning</h2>
                 <div className={styles.borderline}>
@@ -95,7 +99,7 @@ const CheckoutPage = () => {
                 ))}
                 <div className={styles.borderline}>
                 </div>
-                <div className={styles.totalPriceSection} >
+                <div className={styles.totalPriceSection}>
                     <p>Summa totalt: {totalPrice} SEK</p>
                 </div>
             </section>
