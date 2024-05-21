@@ -58,8 +58,45 @@ margin-left: -40px;
 .menuTitle {
   @include fontsizeHuge;
   color: $secondaryTextColor;
+}
 
+.buttonContainer {
   
+}
+
+
+.productButton {
+  font-family: $example1font;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin-right: 20px;
+  width: 120px;
+  outline: none;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.productButton:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
 
 
@@ -73,6 +110,12 @@ margin-left: -40px;
   width: 270px;
   
 }
+
+.menuButton:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+
 
 .menuItemContent {
   position: absolute;
@@ -185,51 +228,6 @@ margin-left: -40px;
   
   object-fit: cover;
 }
-.productButton {
-  margin-right: 5px;
-  width: 100px;
-  align-items: center;
-  appearance: none;
-  background-color: #fcfcfd;
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-    box-sizing: border-box;
-    color: $secondaryTextColor;
-    cursor: pointer;
-  display: inline-flex;
-  font-family: $example1font;
-  height: 35px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow 0.15s, transform 0.15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow, transform;
-  font-size: $base;
-}
-
-.productButton:focus {
-  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
-  rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-}
-
-.productButton:hover {
-  box-shadow: rgba(68, 12, 189, 0.4) 0 4px 8px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -1px 0 inset;
-    transform: translateY(-1px);
-  }
-
   
 
   
@@ -263,10 +261,46 @@ margin-left: -40px;
   .cartContent {
     width: 100%; 
     margin-right: 25px;
+    border-bottom: 1px dotted gray;
   }
   
 .cartItemPrice {
   display: flex;
-  font-size: 10px;
+ 
+  @include fontsizeSmall;
 }
   
+
+.ribbon {
+  width: 60px;
+  font-size: 14px;
+  padding: 4px;
+  position: absolute;
+  right: -25px;
+  top: -12px;
+  text-align: center;
+  border-radius: 25px;
+  transform: rotate(20deg);
+  background-color: $buttonColor;
+  color: white;
+}
+
+.loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid black;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite; 
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

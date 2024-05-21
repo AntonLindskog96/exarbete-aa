@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
   faGooglePlusG,
-
   faLinkedinIn,
   faTwitter,
 
@@ -15,28 +14,45 @@ import {
 
 const Footer: React.FC = () => {
   const scrollToHome = () => {
+    if (window.location.pathname === '/orderPage') {
+      window.location.href = '/startPage'; 
+    } else {
     const home = document.getElementById("home");
     if (home) {
       home.scrollIntoView({ behavior: "smooth" });
     }
+  }
   };
   const scrollToAboutSection = () => {
-    const aboutSection = document.getElementById("aboutSection");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
+    if (window.location.pathname === '/orderPage') {
+      window.location.href = '/startPage'; 
+    } else {
+      const aboutSection = document.getElementById("aboutSection");
+      
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
   const scrollToBurgerSection = () => {
+    if (window.location.pathname === '/orderPage') {
+      window.location.href = '/startPage'; 
+    } else {
     const burgerSection = document.getElementById("burgerSection");
     if (burgerSection) {
       burgerSection.scrollIntoView({ behavior: "smooth" });
     }
+  }
   };
   const scrollToWorkSection = () => {
+    if (window.location.pathname === '/orderPage') {
+      window.location.href = '/startPage'; 
+    } else {
     const workSection = document.getElementById("workSection");
     if (workSection) {
       workSection.scrollIntoView({ behavior: "smooth" });
     }
+  }
   };
 
   return (
@@ -72,7 +88,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={styles.middleSection}>
-          <h2 className={styles.footerTitle}>Pints & Pattys</h2>
+          <h2 className={styles.footerTitle}> Pints & Pattys</h2>
         </div>
 
         <div className={styles.rightSection}>
