@@ -1,5 +1,7 @@
 @import "../../../styles/_variables";
 @import "../../../styles/_typography";
+@import url('https://fonts.googleapis.com/css2?family=Dorsa&family=Praise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
 
 .footer {
     background-color: white;
@@ -29,12 +31,9 @@
   }
 
   .middleSection {
-    font-size: 25px;
+    font-size: 40px;
     text-align: center;
-    font-family: $example1font;
-
-
-
+    font-family: $example3font;
   }
 
   
@@ -131,7 +130,6 @@
 
 .ul .icon {
   position: relative;
-
   transition: transform 0.5s;
   z-index: 3;
 }
@@ -173,5 +171,21 @@
   background: #dd4b39;
 }
 
+.facebookColor{
+  color: #3b5999;
+}
 
-  
+.twitterColor{
+  color: #0077b5;
+}
+
+.linkedinColor{
+  color: #0077b5;
+}
+
+.googleColor {
+ color: #dd4b39
+}
+
+
+

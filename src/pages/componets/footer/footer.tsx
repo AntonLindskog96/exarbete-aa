@@ -49,22 +49,22 @@ const Footer: React.FC = () => {
         <div className={styles.leftSection}>
           <ul className={styles.ul}>
             <li>
-              <a href="#">
+              <a href="#" className={styles.facebookColor}>
                 <FontAwesomeIcon icon={faFacebookF} className={styles.icon} />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" className={styles.twitterColor}>
                 <FontAwesomeIcon icon={faTwitter} className={styles.icon} />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" className={styles.linkedinColor}>
                 <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" className={styles.googleColor}>
                 <FontAwesomeIcon icon={faGooglePlusG} className={styles.icon} />
               </a>
             </li>
