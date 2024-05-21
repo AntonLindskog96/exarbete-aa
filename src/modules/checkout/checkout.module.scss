@@ -1,6 +1,16 @@
 @import "../../styles/variables";
 @import "../../styles/typography";
 
+.shoppingCartContainer {
+  //background-color: rgb(24, 22, 22);
+  border-radius: 5%;
+  width: 50%;
+  margin-top: 20px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
 
 .outerContainer {
   flex-direction: row;
@@ -20,27 +30,35 @@
 
 .cartContent {
   display: flex;
-  justify-content: space-between;
-  width: 20%;
-  margin-right: 20px;
+  justify-content: space-between
 
 }
 
 .borderline {
 
-  border-bottom: 1px solid;
-  color: #605858;
+  border-bottom: 1px solid #e7e7e7 ;
 }
 
 .totalPriceSection {
   color: black;
-  margin-left: 10px;
+  margin-left: 1px;
+}
+
+.quantityCounter {
+
+  font-weight: bold;
+
 }
 
 .checkoutPopup {
 
   width: 800px;
-  height: 1000px;
+  height: 600px;
+}
+
+.shopping {
+
+  font-family: "JetBrains Mono", monospace;
 }
 
 .swishIcon {
@@ -55,11 +73,16 @@
 }
 
 
-
 .cartItemPrice {
   @include fontsizeSmall;
   line-height: 100%;
   color: black;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.cartListItem {
+  list-style-type: none;
+  font-family: "JetBrains Mono", monospace;
 }
 
 
@@ -123,8 +146,8 @@
 .submitButton {
 
 
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color:  $buttonColor;
+  font-family: "JetBrains Mono", monospace;
+  background-color: $buttonColor;
   color: white;
   padding: 10px 5px;
   border: none;
@@ -135,15 +158,6 @@
 
 }
 
-
-
-.shoppingCartContainer {
-  //background-color: rgb(24, 22, 22);
-  border-radius: 5%;
-  width: 50%;
-  margin-top: 100px;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  margin-left: 200px;
+.p {
+  font-family: "JetBrains Mono", monospace;
 }

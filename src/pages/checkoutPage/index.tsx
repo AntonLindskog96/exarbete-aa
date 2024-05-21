@@ -66,7 +66,7 @@ const CheckoutPage = () => {
                 <button className={styles.navigateButton} onClick={() => router.back()}>
                     Meny<ArrowBackIosIcon sx={{fontSize: 30}}/>
                 </button>
-                <h1 className={styles.menuTitle}>Min beställning</h1>
+                <h1 className={styles.menuTitle}>Min Beställning</h1>
 
             </section>
             <section>

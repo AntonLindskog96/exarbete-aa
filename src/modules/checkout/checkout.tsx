@@ -18,7 +18,7 @@ import {
 } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import {set} from "immutable";
-import {fontSize} from "@mui/system";
+import {fontSize, fontStyle} from "@mui/system";
 import {Visibility, VisibilityOff} from "@mui/icons-material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import {useRouter} from "next/router";
@@ -97,8 +97,6 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
         }
     };
 
-
-    const router = useRouter();
     const [menu, setMenu] = useState<any[]>([]);
     const [selectedCategory, setSelectedCategory] = useState<string>("burgers");
     const [cart, setCart] = useState<any[]>([]);
@@ -146,11 +144,11 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
                 onSubmit: handleSubmit,
             }}>
                 <CloseIcon className={styles.closeIcon} onClick={onClose}>Cancel</CloseIcon>
-                <DialogTitle fontWeight={"bold"}
+                <DialogTitle fontWeight={"bold"} fontSize={"40px"}
                              >Min beställning</DialogTitle>
                 <DialogContent>
                     <section className={styles.shoppingCartContainer}>
-                        <h2 className={styles.shopping}>Min Beställning</h2>
+                        <h2 className={styles.shopping}>Min beställning</h2>
                         <div className={styles.borderline}>
                         </div>
                         <div className={styles.shoppingCartSection}>
@@ -159,13 +157,6 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
                         </div>
                         {cart.map((item) => (
                             <li key={item.id} className={styles.cartListItem}>
-                                {/*<img*/}
-                                {/*    src={item.imagebeer ? item.imagebeer : item.imageburger}*/}
-                                {/*    className={`${styles.cartItemImage} ${*/}
-                                {/*        item.imagebeer ? styles.cartItemImageBeer : ""*/}
-                                {/*    }`}*/}
-                                {/*    alt={item.title}*/}
-                                {/*/>*/}
                                 <div className={styles.cartContent}>
                                     <p className={styles.cartItemPrice}>+ {item.title}</p>
                                     <p className={styles.cartItemPrice}>{item.price}Kr</p>
@@ -175,14 +166,14 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
                         <div className={styles.borderline}>
                         </div>
                         <div className={styles.totalPriceSection}>
-                            <p>Summa totalt: {totalPrice} SEK</p>
+                            <p className={styles.p}>Summa totalt: {totalPrice} SEK</p>
                         </div>
                     </section>
-                    <h3>Betala som gäst med</h3>
+                    <h3 className={styles.p}>Betala med</h3>
                     <section className={styles.purchaseContent}>
                         <div className={styles.creditContent}>
                             <img src={creditCardIcon.src} className={styles.creditIcon} alt=""/>
-                            <p>Betalkort</p>
+                            <p className={styles.p}>Betalkort</p>
                             <Radio
                                 checked={selectedValue === 'a'}
                                 onChange={handleChange}
@@ -203,7 +194,7 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
                         </div>
                         <div className={styles.swishContent}>
                             <img src={swishSvgIcon.src} className={styles.swishIcon} alt=""/>
-                            <p>Swish</p>
+                            <p className={styles.p}>Swish</p>
                             <Radio
                                 checked={selectedValue === 'b'}
                                 onChange={handleChange}
