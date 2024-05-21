@@ -67,9 +67,6 @@ const CheckoutPage = () => {
                     Meny<ArrowBackIosIcon sx={{fontSize: 30}}/>
                 </button>
                 <h1 className={styles.menuTitle}>Min beställning</h1>
-                <section>
-
-                </section>
 
             </section>
             <section>
