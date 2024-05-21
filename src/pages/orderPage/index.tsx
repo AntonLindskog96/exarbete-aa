@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import Navback from "../componets/navback/navback";
 import CheckoutButton from "../componets/buttons/paymentButton";
+import Footer from "../componets/footer/footer";
 
 async function getMenu() {
   const res = await fetch("http://localhost:3000/api/products");
@@ -113,6 +114,7 @@ const Orders: NextPage = () => {
   };
 
   return (
+    <section>
     <div className={styles.outerContainer}>
       <section className={styles.menuContainer}>
         <Navback />
@@ -207,6 +209,8 @@ const Orders: NextPage = () => {
         {cart.length > 0 && <CheckoutButton rounded={rounded} />}
       </section>
     </div>
+      <Footer />
+    </section>
   );
 };
 
