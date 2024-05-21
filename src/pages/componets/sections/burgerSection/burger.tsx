@@ -4,7 +4,7 @@ import burgerPicture from "@/assets/images/burgersection.webp";
 
 const BurgerSection = () => {
   return (
-    <section id="about" className={styles.burgerSection}>
+    <section id="burgerSection" className={styles.burgerSection}>
       <img src={burgerPicture.src} alt="icon" className={styles.burgerPicture} />
       <article className={styles.burgerText}>
         <h2 className={styles.burgerTitle}>Våra Burgare</h2>

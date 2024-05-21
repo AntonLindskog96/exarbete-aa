@@ -4,7 +4,7 @@ import aboutPicture from "@/assets/images/aboutsection.webp";
 
 const AboutSection = () => {
   return (
-    <section id="about" className={styles.aboutSection}>
+    <section id="aboutSection" className={styles.aboutSection}>
       <article className={styles.aboutText}>
         <h2 className={styles.aboutname}>OM OSS</h2>
         <p className={styles.homepageText}>

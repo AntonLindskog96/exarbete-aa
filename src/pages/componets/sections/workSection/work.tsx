@@ -4,7 +4,7 @@ import burgerBeer from "@/assets/images/burgergif.gif";
 
 const WorkSection = () => {
   return (
-    <section id="about" className={styles.workSection}>
+    <section id="workSection" className={styles.workSection}>
       <article className={styles.workText}>
         <h1 className={styles.workTitle}>Jobba hos oss</h1>
         <h3 className={styles.workDescription}>Fyll i intresseanmälan så kontaktar vi dig.</h3>
