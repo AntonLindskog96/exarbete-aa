@@ -1,108 +1,94 @@
 @import "../../../styles/_variables";
 @import "../../../styles/_typography";
-@import url('https://fonts.googleapis.com/css2?family=Dorsa&family=Praise&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dorsa&family=Praise&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Praise&display=swap");
 
 .footer {
-    background-color: white;
-    color: $secondaryTextColor;
-    text-align: center;
-    padding: 3rem 0;
-    margin-top: 2rem; 
-    justify-content: space-between;
-  }
+  background-color: $primaryTextColor;
+  color: $secondaryTextColor;
+}
 
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .footerContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
+.leftSection {
+  display: flex;
+  align-items: center;
+}
 
-  .leftSection {
-    display: flex;
-    align-items: center;
-  }
+.rightSection {
+  display: flex;
+  align-items: center;
+}
 
-  .rightSection {
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
-  }
+.middleSection {
+  font-size: 40px;
+  text-align: center;
+  font-family: $example3font;
+}
 
-  .middleSection {
-    font-size: 40px;
-    text-align: center;
-    font-family: $example3font;
-  }
+.scrollToSection {
+  background-color: $primaryTextColor;
+  font-family: $example1font;
+  scroll-behavior: smooth;
+  border: none;
+  cursor: pointer;
+  @include fontsizeSmall;
+}
 
-  
+.scrollToSection:hover {
+  color: $gold;
+}
 
-  
-  .scrollToSection{
-    font-family: $example1font;
-    scroll-behavior: smooth;
-    border: none;
-    cursor: pointer;
-    padding-left: 50px;
-    background-color: white;
-    @include fontsizeSmall
-  }
+.scrollToSection {
+  padding: 0.5em 0.8em;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
 
-  .scrollToSection:hover {
-    color: $gold;
-  }
+.scrollToSection::before,
+.scrollToSection::after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
 
+.scrollToSection::before {
+  content: "";
+  right: 0;
+  top: 0;
+  border-top: 3px solid $gold;
+  border-right: 3px solid $gold;
+  transform: translate(-100%, 50%);
+}
 
+.scrollToSection:after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid $gold;
+  border-left: 3px solid $gold;
+  transform: translate(100%, -50%);
+}
 
-  .scrollToSection {
-    padding: .5em .8em;
-    color: $secondaryTextColor;
-    position: relative;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  .scrollToSection::before,
-  .scrollToSection::after {
-    content: '';
-    height: 14px;
-    width: 14px;
-    position: absolute;
-    transition: all .35s ease;
-    opacity: 0;
-  }
-  
-  .scrollToSection::before {
-    content: '';
-    right: 0;
-    top: 0;
-    border-top: 3px solid $gold;
-    border-right: 3px solid $gold;
-    transform: translate(-100%, 50%);
-  }
-  
-  .scrollToSection:after {
-    content: '';
-    left: 0;
-    bottom: 0;
-    border-bottom: 3px solid $gold;
-    border-left: 3px solid $gold;
-    transform: translate(100%, -50%)
-  }
-  
-  .scrollToSection:hover:before,
-  .scrollToSection:hover:after{
-    transform: translate(0,0);
-    opacity: 1;
-  }
-  
-  .scrollToSection:hover {
-    color: $gold;
-  }
+.scrollToSection:hover:before,
+.scrollToSection:hover:after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
 
-
-
+.scrollToSection:hover {
+  color: $gold;
+}
 
 .ul {
   display: flex;
@@ -147,7 +133,7 @@
   width: 100%;
   height: 100%;
   background: #f00;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 2;
 }
 
@@ -155,11 +141,11 @@
   top: 0;
 }
 
-.ul li:nth-child(1) a:before{
+.ul li:nth-child(1) a:before {
   background: #3b5999;
 }
 
-.ul li:nth-child(2) a:before{
+.ul li:nth-child(2) a:before {
   background: #55acee;
 }
 
@@ -171,21 +157,18 @@
   background: #dd4b39;
 }
 
-.facebookColor{
+.facebookColor {
   color: #3b5999;
 }
 
-.twitterColor{
+.twitterColor {
   color: #0077b5;
 }
 
-.linkedinColor{
+.linkedinColor {
   color: #0077b5;
 }
 
 .googleColor {
- color: #dd4b39
+  color: #dd4b39;
 }
-
-
-
