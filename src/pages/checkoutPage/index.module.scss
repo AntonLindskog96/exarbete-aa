@@ -3,11 +3,10 @@
 @import "../../styles/_typography";
 
 
-
 .outerContainer {
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
-  justify-content: space-between;
+  align-items: center
 
 }
 
@@ -22,21 +21,77 @@
   align-items: baseline;
 }
 
+.orderContainer {
+
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: row;
+  //margin-left: 50px;
+
+}
+
+.orderText {
+
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+
+.orderContent {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.g {
+  display: flex;
+
+}
+
+.estimatedTimeText {
+
+  font-weight: bold;
+}
+
 .contentSection {
 
 
 }
 
+.checkIcon {
+
+  height: 50px;
+  width: 50px;
+}
+
+.clockIcon {
+
+  height: 40px;
+  width: 40px;
+}
+
+.timeContent {
+
+  border: 2px solid #e7e7e7;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+
+}
 
 .shoppingCartContainer {
   background-color: rgb(24, 22, 22);
   border-radius: 5%;
-  width: 20%;
-  margin-top: 100px;
+  width: 15%;
+  margin-bottom: 100px;
   border: none;
   display: flex;
   flex-direction: column;
   margin-right: 100px;
+  margin-left: auto;
 }
 
 .navigateButton {
@@ -44,12 +99,14 @@
   background-color: transparent;
   color: white;
   border: none;
-  margin-top: 10px;
+  margin-top: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
   gap: 10px;
+  margin-right: auto;
+  margin-left: 50px;
 }
 
 .navigateButton:hover {
@@ -60,12 +117,22 @@
 .menuTitle {
   @include fontsizeHuge;
   font-family: $example1font;
-  color: white;
-  margin-left: 100px;
+  color: black;
+  //margin-left: 100px;
+  margin-top: -12px;
+  margin-left: 65px;
+}
+
+.homeIcon {
+
+    width: 150px;
+    height: 150px;
+    margin-top: -20px;
+
 }
 
 .totalPriceSection {
-  color: white;
+  color: black;
   margin-left: 10px;
 }
 
@@ -105,12 +172,12 @@
 
 .shoppingCart {
 
-  color:white;
+  color: white;
 }
 
 .quantityCounter {
 
-  color:white;
+  color: white;
   font-weight: bold;
 
 }
@@ -151,6 +218,6 @@
 .cartItemPrice {
   @include fontsizeSmall;
   line-height: 100%;
-  color: white;
+  color: black;
 
 }

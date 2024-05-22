@@ -1,27 +1,13 @@
-import StartPage from "@/pages/startPage";
-import {useEffect, useState} from "react";
-import React from 'react';
-import {Modal} from "@mui/base";
+import React, {useEffect, useState} from "react";
 import styles from "@/modules/checkout/checkout.module.scss";
 import Dialog from '@mui/material/Dialog';
 import Radio from '@mui/material/Radio';
 import swishSvgIcon from "@/assets/images/card-swish.svg";
 import creditCardIcon from "@/assets/images/credit-card.png";
-import {
-    DialogActions,
-    DialogContent,
-    DialogContentText,
-    DialogTitle,
-    IconButton,
-    InputAdornment,
-    TextField
-} from "@mui/material";
+import Link from "next/link";
+import {DialogActions, DialogContent, DialogTitle} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
-import {set} from "immutable";
-import {fontSize, fontStyle} from "@mui/system";
-import {Visibility, VisibilityOff} from "@mui/icons-material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import {useRouter} from "next/router";
 
 interface LoginProps {
 
@@ -145,7 +131,7 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
             }}>
                 <CloseIcon className={styles.closeIcon} onClick={onClose}>Cancel</CloseIcon>
                 <DialogTitle fontWeight={"bold"} fontSize={"40px"}
-                             >Min beställning</DialogTitle>
+                >Min beställning</DialogTitle>
                 <DialogContent>
                     <section className={styles.shoppingCartContainer}>
                         <h2 className={styles.shopping}>Min beställning</h2>
@@ -184,9 +170,9 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
                                     '& .MuiSvgIcon-root': {
                                         fontSize: 28,
                                     },
-                                        '&.Mui-checked': {
-                                            color: '#b63333'
-                                        },
+                                    '&.Mui-checked': {
+                                        color: '#b63333'
+                                    },
                                 }}
                             />
                             <div className={styles.borderline}>
@@ -207,77 +193,17 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
                                     },
                                     '&.Mui-checked': {
                                         color: '#b63333'
-                                },
+                                    },
                                 }}
                             />
                             <div className={styles.borderline}>
                             </div>
                         </div>
                     </section>
-                    {/*<DialogContentText>*/}
-                    {/*    {formError && <p className={styles.errorText}>{formError}</p>}*/}
-                    {/*</DialogContentText>*/}
-                    {/*<TextField*/}
-                    {/*    autoFocus*/}
-                    {/*    required*/}
-                    {/*    margin="dense"*/}
-                    {/*    id="name"*/}
-                    {/*    name="email"*/}
-                    {/*    label="Email Address"*/}
-                    {/*    type="email"*/}
-                    {/*    fullWidth*/}
-                    {/*    variant="standard"*/}
-                    {/*/>*/}
-                    {/*<TextField*/}
-                    {/*    autoFocus*/}
-                    {/*    required*/}
-                    {/*    margin="dense"*/}
-                    {/*    id="name"*/}
-                    {/*    name="password"*/}
-                    {/*    label="Lösenord"*/}
-                    {/*    type={isPasswordVisible ? "text" : "password"}*/}
-                    {/*    fullWidth*/}
-                    {/*    variant="standard"*/}
-                    {/*    InputProps={{*/}
-                    {/*        endAdornment: (*/}
-                    {/*            <InputAdornment position="end">*/}
-                    {/*                <IconButton*/}
-                    {/*                    onClick={togglePasswordVisibility}*/}
-                    {/*                    edge="end"*/}
-                    {/*                >*/}
-                    {/*                    {isPasswordVisible ? <VisibilityOff/> : <Visibility/>}*/}
-                    {/*                </IconButton>*/}
-                    {/*            </InputAdornment>*/}
-                    {/*        ),*/}
-                    {/*    }}*/}
-                    {/*/>*/}
-                    {/*{!isLogin && (*/}
-                    {/*    <TextField*/}
-                    {/*        autoFocus*/}
-                    {/*        required*/}
-                    {/*        margin="dense"*/}
-                    {/*        id="name"*/}
-                    {/*        name="confirmPassword"*/}
-                    {/*        label="Bekräfta lösenord"*/}
-                    {/*        type={isPasswordVisible ? "text" : "password"}*/}
-                    {/*        fullWidth*/}
-                    {/*        variant="standard"*/}
-                    {/*        InputProps={{*/}
-                    {/*            endAdornment: (*/}
-                    {/*                <InputAdornment position="end">*/}
-                    {/*                    <IconButton*/}
-                    {/*                        onClick={togglePasswordVisibility}*/}
-                    {/*                        edge="end"*/}
-                    {/*                    >*/}
-                    {/*                        {isPasswordVisible ? <VisibilityOff/> : <Visibility/>}*/}
-                    {/*                    </IconButton>*/}
-                    {/*                </InputAdornment>*/}
-                    {/*            ),*/}
-                    {/*        }}*/}
-                    {/*    />*/}
-                    {/*)}*/}
                 </DialogContent>
-                <button className={styles.submitButton} type="submit">Beställ & betala</button>
+                <Link href="/checkoutPage">
+                    <button className={styles.submitButton} type="submit">Beställ & betala</button>
+                </Link>
                 <DialogActions>
                     <p className={styles.registrationText} onClick={toggleForm}>
                     </p>
