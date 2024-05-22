@@ -5,17 +5,23 @@
   color: $primaryTextColor;
   font-family: $example1font;
   height: 100vh;
+  color: $secondaryTextColor;
   
 }
 
-.headerContainer h1 {
-  font-size: 70px;
-  border-bottom: 1px solid;
+.startPageTitle{
+font-family: $example6font;
+letter-spacing: 0.5rem;
+font-weight: 500;
+font-size: 100px;
+border-bottom: 1px solid;
+width: 145vh;
 }
+
 
 .headerContainer h2 {
   @include fontsizeMedium;
-  margin-top: -40px;
+  margin-top: -50px;
 }
 
 

@@ -21,7 +21,7 @@ const StartPage = () => {
             transition={{ delay: 0.5 }}
             className={styles.header1}
           >
-            <h1>Pints & Pattys</h1>
+            <h1 className={styles.startPageTitle}>Pints & Patties</h1>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}

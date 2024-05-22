@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={styles.middleSection}>
-          <h2 className={styles.footerTitle}> Pints & Pattys</h2>
+          <h2 className={styles.footerTitle}> Pints & Patties</h2>
         </div>
 
         <div className={styles.rightSection}>

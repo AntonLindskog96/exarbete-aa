@@ -55,7 +55,7 @@ const Header: React.FC = () => {
                 {!loggedInUser ? (
                     <button className={styles.loginButton} onClick={handleOpen}>Logga in</button>
                 ) : (
-                    <button className={styles.logoutButton} onClick={handleLogout}>Logga out</button>
+                    <button className={styles.logoutButton} onClick={handleLogout}>Logga ut</button>
                 )}
                 {showLoginPopup && <Login open={showLoginPopup} onClose={handleClose}/>}
             </div>

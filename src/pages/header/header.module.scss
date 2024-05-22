@@ -27,6 +27,7 @@
 }
 
 .buttonContent {
+  
   //margin: auto;
   justify-content: space-between;
   margin-left: auto;
@@ -44,7 +45,7 @@
 }
 
 .orderButton {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: $example1font;
   background-color:  $buttonColor;
   color: white;
   padding: 15px 20px;
@@ -57,8 +58,7 @@
 }
 
 .loginButton {
-
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: $example1font;
   background-color:  $buttonColor;
   color: white;
   padding: 15px 5px;
@@ -72,9 +72,9 @@
 
 .logoutButton {
 
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: $example1font;
   background-color:  $buttonColor;
-  color: white;
+  color: $secondaryTextColor;
   padding: 10px 5px;
   border: none;
   border-radius: 25px;
@@ -125,8 +125,6 @@
   width: 0%;
   z-index: 10;
   opacity: 0;
-
-
   transition: all 600ms cubic-bezier(.62,.04,.3,1.56);
   transition-delay: 100ms;
   ul {
@@ -203,6 +201,6 @@
 
 .loginButton:hover {
   background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
+  border: 1px solid $buttonColor;
+  color: $buttonColor;
 }

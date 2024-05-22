@@ -3,52 +3,48 @@
 
 
 .closeIcon {
-
   margin-left: auto;
   cursor: pointer;
 }
 
 .loginPopup {
-
-
   width:400px;
 }
 
 .registrationText {
-
+  font-family: $example1font;
   margin: auto;
   cursor: pointer;
 }
 
 .registrationText:hover {
-
   margin: auto;
   text-decoration-line: underline;
 }
 
 .DialogTitle {
-
-
   font-weight: bolder;
   cursor: pointer;
 }
 
 .errorText {
-
   color: #b63333;
 }
 
 .submitButton {
-
-
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: $example1font;
   background-color:  $buttonColor;
-  color: white;
+  color: $primaryTextColor;
   padding: 10px 5px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   font-size: 18px;
   margin: 10px;
+}
 
+.submitButton:hover {
+  background-color: transparent;
+  border: 1px solid $primaryBg;
+  color: $buttonColor;
 }

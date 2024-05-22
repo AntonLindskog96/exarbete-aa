@@ -27,10 +27,12 @@
 }
 
 .middleSection {
-  font-size: 40px;
+  @include fontsizeHuge;
   text-align: center;
   font-family: $example3font;
+  letter-spacing: 0.2rem;
 }
+
 
 .scrollToSection {
   background-color: $primaryTextColor;
