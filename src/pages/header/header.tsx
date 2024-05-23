@@ -3,6 +3,7 @@ import homeIcon from "@/assets/images/home-icon.png";
 import hamburgerMenuIcon from "@/assets/images/hamburger-menu.png";
 import styles from "@/pages/header/header.module.scss";
 import Login from "@/modules/login/login";
+import CloseIcon from "@mui/icons-material/Close";
 
 
 const Header: React.FC = () => {
@@ -59,7 +60,7 @@ const Header: React.FC = () => {
                 )}
                 {showLoginPopup && <Login open={showLoginPopup} onClose={handleClose}/>}
             </div>
-            <div className={styles.hamburgericon} onClick={toggleMenu}>
+            <div className={`${styles.hamburgericon} ${isMenuOpen ? styles.hidden : ''}`} onClick={toggleMenu}>
                 <img src={hamburgerMenuIcon.src} height={50}></img>
             </div>
             <nav id="nav">
@@ -67,19 +68,22 @@ const Header: React.FC = () => {
 
             </nav>
             <div className={` ${styles.navContent} ${isMenuOpen ? styles.slide : ""}`}>
-                <div className={styles.hamburgericon} onClick={toggleMenu}>
-                    <img src={hamburgerMenuIcon.src} height={50}></img>
-                </div>
 
+                <div className={`${styles.navCloseIcon} ${isMenuOpen ? styles.slide : ''}`} onClick={toggleMenu}>
+                    <CloseIcon fontSize={"large"} className={styles.closeIcon}></CloseIcon>
+                </div>
                 <img src={homeIcon.src} alt="icon" className={styles.menuicon}/>
 
                 <div className={styles.wrapNavContent}>
 
 
-                    <a className={styles.navContentText}>HOme</a>
-                    <a className={styles.navContentText}>About</a>
-                    <a className={styles.navContentText}>Contact</a>
-                    <a className={styles.navContentText}>Help</a>
+                    <a className={styles.navContentText}>Hitta oss</a>
+                    <a className={styles.navContentText}>Beställ</a>
+                    <a className={styles.navContentText} href="#workSection">Karriär</a>
+                    <a className={styles.navContentText}  href="#aboutSection">Om oss</a>
+                    <a className={styles.navContentText}>Recensioner</a>
+                    <a className={styles.navContentText}>Webbshop</a>
+                    <a className={styles.navContentSocialText}>@Instagram/@Facebook</a>
 
 
                 </div>
