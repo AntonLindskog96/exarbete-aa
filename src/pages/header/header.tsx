@@ -60,7 +60,7 @@ const Header: React.FC = () => {
                 )}
                 {showLoginPopup && <Login open={showLoginPopup} onClose={handleClose}/>}
             </div>
-            <div className={`${styles.hamburgericon} ${isMenuOpen ? styles.hidden : ''}`} onClick={toggleMenu}>
+            <div className={`${styles.hamburgericon} ${isMenuOpen ? styles.slide : ''}`} onClick={toggleMenu}>
                 <img src={hamburgerMenuIcon.src} height={50}></img>
             </div>
             <nav id="nav">
