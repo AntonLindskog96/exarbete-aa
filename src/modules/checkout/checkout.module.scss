@@ -156,6 +156,18 @@
   font-size: 18px;
   width: 95%;
   margin: 20px 5px 15px 15px;
+  transition: opacity 0.3s ease;
+  &:disabled {
+    opacity: 0.6;
+  }
+
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
 
 }
 

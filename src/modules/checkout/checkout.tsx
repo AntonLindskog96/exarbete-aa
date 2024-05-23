@@ -8,6 +8,8 @@ import Link from "next/link";
 import {DialogActions, DialogContent, DialogTitle} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import router from "next/router";
+import {ClipLoader} from "react-spinners";
 
 interface LoginProps {
 
@@ -36,6 +38,8 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
     const [selectedCategory, setSelectedCategory] = useState<string>("burgers");
     const [cart, setCart] = useState<any[]>([]);
     const [totalPrice, setTotalPrice] = useState(0);
+    const [isLoading, setIsLoading] = useState(false);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -69,6 +73,16 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
         setTotalPrice(newTotalPrice);
         localStorage.setItem("totalPrice", newTotalPrice.toString());
     }, [cart]);
+
+    const handleOrder = async () => {
+
+        setIsLoading(true);
+
+        setTimeout(() => {
+            setIsLoading(false);
+            router.push('/checkoutPage')
+        },2000);
+    }
 
 
     return (
@@ -149,9 +163,20 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
                         </div>
                     </section>
                 </DialogContent>
-                <Link href="/checkoutPage">
-                    <button className={styles.submitButton} type="submit">Beställ & betala</button>
-                </Link>
+                    <button
+                        className={styles.submitButton}
+                        type="submit"
+                        onClick={handleOrder}
+                        disabled={isLoading}
+                    >
+                        {isLoading ? (
+                            <div className={styles.spinnerContainer}>
+                            <ClipLoader loading={isLoading} size={24} color="#fff" />
+                            </div>
+                            ) : (
+                                "Beställ & betala"
+                        )}
+                       </button>
             </Dialog>
 
         </div>
