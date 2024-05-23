@@ -64,16 +64,31 @@ const Header: React.FC = () => {
             </div>
             <nav id="nav">
 
-                {/*<ul>*/}
-                {/*    <li>HOme</li>*/}
-                {/*    <li>About</li>*/}
-                {/*    <li>Contact</li>*/}
-                {/*    <li>Help</li>*/}
-                {/*</ul>*/}
 
             </nav>
-            <div className={` ${styles["dark-blue"]} ${isMenuOpen ? styles.slide : ""}`}></div>
-            {isMenuOpen && <div className={styles.overlay} onClick={toggleMenu}></div>}
+            <div className={` ${styles.navContent} ${isMenuOpen ? styles.slide : ""}`}>
+                <div className={styles.hamburgericon} onClick={toggleMenu}>
+                    <img src={hamburgerMenuIcon.src} height={50}></img>
+                </div>
+
+                <img src={homeIcon.src} alt="icon" className={styles.menuicon}/>
+
+                <div className={styles.wrapNavContent}>
+
+
+                    <a className={styles.navContentText}>HOme</a>
+                    <a className={styles.navContentText}>About</a>
+                    <a className={styles.navContentText}>Contact</a>
+                    <a className={styles.navContentText}>Help</a>
+
+
+                </div>
+
+            </div>
+            {isMenuOpen && <div className={styles.overlay} onClick={toggleMenu}>
+
+
+            </div>}
         </div>
 
     );
