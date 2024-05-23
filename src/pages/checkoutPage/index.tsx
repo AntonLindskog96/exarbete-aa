@@ -1,16 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {motion} from 'framer-motion';
 import styles from './index.module.scss';
-import Link from 'next/link';
-import Header from "@/pages/header/header";
 import checkIcon from "@/assets/images/check-icon.png";
 import beerIcon from "@/assets/images/beer.png";
 import clockIcon from "@/assets/images/clock-icon.png";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import DeleteOutlineSharpIcon from "@mui/icons-material/DeleteOutlineSharp";
-import RemoveSharpIcon from "@mui/icons-material/RemoveSharp";
-import AddIcon from "@mui/icons-material/Add";
 import {useRouter} from 'next/router'
 import {generateOrderNumber} from "@/utils/generateOrderNumber";
 import homeIcon from "@/assets/images/home-icon.png";
