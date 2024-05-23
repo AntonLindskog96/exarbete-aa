@@ -31,10 +31,13 @@ const CheckoutPage = () => {
     const [cart, setCart] = useState<any[]>([]);
     const [totalPrice, setTotalPrice] = useState(0);
     const [orderNumber,setOrderNumber] = useState('');
+    const [orderTime, setOrderTime] = useState('');
 
     useEffect(() => {
         const newOrderNumber = generateOrderNumber();
         setOrderNumber(newOrderNumber);
+        const currentTime = new Date().toLocaleTimeString();
+        setOrderTime(currentTime);
     },
         []);
 
@@ -97,8 +100,9 @@ const CheckoutPage = () => {
                     </div>
                     <h1 className={styles.menuTitle}>Tack för din beställning!</h1>
                     <div className={styles.timeContent}>
-                        <p className={styles.estimatedTimeText}>Beställningstid:</p>
+                        <p className={styles.timeText}><b>Beställningstid:</b> {orderTime}</p>
                     </div>
+
                     <div className={styles.timeContent}>
                         <img className={styles.clockIcon} src={clockIcon.src} alt=""/>
                         <h3 className={styles.estimatedTimeText}>Upphämtning:</h3>
