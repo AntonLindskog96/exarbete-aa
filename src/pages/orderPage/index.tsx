@@ -133,7 +133,9 @@ const Orders: NextPage = () => {
       <div className={styles.outerContainer}>
         <section className={styles.menuContainer}>
           <Navback />
-          <h1 className={styles.menuTitle}>PINTS & PATTYS MENY</h1>
+          <h1 className={styles.menuTitle}>PINTS & PATTIES MENY</h1>
+          <div className={styles.borderBottom}>
+          </div>
 
           <div className={styles.buttonContainer}>
             <a
