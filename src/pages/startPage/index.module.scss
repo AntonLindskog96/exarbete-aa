@@ -29,7 +29,6 @@ max-width: 90%;
 
 .mainInfoPage {
 margin-left: 270px;
-width: 100%;
 max-width: 90%;
 }
 
@@ -43,7 +42,6 @@ max-width: 90%;
 .burgerPicture {
   width: 800px;
   height: 600px;
-
 }
 
 
@@ -113,12 +111,22 @@ max-width: 90%;
 
 
 
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
   .headerContainer {
     height: 400vh;
     width: 100%;
     display: grid;
+    align-items: start;
+    position: relative;
+    justify-items: center;
   }
+
+  .mainInfoPage {
+    margin-left: 0;
+    display: flex;
+    text-align: center;
+  }
+  
 
   .startPageTitle {
     font-size: 25rem;
@@ -133,14 +141,14 @@ max-width: 90%;
 
   .burgerPicture {
     height: auto;
-    width: 70%;
+    width: 150vh;
  
   }
 
   .contentPicture {
+
+
     position: inherit;
-    margin-right: 10vh;
-    
   }
 
   .scrollTextContainer {
