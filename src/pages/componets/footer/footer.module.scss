@@ -183,6 +183,8 @@
 @media (max-width: 1024px) {
   .footerContainer {
   width: fit-content;
+  height: 100vh;
+  flex-direction: column;
   }
 
   .leftSection,
@@ -192,20 +194,25 @@
   }
 
   .middleSection {
-    margin: 0.5rem 0;
+    font-size: 100px;
   }
-}
-
-@media (max-width: 480px) {
   .scrollToSection {
-    font-size: 16px;
-    padding: 0.4em 0.6em;
+    font-size: 50px;
   }
 
   .ul li a {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 20px;
+    width: 200px ;
+    height: 200px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 90px;
+    margin: 0 50px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 10;
   }
 }
