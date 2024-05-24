@@ -6,14 +6,18 @@
 .footer {
   background-color: $primaryTextColor;
   color: $secondaryTextColor;
+  width: 100%;
+  position: relative;
 }
 
 .footerContainer {
+  background-color: $primaryTextColor;
   display: flex;
   justify-content: space-between;
   max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 1rem;
 }
 
 .leftSection {
@@ -173,4 +177,35 @@
 
 .googleColor {
   color: #dd4b39;
+}
+
+
+@media (max-width: 1024px) {
+  .footerContainer {
+  width: fit-content;
+  }
+
+  .leftSection,
+  .rightSection {
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+  .middleSection {
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .scrollToSection {
+    font-size: 16px;
+    padding: 0.4em 0.6em;
+  }
+
+  .ul li a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+  }
 }

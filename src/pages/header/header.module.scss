@@ -2,11 +2,8 @@
 @import "../../styles/_typography";
 
 .headerContent {
+  position: relative;
   display: flex;
-  //flex-direction: row;
-  //margin-left: auto;
-  //padding: 20px;
-  //margin-top: -200px;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
@@ -18,7 +15,6 @@
 }
 
 .loggedInText {
-
   display: flex;
   justify-content: center;
   flex-direction: column-reverse;
@@ -27,16 +23,12 @@
 }
 
 .buttonContent {
-  
-  //margin: auto;
   justify-content: space-between;
   margin-left: auto;
   flex-direction: row;
   margin-right: 80px;
   z-index: 1;
   display: flex;
-
-
 }
 
 .icon {
@@ -88,9 +80,8 @@
 }
 
 .hamburgericon {
-
+  margin-right: 100px;
   display: flex;
-  margin-top: 10px;
   margin-right: 200px;
   height: 60px;
   width: 60px;
@@ -303,4 +294,37 @@
   background-color: transparent;
   border: 1px solid $buttonColor;
   color: $buttonColor;
+}
+
+
+@media (max-width: 800px) {
+  .icon {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    
+  }
+  .headerContent {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .iconContent {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+  .buttonContent {
+    display: none;
+  }
+  .hamburgericon {
+    position: relative;
+    margin-left: 140vh;
+    margin-top: 40px;
+    height: 200px;
+    cursor: pointer;
+  }
 }
