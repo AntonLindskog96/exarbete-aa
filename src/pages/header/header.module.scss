@@ -89,8 +89,7 @@
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
   &:hover {
-    transform: scale(1.2);
-    box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+    transform: scale(1.1);
   }
 }
 
@@ -107,10 +106,8 @@
 }
 
 .navCloseIcon:hover {
-
   color: rgb(160, 160, 160);
   cursor: pointer;
-
 }
 
 
@@ -165,18 +162,6 @@
 
       }
     }
-  }
-}
-
-.nav.show {
-  //  opacity: 0;
-  // animation: slideIn 0.6s cubic-bezier(.62,.04,.3,1.56);
-  // animation-fill-mode: forwards;
-  width: 50%;
-  // transform:scale(1);
-  opacity: 1;
-  ul {
-    opacity: 1;
   }
 }
 
