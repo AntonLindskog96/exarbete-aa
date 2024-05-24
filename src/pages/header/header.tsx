@@ -4,6 +4,7 @@ import hamburgerMenuIcon from "@/assets/images/hamburger-menu.png";
 import styles from "@/pages/header/header.module.scss";
 import Login from "@/modules/login/login";
 import CloseIcon from "@mui/icons-material/Close";
+import Link from "next/link";
 
 
 const Header: React.FC = () => {
@@ -52,7 +53,9 @@ const Header: React.FC = () => {
                 {loggedInUser && (
                     <p className={styles.loggedInText}>Inloggad som {loggedInUser}</p>
                 )}
-                <button className={styles.orderButton}>Beställ</button>
+                <Link href="/orderPage">
+                    <button className={styles.orderButton}>Beställ</button>
+                </Link>
                 {!loggedInUser ? (
                     <button className={styles.loginButton} onClick={handleOpen}>Logga in</button>
                 ) : (
