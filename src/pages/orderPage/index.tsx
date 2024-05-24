@@ -35,6 +35,7 @@ const Orders: NextPage = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest: number) => Math.round(latest));
+  const [activeLink,setActiveLink] = useState<string | null>(null)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -122,31 +123,39 @@ const Orders: NextPage = () => {
     }
   };
 
+  const handleLinkClick = (link:string) => {
+    setActiveLink(link);
+    setSelectedCategory(link);
+  };
+
   return (
     <section>
       <div className={styles.outerContainer}>
         <section className={styles.menuContainer}>
           <Navback />
-          <h1 className={styles.menuTitle}>Meny</h1>
+          <h1 className={styles.menuTitle}>PINTS & PATTIES MENY</h1>
+          <div className={styles.borderBottom}>
+          </div>
+
           <div className={styles.buttonContainer}>
-            <button
-              className={styles.productButton}
-              onClick={() => setSelectedCategory("burgers")}
+            <a
+              className={`${styles.productButton} ${activeLink === "burgers" ? styles.active : ""}`}
+              onClick={() => handleLinkClick("burgers")}
             >
               Burgare
-            </button>
-            <button
-              className={styles.productButton}
-              onClick={() => setSelectedCategory("beers")}
+            </a>
+            <a
+                className={`${styles.productButton} ${activeLink === "beers" ? styles.active : ""}`}
+              onClick={() => handleLinkClick("beers")}
             >
               Öl
-            </button>
-            <button
-              className={styles.productButton}
-              onClick={() => setSelectedCategory("sides")}
+            </a>
+            <a
+                className={`${styles.productButton} ${activeLink === "sides" ? styles.active : ""}`}
+              onClick={() => handleLinkClick("sides")}
             >
               Tillbehör
-            </button>
+            </a>
           </div>
           {loading ? (
             <div className={styles.loader}></div>
