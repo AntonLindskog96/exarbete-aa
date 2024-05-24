@@ -19,7 +19,6 @@ const StartPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className={styles.header1}
           >
             <h1 className={styles.startPageTitle}>Pints & Patties</h1>
           </motion.div>
@@ -29,7 +28,7 @@ const StartPage = () => {
             transition={{ delay: 1.8, duration: 3 }}
             className={styles.header1}
           >
-            <h2>The perfect pair, burger and beer</h2>
+            <h2 className={styles.titleDescription} >The perfect pair, burger and beer</h2>
             <Link href="/orderPage">
               <button className={styles.button}>Beställ</button>
             </Link>
@@ -50,7 +49,7 @@ const StartPage = () => {
               <li>Åstorp</li>
               <li>Ystad</li>
               <li>Kristianstad</li>
-              <li>Skåne</li>
+              <li >Skåne</li>
             </ul>
           </motion.div>
           <div className={styles.contentPicture}>

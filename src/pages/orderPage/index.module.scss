@@ -225,7 +225,6 @@ margin-left: -40px;
   display: flex;
   margin-bottom: 50px;
   margin-top: 15px;
-  
   object-fit: cover;
 }
   
@@ -303,4 +302,24 @@ margin-left: -40px;
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+  .outerContainer {
+    flex-direction: column;
+    height: auto;
+    width:630.8px;
+    margin-bottom: 150px;
+  }
+  .ulmenu {
+    width: 70vh;
+  }
+  .menuContainer {
+    width: fit-content;
+  }
+  .shoppingCartContainer {  
+    width: fit-content;
+    margin:auto;
+    }
+
 }

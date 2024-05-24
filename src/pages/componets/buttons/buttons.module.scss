@@ -14,3 +14,19 @@
     font-size: $base;
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    .checkoutButton {
+      padding: 12px 20px;
+      font-size: calc($base - 2px); 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .checkoutButton {
+      padding: 10px 15px;
+      font-size: calc($base - 4px);
+      border-radius: 20px;
+      width: 250px;
+    }
+  }

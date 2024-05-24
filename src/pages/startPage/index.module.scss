@@ -15,33 +15,35 @@ letter-spacing: 0.5rem;
 font-weight: 500;
 font-size: 100px;
 border-bottom: 1px solid;
-width: 145vh;
+max-width: 90%;
 }
 
 
-.headerContainer h2 {
+.titleDescription {
+  display: flex;
   @include fontsizeMedium;
-  margin-top: -50px;
+  max-width: 90%;
 }
 
 
 
 .mainInfoPage {
-  margin-left: 270px;
+margin-left: 270px;
+width: 100%;
+max-width: 90%;
 }
 
-
-
 .contentPicture {
-    z-index: 0;
-    bottom: 8%;
-    left:40%;
-    position: absolute;
+  z-index: 0;
+  bottom: 8%;
+  left:40%;
+  position: absolute;
 }
 
 .burgerPicture {
   width: 800px;
   height: 600px;
+
 }
 
 
@@ -56,6 +58,7 @@ width: 145vh;
   font-size: 18px;
   margin-top: 5px;
   width: 350px;
+  max-width: 90%;
 }
 
 
@@ -78,7 +81,8 @@ width: 145vh;
 }
 
 .scrollTextContainer {
-
+  font-family: $example1font;
+  width: 70%;
   bottom: 50px;
   left: 20px;
   width: 300px;
@@ -87,11 +91,9 @@ width: 145vh;
 
 
 .scrollTextList {
-  list-style-type: none;
-  margin: 5;
-  padding: 5;
+
   white-space: nowrap;
-  animation: scrollText 8s linear infinite;
+  animation: scrollText 20s linear infinite;
 }
 
 @keyframes scrollText {
@@ -105,8 +107,60 @@ width: 145vh;
 
 .scrollTextList li {
   display: inline-block;
-  padding-right: 25px;
+  padding-right: 40px;
 }
+
+
+
+
+@media (max-width: 1024px) {
+  .headerContainer {
+    height: 400vh;
+    width: 100%;
+    display: grid;
+  }
+
+  .startPageTitle {
+    font-size: 25rem;
+    letter-spacing: 1.5rem; 
+    margin: 2rem 0;
+  }
+
+  .titleDescription {
+    font-size: 4rem;
+    margin: 2rem 0;
+  }
+
+  .burgerPicture {
+    height: auto;
+    width: 70%;
+ 
+  }
+
+  .contentPicture {
+    position: inherit;
+    margin-right: 10vh;
+    
+  }
+
+  .scrollTextContainer {
+    width: 100%;
+  }
+
+
+  .scrollTextList {
+    font-size: 3rem; 
+  }
+
+  .button {
+    font-size: 5rem; 
+    width: 100%;
+  }
+  .mainInfoPage {
+    display: grid;
+    }
+}
+
 
 
 
