@@ -5,6 +5,7 @@ import styles from "@/pages/header/header.module.scss";
 import Login from "@/modules/login/login";
 import CloseIcon from "@mui/icons-material/Close";
 
+
 const Header: React.FC = () => {
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,49 +38,38 @@ const Header: React.FC = () => {
     }
   }, [showLoginPopup]);
 
-  return (
-    <div className={styles.headerContent}>
-      <div className={styles.iconContent}>
-        <img src={homeIcon.src} alt="icon" className={styles.icon} />
-      </div>
-      <div className={styles.buttonContent}>
-        {loggedInUser && (
-          <p className={styles.loggedInText}>Inloggad som {loggedInUser}</p>
-        )}
-        <button className={styles.orderButton}>Beställ</button>
-        {!loggedInUser ? (
-          <button className={styles.loginButton} onClick={handleOpen}>
-            Logga in
-          </button>
-        ) : (
-          <button className={styles.logoutButton} onClick={handleLogout}>
-            Logga ut
-          </button>
-        )}
-        {showLoginPopup && (
-          <Login open={showLoginPopup} onClose={handleClose} />
-        )}
-      </div>
-      <div
-        className={`${styles.hamburgericon} ${isMenuOpen ? styles.slide : ""}`}
-        onClick={toggleMenu}
-      >
-        <img src={hamburgerMenuIcon.src} height={50}></img>
-      </div>
-      <nav id="nav"></nav>
-      <div
-        className={` ${styles.navContent} ${isMenuOpen ? styles.slide : ""}`}
-      >
-        <div
-          className={`${styles.navCloseIcon} ${isMenuOpen ? styles.slide : ""}`}
-          onClick={toggleMenu}
-        >
-          <CloseIcon
-            fontSize={"large"}
-            className={styles.closeIcon}
-          ></CloseIcon>
-        </div>
-        <img src={homeIcon.src} alt="icon" className={styles.menuicon} />
+    return (
+        <div className={styles.headerContent}>
+            <div className={styles.iconContent}>
+                <img src={homeIcon.src} alt="icon" className={styles.icon}/>
+            </div>
+            <div className={styles.buttonContent}>
+                {loggedInUser && (
+                    <p className={styles.loggedInText}>Inloggad som {loggedInUser}</p>
+                )}
+                <Link href="/orderPage">
+                    <button className={styles.orderButton}>Beställ</button>
+                </Link>
+                {!loggedInUser ? (
+                    <button className={styles.loginButton} onClick={handleOpen}>Logga in</button>
+                ) : (
+                    <button className={styles.logoutButton} onClick={handleLogout}>Logga ut</button>
+                )}
+                {showLoginPopup && <Login open={showLoginPopup} onClose={handleClose}/>}
+            </div>
+            <div className={`${styles.hamburgericon} ${isMenuOpen ? styles.slide : ''}`} onClick={toggleMenu}>
+                <img src={hamburgerMenuIcon.src} height={50}></img>
+            </div>
+            <nav id="nav">
+
+
+            </nav>
+            <div className={` ${styles.navContent} ${isMenuOpen ? styles.slide : ""}`}>
+
+                <div className={`${styles.navCloseIcon} ${isMenuOpen ? styles.slide : ''}`} onClick={toggleMenu}>
+                    <CloseIcon fontSize={"large"} className={styles.closeIcon}></CloseIcon>
+                </div>
+                <img src={homeIcon.src} alt="icon" className={styles.menuicon}/>
 
         <div className={styles.wrapNavContent}>
           <a className={styles.navContentText}>Hitta oss</a>
