@@ -97,12 +97,15 @@
   display: flex;
   margin-top: 10px;
   margin-left: auto;
-  height: 60px;
-  width: 60px;
   z-index: 1000;
   cursor: pointer;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
+}
+
+.closeIcon {
+height: 50px;
+width: 50px;
 }
 
 .navCloseIcon:hover {
@@ -294,19 +297,21 @@
 
 
 
-
 @media (max-width: 800px) {
   .icon {
     position: absolute;
-    height: 400px;
-    width: 400px;
-    
+    height: 450px;
+    width: 450px;
+  }
+  .menuicon {
+    height: 450px;
+    width: 450px;
   }
   .headerContent {
     position: relative;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: start;
     justify-content: space-between;
     padding: 0 20px;
   }
@@ -319,10 +324,37 @@
     display: none;
   }
   .hamburgericon {
-    position: relative;
     margin-left: 140vh;
-    margin-top: 40px;
     height: 200px;
     cursor: pointer;
+    display: flex;
+    margin-top: 100px;
+  }
+  .navContent.slide {
+    width: 100%;
+  }
+  .wrapNavContent{
+    margin-top: 30rem;
+
+  }
+
+  .navContent {
+    display: flex;
+
+  }
+  .navContentText {
+    font-size: 5rem;
+    margin-bottom: 10rem;
+
+  }
+  .navContentSocialText {
+    font-size: 4rem;
+    margin-top: 35rem;
+    font-weight: 300;
+    font-family: $example6font;
+  }
+  .closeIcon {
+    height: 10rem;
+    width: 10rem;
   }
 }

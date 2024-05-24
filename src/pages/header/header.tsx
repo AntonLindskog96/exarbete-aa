@@ -59,7 +59,7 @@ const Header: React.FC = () => {
                 {showLoginPopup && <Login open={showLoginPopup} onClose={handleClose}/>}
             </div>
             <div className={`${styles.hamburgericon} ${isMenuOpen ? styles.slide : ''}`} onClick={toggleMenu}>
-                <img src={hamburgerMenuIcon.src} height={50}></img>
+                <img src={hamburgerMenuIcon.src}></img>
             </div>
             <nav id="nav">
 
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
             <div className={` ${styles.navContent} ${isMenuOpen ? styles.slide : ""}`}>
 
                 <div className={`${styles.navCloseIcon} ${isMenuOpen ? styles.slide : ''}`} onClick={toggleMenu}>
-                    <CloseIcon fontSize={"large"} className={styles.closeIcon}></CloseIcon>
+                    <CloseIcon className={styles.closeIcon}></CloseIcon>
                 </div>
                 <img src={homeIcon.src} alt="icon" className={styles.menuicon}/>
 
