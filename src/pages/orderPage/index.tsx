@@ -35,7 +35,7 @@ const Orders: NextPage = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest: number) => Math.round(latest));
-  const [activeLink,setActiveLink] = useState<string | null>(null)
+  const [activeLink,setActiveLink] = useState<string | null>("burgers")
 
   useEffect(() => {
     const fetchData = async () => {
