@@ -26,7 +26,6 @@ const StartPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.8, duration: 3 }}
-            className={styles.header1}
           >
             <h2 className={styles.titleDescription} >The perfect pair, burger and beer</h2>
             <Link href="/orderPage">

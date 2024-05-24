@@ -16,6 +16,8 @@ font-weight: 500;
 font-size: 100px;
 border-bottom: 1px solid;
 max-width: 90%;
+margin: 0;
+margin-top: 10vh;
 }
 
 
@@ -24,8 +26,6 @@ max-width: 90%;
   @include fontsizeMedium;
   max-width: 90%;
 }
-
-
 
 .mainInfoPage {
 margin-left: 270px;
