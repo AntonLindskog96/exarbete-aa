@@ -8,14 +8,13 @@
   flex-direction: row; 
   display: flex;
   justify-content: space-between; 
-  height: 100vh;
+  height: 100%;
 }
 
 .menuContainer {
   font-family: $example1font;
   color: $primaryTextColor;
   flex-direction: column;
-  padding-left: 40px;
   width: 100%;
 }
 
@@ -68,12 +67,10 @@ margin-left: 80px;
 }
 
 .borderBottom {
-
   width: 82%;
   margin: auto;
   background-color: $primaryTextColor;
   height: 1px;
-
 }
 
 .buttonContainer {
@@ -210,8 +207,10 @@ margin-left: 80px;
   font-family: $example1font;
   @include fontsizeRegular;
   color: $secondaryTextColor;
-
+  display: flex;
 }
+
+
 
 .menuItemPrice {
   font-family: $example1font;
@@ -221,8 +220,7 @@ margin-left: 80px;
 
 
 .menuItemContainer {
-  height: 100;
-  bottom: 0;
+  height: 100%;
   display: flex;
   align-items: center;
   position: relative;
@@ -323,22 +321,44 @@ margin-left: 80px;
   100% { transform: rotate(360deg); }
 }
 
+
+
+
+
+/* MEDIA */
 @media (max-width: 1024px) {
   .outerContainer {
-    flex-direction: column;
-    height: auto;
-    width:630.8px;
-    margin-bottom: 150px;
+    width: 170vh;
+    display: block;
   }
-  .ulmenu {
-    width: 70vh;
+  .menuButton {
+    height: 200%;
+    width: 100%;
   }
-  .menuContainer {
-    width: fit-content;
+
+  .menuItemTitle {
+    font-size: 45px;
   }
   .shoppingCartContainer {  
-    width: fit-content;
     margin:auto;
+    width: 100%;
+    font-size: 40px;
+    }
+
+    .cartItemPrice {
+      font-size: 40px;
+    }
+    .cartListItem {
+      font-size: 40px;
+    }
+
+    .shoppingCartButtons {
+      height: 100px;
+      width: 100px;
+    }
+
+    .addButton {
+      height: 100px;
     }
 
 }

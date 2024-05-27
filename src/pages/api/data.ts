@@ -2,6 +2,7 @@ export const burgers = [
     {
         "id": 1,
         "title": "Cheesy Cheeser",
+        "description": "Cheese, Mayo, Potato Bun, Meat",
         "price": 65,
         "imageburger": "https://misteryork-images.futureordering.com/images/product/86/FFAD02870D497CD8FBD8315A4409CD34D/326x303.png"
     },
