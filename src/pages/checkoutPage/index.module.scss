@@ -6,12 +6,11 @@
 .outerContainer {
   flex-direction: column;
   display: flex;
-  align-items: center
-
+  align-items: center;
+  font-family: $example1font;
 }
 
 .menuContainer {
-  font-family: "Apple Garamond", sans-serif;
   color: $bacon;
   flex-direction: row;
   padding-left: 40px;
@@ -35,6 +34,7 @@
 
   font-weight: bold;
   margin-left: 20px;
+  color: $primaryTextColor
 }
 
 
@@ -43,9 +43,13 @@
   align-items: flex-start;
   flex-direction: column;
   margin-left: 40px;
+  color: $secondaryBg;
+
 }
 
-.g {
+
+
+.orderContentPosition {
   display: flex;
 
 }
@@ -58,7 +62,7 @@
 
 .timeText {
 
-
+  color: $secondaryBg;;
 }
 
 .contentSection {
@@ -78,13 +82,15 @@
   width: 40px;
 }
 
-.timeContent {
+.content {
 
   border: 2px solid #e7e7e7;
   width: 100%;
   padding: 10px;
   border-radius: 5px;
   margin: 20px;
+  color: $secondaryBg;
+  background-color: white;
 
 }
 
@@ -103,7 +109,7 @@
 .navigateButton {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: transparent;
-  color: black;
+  color: $primaryTextColor;
   border: none;
   margin-top: 50px;
   cursor: pointer;
@@ -123,7 +129,7 @@
 .menuTitle {
   @include fontsizeHuge;
   font-family: $example1font;
-  color: black;
+  color: $primaryTextColor;
   //margin-left: 100px;
   margin-top: -12px;
   margin-left: 65px;
@@ -138,7 +144,7 @@
 }
 
 .totalPriceSection {
-  color: black;
+  color: $secondaryBg;
   margin-left: 10px;
 }
 
@@ -212,6 +218,7 @@
   justify-content: space-between;
   width: 100%;
   margin-right: 20px;
+  color: $secondaryBg;
 
 }
 
@@ -224,6 +231,6 @@
 .cartItemPrice {
   @include fontsizeSmall;
   line-height: 100%;
-  color: black;
+  color: $secondaryBg;
 
 }
