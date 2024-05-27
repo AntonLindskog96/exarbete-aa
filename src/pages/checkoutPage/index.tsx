@@ -6,7 +6,7 @@ import clockIcon from "@/assets/images/clock-icon.png";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import {useRouter} from 'next/router'
 import {generateOrderNumber} from "@/utils/generateOrderNumber";
-import homeIcon from "@/assets/images/home-icon.png";
+import homeIcon from "@/assets/images/home-icon2.png";
 
 
 async function getMenu() {
@@ -87,36 +87,39 @@ const CheckoutPage = () => {
             </section>
             <section className={styles.orderContainer}>
                 <div className={styles.orderContent}>
-                    <div className={styles.g}>
+                    <div className={styles.orderContentPosition}>
                         <img className={styles.checkIcon} src={checkIcon.src} alt=""/>
                         <p className={styles.orderText}>Order: {orderNumber}</p>
                     </div>
                     <h1 className={styles.menuTitle}>Tack för din beställning!</h1>
-                    <div className={styles.timeContent}>
-                        <p className={styles.timeText}><b>Beställningstid:</b> {orderTime}</p>
-                    </div>
-
-                    <div className={styles.timeContent}>
-                        <img className={styles.clockIcon} src={clockIcon.src} alt=""/>
-                        <h3 className={styles.estimatedTimeText}>Upphämtning:</h3>
-                        <p className={styles.estimatedTimeText}>Din beställning kommer att vara klar för upphämtning om
-                            ca 20 minuter</p>
-                    </div>
-                    <div className={styles.timeContent}>
-                        <img className={styles.clockIcon} src={beerIcon.src} alt=""/>
-                        <h3 className={styles.estimatedTimeText}>Din beställning:</h3>
-                        {cart.map((item) => (
-                            <li key={item.id} className={styles.cartListItem}>
-                                <div className={styles.cartContent}>
-                                    <p className={styles.cartItemPrice}>+ {item.title}({item.quantity})</p>
-                                    <p className={styles.cartItemPrice}>{item.price}Kr</p>
-                                </div>
-                            </li>
-                        ))}
-                        <div className={styles.borderline}>
+                    <div className={styles.gg}>
+                        <div className={styles.content}>
+                            <p className={styles.timeText}><b>Beställningstid:</b> {orderTime}</p>
                         </div>
-                        <div className={styles.totalPriceSection}>
-                            <p>Summa totalt: {totalPrice} SEK</p>
+
+                        <div className={styles.content}>
+                            <img className={styles.clockIcon} src={clockIcon.src} alt=""/>
+                            <h3 className={styles.estimatedTimeText}>Upphämtning:</h3>
+                            <p className={styles.estimatedTimeText}>Din beställning kommer att vara klar för upphämtning
+                                om
+                                ca 20 minuter</p>
+                        </div>
+                        <div className={styles.content}>
+                            <img className={styles.clockIcon} src={beerIcon.src} alt=""/>
+                            <h3 className={styles.estimatedTimeText}>Din beställning:</h3>
+                            {cart.map((item) => (
+                                <li key={item.id} className={styles.cartListItem}>
+                                    <div className={styles.cartContent}>
+                                        <p className={styles.cartItemPrice}>+ {item.title}({item.quantity})</p>
+                                        <p className={styles.cartItemPrice}>{item.price}Kr</p>
+                                    </div>
+                                </li>
+                            ))}
+                            <div className={styles.borderline}>
+                            </div>
+                            <div className={styles.totalPriceSection}>
+                                <p>Summa totalt: {totalPrice} SEK</p>
+                            </div>
                         </div>
                     </div>
                 </div>
