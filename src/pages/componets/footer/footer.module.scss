@@ -8,15 +8,19 @@
   color: $gold;
   width: 100%;
   position: relative;
+  bottom: 0;
 }
 
 .footerContainer {
   display: flex;
   justify-content: space-between;
+  grid-template-columns: 1fr;
   max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20vh;
   padding: 1rem;
+  height: 100%;
 }
 
 .leftSection {
@@ -182,7 +186,6 @@
 @media (max-width: 1024px) {
   .footerContainer {
   width: fit-content;
-  height: 100vh;
   flex-direction: column;
   }
 
