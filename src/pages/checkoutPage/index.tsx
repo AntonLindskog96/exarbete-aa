@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styles from './index.module.scss';
-import checkIcon from "@/assets/images/check-icon.png";
+import checkIcon from "@/assets/images/check-icon.webp";
 import beerIcon from "@/assets/images/beer.png";
 import clockIcon from "@/assets/images/clock-icon.png";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
