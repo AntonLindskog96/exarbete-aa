@@ -5,13 +5,12 @@
 
 .footer {
   background-color: $primaryTextColor;
-  color: $secondaryTextColor;
+  color: $gold;
   width: 100%;
   position: relative;
 }
 
 .footerContainer {
-  background-color: $primaryTextColor;
   display: flex;
   justify-content: space-between;
   max-width: 90rem;
@@ -40,11 +39,12 @@
 
 .scrollToSection {
   background-color: $primaryTextColor;
-  font-family: $example1font;
+  font-family: $example6font;
   scroll-behavior: smooth;
+  color: $gold;
   border: none;
   cursor: pointer;
-  @include fontsizeSmall;
+  @include fontsizeMedium;
 }
 
 .scrollToSection:hover {
@@ -55,7 +55,6 @@
   padding: 0.5em 0.8em;
   position: relative;
   text-decoration: none;
-  font-size: 20px;
 }
 
 .scrollToSection::before,

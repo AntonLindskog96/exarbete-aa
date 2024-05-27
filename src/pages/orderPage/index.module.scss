@@ -13,7 +13,7 @@
 
 .menuContainer {
   font-family: $example1font;
-  color: $secondaryTextColor;
+  color: $primaryTextColor;
   flex-direction: column;
   padding-left: 40px;
   width: 100%;
@@ -48,7 +48,7 @@ margin-left: 80px;
 
 .ulcart {
   font-family: $example1font;
-  color: $secondaryTextColor;
+  color: $primaryTextColor;
   list-style-type: none;
   padding-left: 10px;
 }
@@ -57,7 +57,7 @@ margin-left: 80px;
 
 .menuTitle {
   @include fontsizeHuge;
-  color: $secondaryTextColor;
+  color: $primaryTextColor;
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.5rem;
   font-weight: 500;
@@ -71,7 +71,7 @@ margin-left: 80px;
 
   width: 82%;
   margin: auto;
-  background-color: black;
+  background-color: $primaryTextColor;
   height: 1px;
 
 }
@@ -86,15 +86,9 @@ margin-left: 80px;
 .productButton {
   font-family: $example1font;
   align-items: center;
-  //background-color: #fff;
-  //border-radius: 12px;
-  //box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
-  //box-sizing: border-box;
-  //opacity: .5;
   cursor: pointer;
   display: inline-flex;
-  color: gray;
-
+  color: $clay;
   font-size: 1.2rem;
   font-weight: 700;
   justify-content: center;
@@ -123,23 +117,23 @@ margin-left: 80px;
 
 .active{
   text-decoration: underline;
-  color: #121212;
+  color: $primaryTextColor;
 }
 
 
 .menuButton {
-  background: linear-gradient(-0deg, $primaryBg 20%, rgb(134, 134, 134) 90%);
+  background: linear-gradient(-0deg, $primaryTextColor 20%, $gold 90%);
+  border: 1px solid white;
   height: 180px;
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: none;
   width: 270px;
   
 }
 
 .menuButton:hover {
-  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+  box-shadow: 0 5px 35px 0px $gold;
 }
 
 
@@ -168,7 +162,7 @@ margin-left: 80px;
 
 .quantityCounter {
   font-family: $example1font;
-  color:$secondaryTextColor;
+  color:$primaryTextColor;
   font-weight: bold;
 }
 
@@ -180,7 +174,7 @@ margin-left: 80px;
 
 
 .shoppingCart {
-  color:$secondaryTextColor;
+  color:$primaryTextColor;
   
 }
 
@@ -221,16 +215,18 @@ margin-left: 80px;
   font-family: $example1font;
   @include fontsizeRegular;
   color: $secondaryTextColor;
+
 }
 
 .menuItemPrice {
   font-family: $example1font;
   @include fontsizeRegular;
-  color: $secondaryTextColor;
+  color: $primaryTextColor;
 }
 
 
 .menuItemContainer {
+  height: 100;
   bottom: 0;
   display: flex;
   align-items: center;
@@ -243,7 +239,7 @@ margin-left: 80px;
 .menuItemImage {
   width: 200px;
   height: 100%; 
-  object-fit: cover;
+  
 }
 
 .imageBeer {
@@ -259,12 +255,13 @@ margin-left: 80px;
   
   .shopping {
     font-family: $example1font;
-    color: $secondaryTextColor;
+    color: $primaryTextColor;
     align-self: center;
     width: 100%;
   }
   
   .cartListItem {
+    color: $primaryTextColor;
     display: flex;
     align-items: center;
     font-family: $example1font;
