@@ -50,6 +50,13 @@ export const burgers = [
         "price": 85,
         "imageburger": "https://misteryork-images.futureordering.com/images/product/21/BB7815613A8971692E5433E32651C4FDD/326x303.png"
     },
+    {
+        "id": 9,
+        "title": "Farsan",
+        "price": 80,
+        "imageburger": "https://assets-global.website-files.com/63f475862254e830a9e0be38/661f82d8656bb1a72511f7ae_Greven.png",
+        "isNew": true
+    },
 ]
 
 export const beers = [
