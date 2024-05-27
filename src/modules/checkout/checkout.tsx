@@ -92,8 +92,6 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
                 component: 'form'
             }}>
                 <CloseIcon className={styles.closeIcon} onClick={onClose}>Cancel</CloseIcon>
-                <DialogTitle fontWeight={"bold"} fontSize={"40px"}
-                >Min beställning</DialogTitle>
                 <DialogContent>
                     <section className={styles.shoppingCartContainer}>
                         <h2 className={styles.shopping}>Min beställning</h2>

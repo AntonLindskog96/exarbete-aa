@@ -20,17 +20,18 @@
 }
 
 .shoppingCartSection {
-  position: absolute;
+  position: sticky;
   display: flex;
   margin-left: 250px;
-  margin-top: -4px;
+  margin-top: -70px;
   align-items: flex-end;
 }
 
 
 .cartContent {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  margin-top: 20px;
 
 }
 
