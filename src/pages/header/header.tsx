@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import homeIcon from "@/assets/images/home-icon.png";
+import homeIcon from "@/assets/images/home-icon2.png";
 import hamburgerMenuIcon from "@/assets/images/hamburger-menu.png";
 import styles from "@/pages/header/header.module.scss";
 import Login from "@/modules/login/login";
@@ -49,12 +49,12 @@ const Header: React.FC = () => {
                     <p className={styles.loggedInText}>Inloggad som {loggedInUser}</p>
                 )}
                 <Link href="/orderPage">
-                    <button className={styles.orderButton}>Beställ</button>
+                    <button className={styles.headerButtons}>Beställ</button>
                 </Link>
                 {!loggedInUser ? (
-                    <button className={styles.loginButton} onClick={handleOpen}>Logga in</button>
+                    <button className={styles.headerButtons} onClick={handleOpen}>Logga in</button>
                 ) : (
-                    <button className={styles.logoutButton} onClick={handleLogout}>Logga ut</button>
+                    <button className={styles.headerButtons} onClick={handleLogout}>Logga ut</button>
                 )}
                 {showLoginPopup && <Login open={showLoginPopup} onClose={handleClose}/>}
             </div>

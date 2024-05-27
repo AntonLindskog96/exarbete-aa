@@ -37,7 +37,7 @@
 }
 
 
-.orderButton {
+.headerButtons {
   font-family: $example1font;
   background-color:  $buttonColor;
   color: white;
@@ -47,37 +47,15 @@
   cursor: pointer;
   font-size: 18px;
   margin: 10px;
-  width: 100px;
+  
 }
 
-.loginButton {
-  font-family: $example1font;
-  background-color:  $buttonColor;
-  color: white;
-  padding: 15px 5px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 18px;
-  width: 100px;
-  margin: 10px;
+.headerButtons:hover {
+  background-color: transparent;
+  border: 1px solid $primaryTextColor;
+  color: $primaryTextColor;
 }
 
-.logoutButton {
-
-  font-family: $example1font;
-  background-color:  $buttonColor;
-  color: $secondaryTextColor;
-  padding: 10px 5px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 18px;
-  margin: 10px;
-  width: 100px;
-
-
-}
 
 .hamburgericon {
   margin-right: 100px;
@@ -194,7 +172,7 @@ width: 50px;
 
 
 .wrapNavContent {
-
+  color: $secondaryTextColor;
   grid-row-gap: 4rem;
   flex-direction: column;
   justify-content: center;
@@ -205,8 +183,7 @@ width: 50px;
 
 
 .navContentText {
-
-  color: var(--black);
+  color: $secondaryTextColor;
   letter-spacing: -.82px;
   text-transform: uppercase;
   font-family: Akzidenzgroteskpro, sans-serif;
@@ -269,19 +246,6 @@ width: 50px;
   height: 200px;
  margin-top: 50px;
 
-}
-
-
-.orderButton:hover {
-  background-color: transparent;
-  border: 1px solid #b63333;
-  color: #b63333;
-}
-
-.loginButton:hover {
-  background-color: transparent;
-  border: 1px solid $buttonColor;
-  color: $buttonColor;
 }
 
 

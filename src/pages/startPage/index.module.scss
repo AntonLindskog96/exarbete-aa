@@ -2,15 +2,15 @@
 @import "../../styles/_typography";
 
 .headerContainer, .getStarted {
-  color: $primaryTextColor;
   font-family: $example1font;
   height: 100vh;
   color: $secondaryTextColor;
-  
+  color: $gold;
 }
 
 .startPageTitle{
 font-family: $example6font;
+color: $gold;
 letter-spacing: 0.5rem;
 font-weight: 500;
 font-size: 100px;
@@ -20,11 +20,17 @@ margin: 0;
 margin-top: 10vh;
 }
 
+.descriptionContainer {
+  display: flex;
+  align-items: center; 
+}
+
 
 .titleDescription {
   display: flex;
   @include fontsizeMedium;
   max-width: 90%;
+  margin: 30px 0;
 }
 
 .mainInfoPage {
@@ -46,10 +52,10 @@ max-width: 90%;
 }
 
 
-.button {
+ .button {
   font-family: $example1font;
   background-color: $buttonColor;
-  color: white;
+  color: $primaryTextColor;
   padding: 15px 25px;
   border: none;
   border-radius: 25px;
@@ -63,34 +69,22 @@ max-width: 90%;
 
 .button:hover {
   background-color: transparent;
-  border: 1px solid $buttonColor;
-  color: $buttonColor;
-}
-
-.headerButton:hover {
-  background-color: transparent;
-  border: 1px solid $buttonColor;
-  color: $buttonColor;
-}
-
-.loginButton:hover {
-  background-color: transparent;
-  border: 1px solid $buttonColor;
-  color: $buttonColor;
+  border: 1px solid $primaryTextColor;
+  color: $primaryTextColor;
 }
 
 .scrollTextContainer {
+  color: $primaryTextColor;
   font-family: $example1font;
-  width: 70%;
+  width: 100%;
   bottom: 50px;
-  left: 20px;
-  width: 300px;
+  font-size: 20px;
+  width: 500px;
   overflow: hidden;
 }
 
 
 .scrollTextList {
-
   white-space: nowrap;
   animation: scrollText 20s linear infinite;
 }
@@ -110,6 +104,15 @@ max-width: 90%;
 }
 
 
+
+
+
+
+
+
+
+
+/*  MEDIA     */
 @media (max-width: 800px) {
   .headerContainer {
     height: 400vh;

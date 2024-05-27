@@ -82,13 +82,37 @@ export const beers = [
         "id": 4,
         "title": "Ölle 0.4L",
         "price": 65,
-        "imagebeer": "https://product-cdn.systembolaget.se/productimages/625317/625317_400.png?q=75&w=2000"
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/24578195/24578195_400.png?q=75&w=2000"
     },
     {
         "id": 5,
         "title": "Ölker 0.5L",
         "price": 55,
         "imagebeer": "https://product-cdn.systembolaget.se/productimages/24578195/24578195_400.png?q=75&w=2000"
+    },
+    {
+        "id": 6,
+        "title": "Öl 0.5L",
+        "price": 55,
+        "imagebeer": "https://sb-product-media-prod.azureedge.net/productimages/24439647/24439647_400.png?q=75&w=2000"
+    },
+    {
+        "id": 7,
+        "title": "Öl 0.5L",
+        "price": 55,
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/586898/586898_400.png?q=75&w=2000"
+    },
+    {
+        "id": 8,
+        "title": "Öl 0.5L",
+        "price": 55,
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/508387/508387_400.png?q=75&w=2000"
+    },
+    {
+        "id": 9,
+        "title": "Öl 0.5L",
+        "price": 55,
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/508171/508171_400.png?q=75&w=2000"
     }
 ]
 

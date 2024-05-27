@@ -22,12 +22,29 @@ const StartPage = () => {
           >
             <h1 className={styles.startPageTitle}>Pints & Patties</h1>
           </motion.div>
+          <div className={styles.descriptionContainer}>
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.8, duration: 1.5 }}
+            className={styles.titleDescription}
+          >
+            The perfect pair...
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 3, duration: 1.5 }}
+            className={styles.titleDescription}
+          >
+            burger and beer
+          </motion.span>
+        </div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.8, duration: 3 }}
+            transition={{ delay: 4, duration: 3 }}
           >
-            <h2 className={styles.titleDescription} >The perfect pair, burger and beer</h2>
             <Link href="/orderPage">
               <button className={styles.button}>Beställ</button>
             </Link>
@@ -35,7 +52,7 @@ const StartPage = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.5, duration: 3 }}
+            transition={{ delay: 4.5, duration: 3 }}
             className={styles.scrollTextContainer}
           >
             <ul className={styles.scrollTextList}>

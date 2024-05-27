@@ -15,6 +15,12 @@
     width: 100%;
   }
 
+  .checkoutButton:hover {
+    background-color: transparent;
+    border: 1px solid $primaryTextColor;
+    color: $primaryTextColor;
+  }
+
   @media (max-width: 768px) {
     .checkoutButton {
       padding: 12px 20px;
