@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import styles from "./index.module.scss";
 import Link from "next/link";
 import Header from "@/pages/header/header";
-import burgerPicture from "@/assets/images/burger-picture.avif";
+import burgerPicture from "@/assets/images/burger-picture3.png";
 import AboutSection from "../componets/sections/aboutSection/about";
 import BurgerSection from "../componets/sections/burgerSection/burger";
 import WorkSection from "../componets/sections/workSection/work";

@@ -101,14 +101,16 @@ const Checkout: React.FC<LoginProps> = ({open, onClose}) => {
                             <ShoppingCartOutlinedIcon className={styles.shoppingCart}/>
                             <p className={styles.quantityCounter}>{cart.reduce((total, item) => total + item.quantity, 0)}</p>
                         </div>
+                        <div className={styles.shoppingItems}>
                         {cart.map((item) => (
                             <li key={item.id} className={styles.cartListItem}>
                                 <div className={styles.cartContent}>
-                                    <p className={styles.cartItemPrice}>+ {item.title}</p>
+                                    <p className={styles.cartItemPrice}>+ {item.title}({item.quantity})</p>
                                     <p className={styles.cartItemPrice}>{item.price}Kr</p>
                                 </div>
                             </li>
                         ))}
+                        </div>
                         <div className={styles.borderline}>
                         </div>
                         <div className={styles.totalPriceSection}>

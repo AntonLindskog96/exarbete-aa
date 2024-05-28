@@ -19,6 +19,31 @@
 
 }
 
+
+.shoppingItems {
+
+  max-height: 200px;
+  overflow-y: auto;
+
+}
+
+.shoppingItems::-webkit-scrollbar {
+
+  width: 0;
+  height: 0;
+}
+
+.shoppingItems {
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.shoppingItems::-webkit-scrollbar{
+
+  display: none;
+}
+
 .shoppingCartSection {
   position: sticky;
   display: flex;
