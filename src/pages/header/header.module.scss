@@ -168,7 +168,7 @@ width: 50px;
 
 
 .wrapNavContent {
-  color: $secondaryTextColor;
+  color: $primaryTextColor;
   grid-row-gap: 4rem;
   flex-direction: column;
   justify-content: center;
@@ -179,7 +179,7 @@ width: 50px;
 
 
 .navContentText {
-  color: $secondaryTextColor;
+  color: $primaryTextColor;
   letter-spacing: -.82px;
   text-transform: uppercase;
   font-family: Akzidenzgroteskpro, sans-serif;
