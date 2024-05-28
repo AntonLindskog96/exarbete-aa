@@ -4,6 +4,7 @@ import styles from "./index.module.scss";
 import Link from "next/link";
 import Header from "@/pages/header/header";
 import burgerPicture from "@/assets/images/burger-picture3.png";
+import backgroundImage from "@/assets/images/background.avif";
 import AboutSection from "../componets/sections/aboutSection/about";
 import BurgerSection from "../componets/sections/burgerSection/burger";
 import WorkSection from "../componets/sections/workSection/work";
@@ -78,13 +79,13 @@ const StartPage = () => {
               </div>
             </div>
           </motion.div>
-          <div className={styles.contentPicture}>
+{/*           <div className={styles.contentPicture}>
             <img
-              src={burgerPicture.src}
+              src={backgroundImage.src}
               alt="icon"
               className={styles.burgerPicture}
             />
-          </div>
+          </div> */}
         </section>
       </section>
       <AboutSection />

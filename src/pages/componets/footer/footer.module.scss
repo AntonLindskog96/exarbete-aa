@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Praise&display=swap");
 
 .footer {
-  background-color: $primaryTextColor;
+  background-color: $footerColor;
   color: $gold;
   width: 100%;
   position: relative;
@@ -42,7 +42,7 @@
 
 
 .scrollToSection {
-  background-color: $primaryTextColor;
+  background-color: $footerColor;
   font-family: $example6font;
   scroll-behavior: smooth;
   color: $secondaryTextColor;
