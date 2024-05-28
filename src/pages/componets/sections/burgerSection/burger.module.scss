@@ -3,9 +3,7 @@
 
 .burgerSection {
     font-family: $example1font;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include row;
     width: 70%; 
     background-color: white;
     text-align: center;
@@ -18,7 +16,7 @@
   }
   .homepageText {
     @include fontsizeMedium;
-    padding: 20px;
+    padding: $padding-large;
   }
   
   .burgerTitle {

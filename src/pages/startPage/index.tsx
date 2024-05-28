@@ -66,7 +66,7 @@ const StartPage = () => {
                 <div className={styles.tag}>ÅSTORP</div>
                 <div className={styles.tag}>STOCKHOLM</div>
                 <div className={styles.tag}>JOKKMOKK</div>
-                <div className={styles.tag}>HELSINKI</div>
+                <div className={styles.tag}>GISLAVED</div>
                 <div className={styles.tag}>SKÅNE</div>
                 <div className={styles.tag}>GÖTEBORG</div>
                 <div className={styles.tag}>YSTAD</div>
@@ -74,7 +74,7 @@ const StartPage = () => {
                 <div className={styles.tag}>ÅSTORP</div>
                 <div className={styles.tag}>STOCKHOLM</div>
                 <div className={styles.tag}>JOKKMOKK</div>
-                <div className={styles.tag}>HELSINKI</div>
+                <div className={styles.tag}>JÖNKÖPING</div>
                 <div className={styles.tag}>SKÅNE</div>
               </div>
             </div>

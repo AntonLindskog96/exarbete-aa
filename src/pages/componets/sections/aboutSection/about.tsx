@@ -61,7 +61,7 @@ const AboutSection = () => {
           Från skånska vidder till göteborgska gränder - två skåningar med öl i
           ådrorna och burgare i tankarna bestämde sig för att krydda upp
           Göteborgs street food-scen.
-          <br /> <br /> Välkommen till 'Pints and Pattys', där våra burgare är
+          <br /> <br /> Välkommen till 'Pints and Patties', där våra burgare är
           saftigare än en sommardag på Skanör-stranden och vårt ölutbud är
           vildare än en midsommarfest i Malmö. Kom och upplev skånsk charm i
           varje tugga och en twist av göteborgskt äventyr i varje klunk!

@@ -108,7 +108,7 @@
   height: 180px;
   margin-right: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: $radius-tier-3;
   width: 270px;
 }
 
@@ -153,7 +153,7 @@
   display: flex;
   align-items: center;
   background-color: $buttonColor;
-  border-radius: 10px;
+  border-radius: $radius-tier-2;
   height: 35px;
   margin-right: 10px;
   color: $primaryTextColor;
@@ -164,7 +164,7 @@
   font-family: $example1font;
   background-color: $buttonColor;
   border: none;
-  border-radius: 5px;
+  border-radius: $radius-tier-3;
   cursor: pointer;
   color: $primaryTextColor;
   margin: auto;
@@ -174,7 +174,7 @@
   font-family: $example1font;
   background-color: $buttonColor;
   border: none;
-  border-radius: 5px;
+  border-radius: $radius-tier-3;
   cursor: pointer;
   color: $primaryTextColor;
   margin: auto;
@@ -197,7 +197,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  border-radius: 5px;
+  border-radius: $radius-tier-1;
   cursor: pointer;
   justify-content: center;
 }
@@ -263,7 +263,7 @@
   right: -25px;
   top: -12px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: $radius-tier-1;
   transform: rotate(20deg);
   background-color: $HotColor;
   color: $secondaryTextColor;

@@ -11,9 +11,7 @@ padding-left: 20px;
 
 .workSection {
     font-family: $example1font;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include row;
     width: 70%; 
     background-color: white;
     margin: 0 auto;
@@ -23,7 +21,7 @@ padding-left: 20px;
 
   .workText {
     width: 70vh;
-    padding: 25px
+    padding: $padding-large;
   }
 
   

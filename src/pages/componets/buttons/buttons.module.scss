@@ -9,7 +9,7 @@
     color: $primaryTextColor;
     padding: 15px 25px;
     border: none;
-    border-radius: 25px;
+    border-radius: $radius-tier-1;
     cursor: pointer;
     font-size: $base;
     width: 100%;
@@ -33,7 +33,7 @@
     .checkoutButton {
       padding: 10px 15px;
       font-size: calc($base - 4px);
-      border-radius: 20px;
+      border-radius: $radius-tier-1;
       width: 250px;
     }
   }
