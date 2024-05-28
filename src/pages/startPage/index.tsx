@@ -8,6 +8,7 @@ import AboutSection from "../componets/sections/aboutSection/about";
 import BurgerSection from "../componets/sections/burgerSection/burger";
 import WorkSection from "../componets/sections/workSection/work";
 import Footer from "../componets/footer/footer";
+import burgerPicture2 from "@/assets/images/promo-burger.png";
 
 const StartPage = () => {
   return (
@@ -55,18 +56,26 @@ const StartPage = () => {
             transition={{ delay: 4.5, duration: 3 }}
             className={styles.scrollTextContainer}
           >
-            <ul className={styles.scrollTextList}>
-              <li>Göteborg</li>
-              <li>Åstorp</li>
-              <li>Ystad</li>
-              <li>Kristianstad</li>
-              <li>Skåne</li>
-              <li>Göteborg</li>
-              <li>Åstorp</li>
-              <li>Ystad</li>
-              <li>Kristianstad</li>
-              <li >Skåne</li>
-            </ul>
+            <div className={styles.scrollTextList}>
+              <div className={styles.inner}>
+                <div className={styles.tag}>GÖTEBORG</div>
+                <div className={styles.tag}>YSTAD</div>
+                <div className={styles.tag}>KRISTIANSTAD</div>
+                <div className={styles.tag}>ÅSTORP</div>
+                <div className={styles.tag}>STOCKHOLM</div>
+                <div className={styles.tag}>JOKKMOKK</div>
+                <div className={styles.tag}>HELSINKI</div>
+                <div className={styles.tag}>SKÅNE</div>
+                <div className={styles.tag}>GÖTEBORG</div>
+                <div className={styles.tag}>YSTAD</div>
+                <div className={styles.tag}>KRISTIANSTAD</div>
+                <div className={styles.tag}>ÅSTORP</div>
+                <div className={styles.tag}>STOCKHOLM</div>
+                <div className={styles.tag}>JOKKMOKK</div>
+                <div className={styles.tag}>HELSINKI</div>
+                <div className={styles.tag}>SKÅNE</div>
+              </div>
+            </div>
           </motion.div>
           <div className={styles.contentPicture}>
             <img
