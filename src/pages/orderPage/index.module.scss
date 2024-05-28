@@ -2,12 +2,10 @@
 @import "../../styles/_variables";
 @import "../../styles/_typography";
 
-
-
 .outerContainer {
-  flex-direction: row; 
+  flex-direction: row;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   height: 100%;
 }
 
@@ -18,16 +16,14 @@
   width: 100%;
 }
 
-
-.shoppingCartContainer {  
-width: 25%;
-margin-top: 370px;
-border: none;
-display: flex;
-flex-direction: column;
-margin-right: 200px;
-position: relative;
-
+.shoppingCartContainer {
+  width: 25%;
+  margin-top: 370px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+  position: relative;
 }
 
 .listItem {
@@ -36,13 +32,13 @@ position: relative;
 }
 
 .ulmenu {
-margin-left: 80px;
+  margin-left: 80px;
 }
 
 .cartItemImage {
   width: 70px;
-  height: auto; 
-  margin-right: 10px; 
+  height: auto;
+  margin-right: 10px;
 }
 
 .ulcart {
@@ -51,8 +47,6 @@ margin-left: 80px;
   list-style-type: none;
   padding-left: 10px;
 }
-
-
 
 .menuTitle {
   @include fontsizeHuge;
@@ -63,7 +57,6 @@ margin-left: 80px;
   font-size: 100px;
   text-align: center;
   margin-bottom: 50px;
-
 }
 
 .borderBottom {
@@ -78,7 +71,6 @@ margin-left: 80px;
   display: flex;
   justify-content: center;
 }
-
 
 .productButton {
   font-family: $example1font;
@@ -102,14 +94,12 @@ margin-left: 80px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-
 }
 
-.active{
+.active {
   text-decoration: underline;
   color: $primaryTextColor;
 }
-
 
 .menuButton {
   background: linear-gradient(-0deg, $primaryTextColor 20%, $gold 90%);
@@ -119,14 +109,11 @@ margin-left: 80px;
   margin-bottom: 10px;
   border-radius: 5px;
   width: 270px;
-  
 }
 
 .menuButton:hover {
   box-shadow: 0 5px 35px 0px $gold;
 }
-
-
 
 .menuItemContent {
   position: absolute;
@@ -134,38 +121,31 @@ margin-left: 80px;
   left: 0;
   display: flex;
   justify-content: space-between;
-  width: 100%; 
+  width: 100%;
 }
 
-
-
 .shoppingCartSection {
-  justify-content: flex-end; 
+  justify-content: flex-end;
   display: flex;
   align-items: flex-end;
   position: absolute;
   top: 0;
   right: 0;
   margin-right: 10px;
-  
 }
 
 .quantityCounter {
   font-family: $example1font;
-  color:$primaryTextColor;
+  color: $primaryTextColor;
   font-weight: bold;
 }
-
 
 .navigateButton:hover {
   background-color: transparent;
 }
 
-
-
 .shoppingCart {
-  color:$primaryTextColor;
-  
+  color: $primaryTextColor;
 }
 
 .shoppingCartButtons {
@@ -189,7 +169,6 @@ margin-left: 80px;
   margin: auto;
 }
 
-
 .addButton {
   font-family: $example1font;
   background-color: $buttonColor;
@@ -200,7 +179,6 @@ margin-left: 80px;
   margin: auto;
 }
 
-
 .menuItemTitle {
   font-family: $example1font;
   @include fontsizeRegular;
@@ -208,14 +186,11 @@ margin-left: 80px;
   display: flex;
 }
 
-
-
 .menuItemPrice {
   font-family: $example1font;
   @include fontsizeRegular;
   color: $primaryTextColor;
 }
-
 
 .menuItemContainer {
   display: flex;
@@ -240,49 +215,44 @@ margin-left: 80px;
   object-fit: contain;
 }
 
+.shopping {
+  font-family: $example1font;
+  color: $primaryTextColor;
+  align-self: center;
+  width: 100%;
+}
 
+.cartListItem {
+  color: $primaryTextColor;
+  display: flex;
+  align-items: center;
+  font-family: $example1font;
+  padding-bottom: 10px;
+}
 
-  
-  .shopping {
-    font-family: $example1font;
-    color: $primaryTextColor;
-    align-self: center;
-    width: 100%;
-  }
-  
-  .cartListItem {
-    color: $primaryTextColor;
-    display: flex;
-    align-items: center;
-    font-family: $example1font;
-    padding-bottom: 10px;
-  }
-  
-  .cartItemImage {
-    width: 70px;
-    height: auto; 
-    margin-right: 10px; 
-  }
+.cartItemImage {
+  width: 70px;
+  height: auto;
+  margin-right: 10px;
+}
 
-  .cartItemImageBeer {
-    width: 35px;
-    height: auto; 
-    margin: 10px 35px 0 15px;
+.cartItemImageBeer {
+  width: 35px;
+  height: auto;
+  margin: 10px 35px 0 15px;
+}
 
-  }
+.cartContent {
+  width: 100%;
+  margin-right: 25px;
+  border-bottom: 1px dotted gray;
+}
 
-  .cartContent {
-    width: 100%; 
-    margin-right: 25px;
-    border-bottom: 1px dotted gray;
-  }
-  
 .cartItemPrice {
   display: flex;
- 
+
   @include fontsizeSmall;
 }
-  
 
 .ribbon {
   width: 60px;
@@ -304,23 +274,27 @@ margin-left: 80px;
   border-top: 12px solid black;
   width: 50px;
   height: 50px;
-  -webkit-animation: spin 2s linear infinite; 
+  -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
-
-
-
 
 /* MEDIA */
 @media (max-width: 1024px) {
@@ -336,26 +310,25 @@ margin-left: 80px;
   .menuItemTitle {
     font-size: 45px;
   }
-  .shoppingCartContainer {  
-    margin:auto;
+  .shoppingCartContainer {
+    margin: auto;
     width: 100%;
     font-size: 40px;
-    }
+  }
 
-    .cartItemPrice {
-      font-size: 40px;
-    }
-    .cartListItem {
-      font-size: 40px;
-    }
+  .cartItemPrice {
+    font-size: 40px;
+  }
+  .cartListItem {
+    font-size: 40px;
+  }
 
-    .shoppingCartButtons {
-      height: 100px;
-      width: 100px;
-    }
+  .shoppingCartButtons {
+    height: 100px;
+    width: 100px;
+  }
 
-    .addButton {
-      height: 100px;
-    }
-
+  .addButton {
+    height: 100px;
+  }
 }

@@ -9,6 +9,7 @@ import BurgerSection from "../componets/sections/burgerSection/burger";
 import WorkSection from "../componets/sections/workSection/work";
 import Footer from "../componets/footer/footer";
 import burgerPicture2 from "@/assets/images/promo-burger.png";
+import ReviewSection from "../componets/sections/reviewSection/review";
 
 const StartPage = () => {
   return (
@@ -88,6 +89,7 @@ const StartPage = () => {
       </section>
       <AboutSection />
       <BurgerSection />
+      <ReviewSection />
       <WorkSection />
       <Footer />
     </motion.div>
