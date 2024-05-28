@@ -73,39 +73,42 @@ max-width: 90%;
   color: $primaryTextColor;
 }
 
-.scrollTextContainer {
-  color: $primaryTextColor;
-  font-family: $example1font;
-  width: 100%;
-  bottom: 50px;
-  font-size: 20px;
-  width: 500px;
-  overflow: hidden;
+
+
+.inner {
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+  animation: loop 10s linear infinite;
 }
 
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0 0.2rem;
+  color: white;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.4rem;
+
+}
 
 .scrollTextList {
-  white-space: nowrap;
-  animation: scrollText 20s linear infinite;
+  width: 30rem;
+  font-family: $example1font;
+  position: relative;
+  overflow: hidden;
+
 }
 
-@keyframes scrollText {
+@keyframes loop {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
-
-.scrollTextList li {
-  display: inline-block;
-  padding-right: 40px;
-}
-
-
-
-
 
 
 
