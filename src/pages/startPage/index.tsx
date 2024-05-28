@@ -14,7 +14,7 @@ import ReviewSection from "../componets/sections/reviewSection/review";
 
 const StartPage = () => {
   return (
-    <motion.div>
+    <motion.div className={styles.startpageContainer}>
       <section id="home" className={styles.headerContainer}>
         <Header />
         <section className={styles.mainInfoPage}>

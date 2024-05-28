@@ -34,7 +34,7 @@
 
   font-weight: bold;
   margin-left: 20px;
-  color: $primaryTextColor
+  color: $secondaryTextColor
 }
 
 
@@ -109,7 +109,7 @@
 .navigateButton {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: transparent;
-  color: $primaryTextColor;
+  color: $secondaryTextColor;
   border: none;
   margin-top: 50px;
   cursor: pointer;
@@ -129,7 +129,7 @@
 .menuTitle {
   @include fontsizeHuge;
   font-family: $example1font;
-  color: $primaryTextColor;
+  color: $secondaryTextColor;
   //margin-left: 100px;
   margin-top: -12px;
   margin-left: 65px;

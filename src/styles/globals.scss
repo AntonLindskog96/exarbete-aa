@@ -3,13 +3,16 @@
   
 html, body {
   height: 100%;
-  background-image: url('../../src/assets/images/background.avif');
-  background-color: black;
+  background-color: $primaryBg;
   scroll-behavior: smooth;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+}
+
+.headercontainer {
+  background-image: url('/../src/assets/images/background.avif');
 }
 
 

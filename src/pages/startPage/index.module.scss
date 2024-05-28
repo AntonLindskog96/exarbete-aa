@@ -5,7 +5,15 @@
   font-family: $example1font;
   height: 118vh;
   color: $gold;
-  background-image: url('/../src/assets/images/background.avif');
+}
+
+.startpageContainer {
+  background-image: url('../../../src/assets/images/background.avif');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
 }
 
 .startPageTitle{

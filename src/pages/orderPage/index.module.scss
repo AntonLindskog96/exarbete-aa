@@ -2,6 +2,7 @@
 @import "../../styles/_variables";
 @import "../../styles/_typography";
 
+
 .outerContainer {
   flex-direction: row;
   display: flex;
@@ -11,7 +12,7 @@
 
 .menuContainer {
   font-family: $example1font;
-  color: $primaryTextColor;
+  color: $secondaryTextColor;
   flex-direction: column;
   width: 100%;
 }
@@ -43,14 +44,14 @@
 
 .ulcart {
   font-family: $example1font;
-  color: $primaryTextColor;
+  color: $secondaryTextColor;
   list-style-type: none;
   padding-left: 10px;
 }
 
 .menuTitle {
   @include fontsizeHuge;
-  color: $primaryTextColor;
+  color: $secondaryTextColor;
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.5rem;
   font-weight: 500;
@@ -62,7 +63,7 @@
 .borderBottom {
   width: 82%;
   margin: auto;
-  background-color: $primaryTextColor;
+  background-color: $secondaryTextColor;
   height: 1px;
 }
 
@@ -98,11 +99,11 @@
 
 .active {
   text-decoration: underline;
-  color: $primaryTextColor;
+  color: $secondaryTextColor;
 }
 
 .menuButton {
-  background: linear-gradient(-0deg, $primaryTextColor 20%, $gold 90%);
+  background: linear-gradient(-0deg, white 20%, $gold 90%);
   border: 1px solid white;
   height: 180px;
   margin-right: 10px;
@@ -136,7 +137,7 @@
 
 .quantityCounter {
   font-family: $example1font;
-  color: $primaryTextColor;
+  color: $secondaryTextColor;
   font-weight: bold;
 }
 
@@ -145,7 +146,7 @@
 }
 
 .shoppingCart {
-  color: $primaryTextColor;
+  color: $secondaryTextColor;
 }
 
 .shoppingCartButtons {
@@ -182,14 +183,14 @@
 .menuItemTitle {
   font-family: $example1font;
   @include fontsizeRegular;
-  color: $secondaryTextColor;
+  color: $primaryTextColor;
   display: flex;
 }
 
 .menuItemPrice {
   font-family: $example1font;
   @include fontsizeRegular;
-  color: $primaryTextColor;
+  color: $secondaryTextColor;
 }
 
 .menuItemContainer {
@@ -217,13 +218,13 @@
 
 .shopping {
   font-family: $example1font;
-  color: $primaryTextColor;
+  color: $secondaryTextColor;
   align-self: center;
   width: 100%;
 }
 
 .cartListItem {
-  color: $primaryTextColor;
+  color: $secondaryTextColor;
   display: flex;
   align-items: center;
   font-family: $example1font;
@@ -264,8 +265,8 @@
   text-align: center;
   border-radius: 25px;
   transform: rotate(20deg);
-  background-color: $buttonColor;
-  color: white;
+  background-color: $HotColor;
+  color: $secondaryTextColor;
 }
 
 .loader {
