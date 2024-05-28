@@ -151,19 +151,20 @@ max-width: 90%;
   }
 
   .contentPicture {
-
-
     position: inherit;
   }
 
-  .scrollTextContainer {
-    width: 100%;
-  }
-
-
   .scrollTextList {
-    font-size: 3rem; 
+    width: 150vh;
   }
+
+  .tag {
+    width: 100%;
+    color: white;
+    font-size: 5rem;
+  
+  }
+
 
   .button {
     font-size: 5rem; 

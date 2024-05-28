@@ -54,6 +54,16 @@ const Footer: React.FC = () => {
     }
   }
   };
+  const scrollToReviewSection = () => {
+    if (window.location.pathname === '/orderPage') {
+      window.location.href = '/startPage'; 
+    } else {
+    const reviewSection = document.getElementById("reviewSection");
+    if (reviewSection) {
+      reviewSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+  };
 
   return (
     <footer className={styles.footer}>
@@ -112,6 +122,12 @@ const Footer: React.FC = () => {
             className={styles.scrollToSection}
           >
             JOBBA HOS OSS
+          </button>
+          <button
+            onClick={scrollToReviewSection}
+            className={styles.scrollToSection}
+          >
+            RECENSIONER
           </button>
         </div>
       </section>
