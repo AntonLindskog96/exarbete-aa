@@ -57,6 +57,13 @@ export const burgers = [
         "imageburger": "https://assets-global.website-files.com/63f475862254e830a9e0be38/661f82d8656bb1a72511f7ae_Greven.png",
         "isNew": true
     },
+    {
+        "id": 9,
+        "title": "Big Chicken",
+        "price": 80,
+        "imageburger": "https://assets-global.website-files.com/63f475862254e830a9e0be38/661f82b7d39e6d83d4712bf3_Crispy%20Chicken%20Caesar.png",
+        "isNew": true
+    },
 ]
 
 export const beers = [
