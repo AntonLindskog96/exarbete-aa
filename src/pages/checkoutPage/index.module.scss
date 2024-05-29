@@ -54,10 +54,7 @@
 
 }
 
-.estimatedTimeText {
 
-
-}
 
 
 .timeText {
@@ -65,10 +62,7 @@
   color: $secondaryBg;;
 }
 
-.contentSection {
 
-
-}
 
 .checkIcon {
 
@@ -156,7 +150,7 @@
 }
 
 .checkoutButton {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: $example1font;
   background-color: #b63333;
   color: white;
   padding: 15px 25px;

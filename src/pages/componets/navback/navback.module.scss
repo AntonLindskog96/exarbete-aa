@@ -14,3 +14,7 @@
     flex-direction: column-reverse;
     gap: 10px;
   }
+
+  .navigateButton:hover {
+    transform: scaleY(0.9) scaleX(0.9);
+  }

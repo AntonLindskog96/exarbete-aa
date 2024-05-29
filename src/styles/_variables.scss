@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Dorsa&family=Praise&display=swap');
 
+
 /* COLORS */
 $primaryTitleColor: #FFFFFF;
 $primaryTextColor: #000000;
@@ -12,9 +13,6 @@ $secondaryBg: #242323;
 $buttonColor: #FFFFFF;
 $footerColor: #FFFFFF;
 $HotColor: #000000;
-
-
-
 
 /* FONT FAMILYS */
 $example1font: "JetBrains Mono", monospace;
@@ -97,7 +95,6 @@ $tabletBreakpoint: 640px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 @mixin column {

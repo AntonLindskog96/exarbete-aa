@@ -38,7 +38,7 @@
 
 
 .headerButtons {
-  font-family: $example1font;
+  font-family: $example6font;
   background-color:  $buttonColor;
   color: $primaryTextColor;
   padding: 15px 20px;
@@ -51,9 +51,7 @@
 }
 
 .headerButtons:hover {
-  background-color: transparent;
-  border: 1px solid $primaryTextColor;
-  color: $primaryTextColor;
+  transform: scaleX(1.1) scaleY(1.1);
 }
 
 

@@ -62,14 +62,15 @@ max-width: 90%;
 
 
  .button {
-  font-family: $example1font;
+  font-family: $example6font;
+  letter-spacing: 1.5px;
   background-color: $buttonColor;
   color: $primaryTextColor;
   padding: 15px 25px;
   border: none;
   border-radius: $radius-tier-1;
   cursor: pointer;
-  font-size: 18px;
+  @include fontsizeMedium;
   margin-top: 5px;
   width: 350px;
   max-width: 90%;
@@ -77,9 +78,7 @@ max-width: 90%;
 
 
 .button:hover {
-  background-color: transparent;
-  border: 1px solid $primaryTextColor;
-  color: $primaryTextColor;
+  transform: scaleX(1.05) scaleY(1.05);
 }
 
 

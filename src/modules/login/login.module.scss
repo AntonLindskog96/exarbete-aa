@@ -32,9 +32,10 @@
 }
 
 .submitButton {
-  font-family: $example1font;
-  background-color:  $buttonColor;
-  color: $primaryTextColor;
+  font-family: $example6font;
+  letter-spacing: 1.5px;
+  background-color:  $primaryTextColor;
+  color: $secondaryTextColor;
   padding: 10px 5px;
   border: none;
   border-radius: $radius-tier-1;
@@ -44,7 +45,5 @@
 }
 
 .submitButton:hover {
-  background-color: transparent;
-  border: 1px solid $primaryBg;
-  color: $buttonColor;
+transform: scaleX(0.99) scaleY(0.99);
 }

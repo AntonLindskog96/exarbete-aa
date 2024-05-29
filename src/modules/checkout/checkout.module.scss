@@ -2,14 +2,12 @@
 @import "../../styles/typography";
 
 .shoppingCartContainer {
-  //background-color: rgb(24, 22, 22);
   border-radius: 5%;
   width: 50%;
   margin-top: 20px;
   border: none;
   display: flex;
   flex-direction: column;
-  //margin-left: auto;
 }
 
 .outerContainer {
@@ -84,7 +82,7 @@
 
 .shopping {
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: $example1font;
 }
 
 .swishIcon {
@@ -93,7 +91,6 @@
 }
 
 .creditIcon {
-
   height: 30px;
   margin-right: 10px;
 }
@@ -103,12 +100,12 @@
   @include fontsizeSmall;
   line-height: 100%;
   color: black;
-  font-family: "JetBrains Mono", monospace;
+  font-family: $example1font;
 }
 
 .cartListItem {
   list-style-type: none;
-  font-family: "JetBrains Mono", monospace;
+  font-family: $example1font;
 }
 
 
@@ -172,7 +169,8 @@
 .submitButton {
 
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: $example6font;
+  letter-spacing: 1.5px;
   background-color: $primaryTextColor;
   color: white;
   padding: 10px 5px;
@@ -190,13 +188,11 @@
 }
 
 .spinnerContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center;
   height: 24px;
 
 }
 
 .p {
-  font-family: "JetBrains Mono", monospace;
+  font-family: $example1font;
 }

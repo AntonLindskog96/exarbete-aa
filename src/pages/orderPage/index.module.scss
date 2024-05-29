@@ -74,13 +74,14 @@
 }
 
 .productButton {
-  font-family: $example1font;
+  font-family: $example6font;
+  letter-spacing: 3px;
   align-items: center;
   cursor: pointer;
   display: inline-flex;
   color: $clay;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 400;
   justify-content: center;
   line-height: 1;
   margin-right: 20px;
@@ -161,7 +162,6 @@
 }
 
 .removeButton {
-  font-family: $example1font;
   background-color: $buttonColor;
   border: none;
   border-radius: $radius-tier-3;
@@ -171,7 +171,6 @@
 }
 
 .addButton {
-  font-family: $example1font;
   background-color: $buttonColor;
   border: none;
   border-radius: $radius-tier-3;

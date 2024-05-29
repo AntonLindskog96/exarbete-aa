@@ -4,22 +4,21 @@
 
 
 .checkoutButton {
-    font-family: $example1font;
+    font-family: $example6font;
     background-color: $buttonColor;
     color: $primaryTextColor;
     padding: 15px 25px;
     border: none;
     border-radius: $radius-tier-1;
     cursor: pointer;
-    font-size: $base;
+    @include fontsizeMedium;
+    letter-spacing: 1px;
     width: 100%;
     margin-top: 10px;
   }
 
-  .checkoutButton:hover {
-    background-color: transparent;
-    border: 1px solid $primaryTextColor;
-    color: $primaryTextColor;
+  .checkoutButtonSection:hover {
+    transform: scaleX(0.95) scaleY(0.95);
   }
 
   @media (max-width: 768px) {
