@@ -8,6 +8,7 @@
     background-color: white;
     text-align: center;
     flex-direction: row-reverse;
+    height: 75% ;
     display: flex;
     margin: 0 auto;
     margin-bottom: 10vh;
@@ -18,7 +19,8 @@
   }
   .homepageText {
     @include fontsizeMedium;
-    padding: $padding-large;
+    padding: $padding-huge;
+    
   }
   
   .burgerTitle {
@@ -29,7 +31,7 @@
   
   .burgerPicture {
     display: flex;
-    width: 45%;
+    width: 70%;
   }
   
 
