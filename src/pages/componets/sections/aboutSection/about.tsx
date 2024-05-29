@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./about.module.scss";
-import aboutPicture from "@/assets/images/aboutsection.webp";
+import aboutPicture from "@/assets/images/aboutsection.png";
 import { inView, motion, useAnimation } from "framer-motion";
 
 const AboutSection = () => {
