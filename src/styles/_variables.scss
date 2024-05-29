@@ -1,21 +1,32 @@
-/* Boilerplate variables */
+@import url('https://fonts.googleapis.com/css2?family=Dorsa&family=Praise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Dorsa&family=Praise&display=swap');
+
 
 /* COLORS */
-$primaryTextColor: #FFFFFF;
-$secondaryTextColor: black;
-$primaryBg: #d9d9d9;
+$primaryTitleColor: #FFFFFF;
+$primaryTextColor: #000000;
+$secondaryTextColor: #FFFFFF;
+$primaryBg: #242323;
 $secondaryBg: #242323;
-$buttonColor: #bc5050;
+$buttonColor: #FFFFFF;
+$footerColor: #FFFFFF;
+$HotColor: #000000;
 
 /* FONT FAMILYS */
 $example1font: "JetBrains Mono", monospace;
 $example2font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-
+$example3font: "Dorsa", sans-serif;
+$example4font: "Praise", cursive;
+$example5font: "Chelsea Market", system-ui;
+$example6font: "Bebas Neue", sans-serif;
 
 $Red: #b63333;
 $bacon: #FBE9E9;
 $ash: #EEEEEE;
 $snow: #F4F3F1;
+$gold: #B79347;
 $alert: #EB5757;
 $lightMint: #DBFBF0;
 $mint: #8ED8BF;
@@ -84,7 +95,6 @@ $tabletBreakpoint: 640px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 @mixin column {

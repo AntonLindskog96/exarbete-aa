@@ -2,106 +2,186 @@
 @import "../../styles/_typography";
 
 .headerContainer, .getStarted {
-  color: $primaryTextColor;
   font-family: $example1font;
+  height: 118vh;
+  color: $gold;
+}
+
+.startpageContainer {
+  background-image: url('../../../src/assets/images/background.avif');
   height: 100vh;
-  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
 }
 
-.headerContainer h1 {
-  font-size: 70px;
-  border-bottom: 1px solid;
+.startPageTitle{
+font-family: $example6font;
+color: $primaryTitleColor;
+letter-spacing: 0.5rem;
+font-weight: 500;
+font-size: 100px;
+border-bottom: 1px solid;
+max-width: 45%;
+margin: 0;
+margin-top: 10vh;
 }
 
-.headerContainer h2 {
+.descriptionContainer {
+  display: flex;
+  align-items: center; 
+}
+
+
+.titleDescription {
+  display: flex;
   @include fontsizeMedium;
-  margin-top: -40px;
+  color: $primaryTitleColor;
+  max-width: 90%;
+  margin: 30px 0;
 }
-
-
 
 .mainInfoPage {
-
-  margin-left: 100px;
+margin-left: 270px;
+max-width: 90%;
 }
 
-
-
 .contentPicture {
-    z-index: 0;
-    bottom: 8%;
-    left:35%;
-    position: absolute;
+  z-index: 0;
+  bottom: 8%;
+  left:40%;
+  position: absolute;
 }
 
 .burgerPicture {
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
 }
 
 
-.button {
-  font-family: $example1font;
+ .button {
+  font-family: $example6font;
+  letter-spacing: 1.5px;
   background-color: $buttonColor;
-  color: white;
+  color: $primaryTextColor;
   padding: 15px 25px;
   border: none;
-  border-radius: 25px;
+  border-radius: $radius-tier-1;
   cursor: pointer;
-  font-size: 18px;
+  @include fontsizeMedium;
   margin-top: 5px;
   width: 350px;
+  max-width: 90%;
 }
 
 
 .button:hover {
-  background-color: transparent;
-  border: 1px solid $primaryTextColor;
-  color: $buttonColor;
+  transform: scaleX(1.05) scaleY(1.05);
 }
 
-.headerButton:hover {
-  background-color: transparent;
-  border: 1px solid $buttonColor;
-  color: $buttonColor;
+
+
+.inner {
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+  animation: loop 10s linear infinite;
 }
 
-.loginButton:hover {
-  background-color: transparent;
-  border: 1px solid $buttonColor;
-  color: $buttonColor;
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0 0.2rem;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: $radius-tier-1;
+
 }
-
-.scrollTextContainer {
-
-  bottom: 50px;
-  left: 20px;
-  width: 300px;
-  overflow: hidden;
-}
-
 
 .scrollTextList {
-  list-style-type: none;
-  margin: 5;
-  padding: 5;
-  white-space: nowrap;
-  animation: scrollText 8s linear infinite;
+  width: 30rem;
+  font-family: $example1font;
+  position: relative;
+  overflow: hidden;
+
 }
 
-@keyframes scrollText {
+@keyframes loop {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
-.scrollTextList li {
-  display: inline-block;
-  padding-right: 25px;
+
+
+
+
+
+/*  MEDIA     */
+@media (max-width: 1024px) {
+  .headerContainer {
+    height: 400vh;
+    width: 100%;
+    display: grid;
+    align-items: start;
+    position: relative;
+    justify-items: center;
+  }
+
+  .mainInfoPage {
+    margin-left: 0;
+    display: flex;
+    text-align: center;
+  }
+  
+
+  .startPageTitle {
+    font-size: 25rem;
+    letter-spacing: 1.5rem; 
+    margin: 2rem 0;
+  }
+
+  .titleDescription {
+    font-size: 4rem;
+    margin: 2rem 0;
+  }
+
+  .burgerPicture {
+
+    height: 100%;
+  }
+
+  .contentPicture {
+  height: 100%;
+  }
+
+  .scrollTextList {
+    width: 150vh;
+  }
+
+  .tag {
+    width: 100%;
+    color: white;
+    font-size: 5rem;
+  
+  }
+
+
+  .button {
+    font-size: 5rem; 
+    width: 100%;
+  }
+  .mainInfoPage {
+    display: grid;
+    }
 }
+
 
 
 

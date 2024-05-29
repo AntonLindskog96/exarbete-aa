@@ -2,7 +2,7 @@ import StartPage from "@/pages/startPage";
 import {useState} from "react";
 import React from 'react';
 import {Modal} from "@mui/base";
-import styles from "@/modules/login.module.scss";
+import styles from "@/modules/login/login.module.scss";
 import Dialog from '@mui/material/Dialog';
 import {
     DialogActions,

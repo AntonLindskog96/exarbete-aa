@@ -1,8 +1,28 @@
-@import url('https://fonts.cdnfonts.com/css/apple-garamond');
 @import "../styles/_variables";
 @import "../styles/_typography";
   
-  html {
-    background-color: $primaryBg;
+html, body {
+  height: 100%;
+  background-color: $primaryBg;
+  scroll-behavior: smooth;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.headercontainer {
+  background-image: url('/../src/assets/images/background.avif');
+}
+
+
+@media (max-width: 1024px) {
+  html, body {
+    background-image: none;
   }
+}
+
+
+
+
 

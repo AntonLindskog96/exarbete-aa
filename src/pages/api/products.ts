@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { burgers, beers } from './data'; 
+import { burgers, beers, sides } from './data'; 
 
 export default function handler(
   req: NextApiRequest,
@@ -10,8 +10,10 @@ export default function handler(
       res.status(200).json(beers);
     } else if (req.query.type === 'burgers') {
       res.status(200).json(burgers);
+    } else if (req.query.type === 'sides') {
+      res.status(200).json(sides);
     } else {
-      const allProducts = { burgers, beers };
+      const allProducts = { burgers, beers, sides };
       res.status(200).json(allProducts);
     }
   } else {

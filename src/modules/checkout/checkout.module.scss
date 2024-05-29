@@ -1,0 +1,198 @@
+@import "../../styles/variables";
+@import "../../styles/typography";
+
+.shoppingCartContainer {
+  border-radius: 5%;
+  width: 50%;
+  margin-top: 20px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.outerContainer {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.shoppingItems {
+
+  max-height: 200px;
+  overflow-y: auto;
+
+}
+
+.shoppingItems::-webkit-scrollbar {
+
+  width: 0;
+  height: 0;
+}
+
+.shoppingItems {
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.shoppingItems::-webkit-scrollbar{
+
+  display: none;
+}
+
+.shoppingCartSection {
+  position: sticky;
+  display: flex;
+  margin-left: 250px;
+  margin-top: -70px;
+  align-items: flex-end;
+}
+
+
+.cartContent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+}
+
+.borderline {
+
+  border-bottom: 1px solid #e7e7e7 ;
+}
+
+.totalPriceSection {
+  color: black;
+  margin-left: 1px;
+}
+
+.quantityCounter {
+
+  font-weight: bold;
+
+}
+
+.checkoutPopup {
+
+  width: 800px;
+  height: 600px;
+}
+
+.shopping {
+
+  font-family: $example1font;
+}
+
+.swishIcon {
+
+  height: 30px;
+}
+
+.creditIcon {
+  height: 30px;
+  margin-right: 10px;
+}
+
+
+.cartItemPrice {
+  @include fontsizeSmall;
+  line-height: 100%;
+  color: black;
+  font-family: $example1font;
+}
+
+.cartListItem {
+  list-style-type: none;
+  font-family: $example1font;
+}
+
+
+.purchaseContent {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.creditContent {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-right: 1px solid #e7e7e7;
+}
+
+.swishContent {
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.closeIcon {
+
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.registrationText {
+
+  margin: auto;
+  cursor: pointer;
+}
+
+.registrationText:hover {
+
+  margin: auto;
+  text-decoration-line: underline;
+}
+
+.DialogTitle {
+
+
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.errorText {
+
+  color: #b63333;
+}
+
+.submitButton {
+
+
+  font-family: $example6font;
+  letter-spacing: 1.5px;
+  background-color: $primaryTextColor;
+  color: white;
+  padding: 10px 5px;
+  border: none;
+  border-radius: $radius-tier-1;
+  cursor: pointer;
+  font-size: 18px;
+  width: 95%;
+  margin: 20px 5px 15px 15px;
+  transition: opacity 0.3s ease;
+  &:disabled {
+    opacity: 0.6;
+  }
+
+}
+
+.spinnerContainer {
+  @include center;
+  height: 24px;
+
+}
+
+.p {
+  font-family: $example1font;
+}

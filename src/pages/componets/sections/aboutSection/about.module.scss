@@ -3,12 +3,10 @@
 
 .aboutSection {
     font-family: $example1font;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include row;
+    text-align: center;
     width: 70%; 
     background-color: white;
-    text-align: center;
     margin: 0 auto;
     margin-bottom: 10vh;
   }
@@ -19,7 +17,7 @@
 
   .homepageText {
     @include fontsizeMedium;
-    padding: 25px;
+    padding: $padding-large;
   }
   
   .aboutname {
@@ -31,5 +29,11 @@
   .aboutPicture {
     width: 100%;
     height: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .aboutSection {
+      width: 100%;
+    }
   }
   
