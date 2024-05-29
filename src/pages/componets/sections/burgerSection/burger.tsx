@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./burger.module.scss";
 import burgerPicture from "@/assets/images/burgersection.webp";
+import burgerPicture2 from "@/assets/images/burgersection2.avif";
 import { inView, motion, useAnimation } from "framer-motion";
 
 const BurgerSection = () => {
@@ -75,7 +76,7 @@ const BurgerSection = () => {
         </p>
       </article>
       <motion.img
-        src={burgerPicture.src}
+        src={burgerPicture2.src}
         alt="icon"
         className={styles.burgerPicture}
         initial={{ opacity: 0 }}
