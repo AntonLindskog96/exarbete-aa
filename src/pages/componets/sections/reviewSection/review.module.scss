@@ -53,13 +53,41 @@
     z-index: 1;
   }
 
+  .review4 {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    opacity: 1;
+  }
+
+  .reviewText4 {
+    position: absolute;
+    top: 30%;
+    word-spacing: 0.5rem;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;   
+    z-index: 1;
+  }
+
+  .fadeLeft {
+    position: absolute;
+    top: 0;
+    left: 55%;
+    width: 55%; 
+    height: 100%;
+    background: linear-gradient(to right,rgb(0, 0, 0), rgb(34, 32, 32)); 
+  }
+
+
   .faderight {
     position: absolute;
     top: 0;
     right: 55%;
     width: 10%; 
     height: 100%;
-    background: linear-gradient(to right, rgba(22, 652, 65, 0), rgb(14, 13, 11)); 
+    background: linear-gradient(to right, rgba(22, 652, 65, 0), rgb(10, 10, 11)); 
   }
 
 
