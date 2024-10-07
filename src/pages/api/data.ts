@@ -95,7 +95,8 @@ export const beers = [
         "id": 5,
         "title": "Ölker 0.5L",
         "price": 55,
-        "imagebeer": "https://product-cdn.systembolaget.se/productimages/24578195/24578195_400.png?q=75&w=2000"
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/41808381/41808381_400.png?q=75&w=2000",
+        "isNew": true
     },
     {
         "id": 6,
@@ -113,7 +114,8 @@ export const beers = [
         "id": 8,
         "title": "Öl 0.5L",
         "price": 55,
-        "imagebeer": "https://product-cdn.systembolaget.se/productimages/508387/508387_400.png?q=75&w=2000"
+        "imagebeer": "https://product-cdn.systembolaget.se/productimages/508387/508387_400.png?q=75&w=2000",
+        "isNew": true
     },
     {
         "id": 9,

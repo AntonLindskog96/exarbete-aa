@@ -10,6 +10,8 @@
     margin: 0 auto;
     margin-bottom: 10vh;
   }
+
+  
   
   .aboutText {
     width: 150vh;
@@ -27,8 +29,10 @@
   
   
   .aboutPicture {
-    width: 100%;
-    height: 100%;
+    width: 57%;
+    height: 560px;
+    will-change: transform;
+    transform-style: preserve-3d;
   }
 
   @media (max-width: 1024px) {

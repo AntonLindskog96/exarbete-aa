@@ -6,7 +6,7 @@ import clockIcon from "@/assets/images/clock-icon.png";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import {useRouter} from 'next/router'
 import {generateOrderNumber} from "@/utils/generateOrderNumber";
-import homeIcon from "@/assets/images/home-icon2.png";
+import homeIcon from "@/assets/images/home-icon.png";
 
 
 async function getMenu() {

@@ -4,6 +4,7 @@ import reviewPicture from "@/assets/images/aboutsection.webp";
 import reviewPicture1 from "@/assets/images/review1.jpg";
 import reviewPicture2 from "@/assets/images/review2.jpg";
 import reviewPicture3 from "@/assets/images/review3.jpg";
+import reviewPicture4 from "@/assets/images/beer.avif";
 import { inView, motion, useAnimation } from "framer-motion";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
@@ -102,6 +103,19 @@ const ReviewSection = () => {
             alt="Image 2"
           />
           <div className={styles.faderight}></div>
+        </SplideSlide>
+        <SplideSlide>
+          <p className={styles.reviewText4}>
+            »Riktigt gott, succé«
+            <br /> <br />
+            <em>- Anton </em>
+          </p>
+          <img
+            className={styles.review4}
+            src={reviewPicture4.src}
+            alt="Image 2"
+          />
+          <div className={styles.fadeLeft}></div>
         </SplideSlide>
       </Splide>
     </motion.section>
