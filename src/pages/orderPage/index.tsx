@@ -157,9 +157,6 @@ const Orders: NextPage = () => {
               Tillbehör
             </a>
           </div>
-          {loading ? (
-            <div className={styles.loader}></div>
-          ) : (
             <motion.ul className={styles.ulmenu}>
               {menu.map((item, index) => (
                 <motion.button
@@ -191,7 +188,7 @@ const Orders: NextPage = () => {
                 </motion.button>
               ))}
             </motion.ul>
-          )}
+          )
         </section>
         <section className={styles.shoppingCartContainer}>
           <h2 className={styles.shopping}>Min Beställning</h2>
